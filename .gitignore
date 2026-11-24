@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env*
+!.env.example
+.runtime/
+node_modules/
+*.wav
+*.safetensors
+*.pt
+*.sqlite*
+reports/private/

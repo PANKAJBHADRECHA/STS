@@ -1,0 +1,20 @@
+{
+  "mode": "native_audio_smoke_test",
+  "checkpoint": "kyutai/moshiko-mlx-q4",
+  "checkpoint_revision": "18e4df760a34d5977a34517d7d1580e07acbb2f1",
+  "runtime": "moshi_mlx==0.3.0",
+  "status": "resource_stopped",
+  "cases": [],
+  "live_audio_qualified": false,
+  "agentic_integration_tested": false,
+  "limitations": [
+    "Synthetic OS-generated fixture voices, not human conversations.",
+    "No closed-loop interruption recovery, tool integration, voice-quality judge or wall-clock long-session test."
+  ],
+  "metal_available": true,
+  "worker_exit_code": -15,
+  "peak_worker_rss_bytes": 352124928,
+  "worker_wall_seconds": 23.059284000191838,
+  "swap_growth_mb": 2670.5600000000004,
+  "reason": "swap grew by more than 768 MiB"
+}

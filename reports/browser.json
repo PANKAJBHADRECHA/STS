@@ -1,0 +1,613 @@
+{
+  "browser": "Chromium 141 / Playwright 1.56.0",
+  "replays": 100,
+  "combinations": 25,
+  "desktop": "1440x1050",
+  "mobile": "390x844",
+  "console_errors": [],
+  "documents_checked": 3,
+  "download_checked": true,
+  "runs": [
+    {
+      "variant": "baseline",
+      "family": "argument_corrections",
+      "case": 0,
+      "passed": false
+    },
+    {
+      "variant": "baseline",
+      "family": "argument_corrections",
+      "case": 1,
+      "passed": false
+    },
+    {
+      "variant": "baseline",
+      "family": "argument_corrections",
+      "case": 2,
+      "passed": true
+    },
+    {
+      "variant": "baseline",
+      "family": "argument_corrections",
+      "case": 3,
+      "passed": true
+    },
+    {
+      "variant": "baseline",
+      "family": "tool_failures",
+      "case": 0,
+      "passed": false
+    },
+    {
+      "variant": "baseline",
+      "family": "tool_failures",
+      "case": 1,
+      "passed": false
+    },
+    {
+      "variant": "baseline",
+      "family": "tool_failures",
+      "case": 2,
+      "passed": false
+    },
+    {
+      "variant": "baseline",
+      "family": "tool_failures",
+      "case": 3,
+      "passed": false
+    },
+    {
+      "variant": "baseline",
+      "family": "interruptions",
+      "case": 0,
+      "passed": false
+    },
+    {
+      "variant": "baseline",
+      "family": "interruptions",
+      "case": 1,
+      "passed": false
+    },
+    {
+      "variant": "baseline",
+      "family": "interruptions",
+      "case": 2,
+      "passed": false
+    },
+    {
+      "variant": "baseline",
+      "family": "interruptions",
+      "case": 3,
+      "passed": true
+    },
+    {
+      "variant": "baseline",
+      "family": "delayed_feedback",
+      "case": 0,
+      "passed": true
+    },
+    {
+      "variant": "baseline",
+      "family": "delayed_feedback",
+      "case": 1,
+      "passed": false
+    },
+    {
+      "variant": "baseline",
+      "family": "delayed_feedback",
+      "case": 2,
+      "passed": false
+    },
+    {
+      "variant": "baseline",
+      "family": "delayed_feedback",
+      "case": 3,
+      "passed": false
+    },
+    {
+      "variant": "baseline",
+      "family": "long_sessions",
+      "case": 0,
+      "passed": false
+    },
+    {
+      "variant": "baseline",
+      "family": "long_sessions",
+      "case": 1,
+      "passed": false
+    },
+    {
+      "variant": "baseline",
+      "family": "long_sessions",
+      "case": 2,
+      "passed": true
+    },
+    {
+      "variant": "baseline",
+      "family": "long_sessions",
+      "case": 3,
+      "passed": false
+    },
+    {
+      "variant": "task_memory",
+      "family": "argument_corrections",
+      "case": 0,
+      "passed": false
+    },
+    {
+      "variant": "task_memory",
+      "family": "argument_corrections",
+      "case": 1,
+      "passed": false
+    },
+    {
+      "variant": "task_memory",
+      "family": "argument_corrections",
+      "case": 2,
+      "passed": true
+    },
+    {
+      "variant": "task_memory",
+      "family": "argument_corrections",
+      "case": 3,
+      "passed": true
+    },
+    {
+      "variant": "task_memory",
+      "family": "tool_failures",
+      "case": 0,
+      "passed": false
+    },
+    {
+      "variant": "task_memory",
+      "family": "tool_failures",
+      "case": 1,
+      "passed": false
+    },
+    {
+      "variant": "task_memory",
+      "family": "tool_failures",
+      "case": 2,
+      "passed": false
+    },
+    {
+      "variant": "task_memory",
+      "family": "tool_failures",
+      "case": 3,
+      "passed": false
+    },
+    {
+      "variant": "task_memory",
+      "family": "interruptions",
+      "case": 0,
+      "passed": false
+    },
+    {
+      "variant": "task_memory",
+      "family": "interruptions",
+      "case": 1,
+      "passed": false
+    },
+    {
+      "variant": "task_memory",
+      "family": "interruptions",
+      "case": 2,
+      "passed": false
+    },
+    {
+      "variant": "task_memory",
+      "family": "interruptions",
+      "case": 3,
+      "passed": true
+    },
+    {
+      "variant": "task_memory",
+      "family": "delayed_feedback",
+      "case": 0,
+      "passed": true
+    },
+    {
+      "variant": "task_memory",
+      "family": "delayed_feedback",
+      "case": 1,
+      "passed": false
+    },
+    {
+      "variant": "task_memory",
+      "family": "delayed_feedback",
+      "case": 2,
+      "passed": false
+    },
+    {
+      "variant": "task_memory",
+      "family": "delayed_feedback",
+      "case": 3,
+      "passed": false
+    },
+    {
+      "variant": "task_memory",
+      "family": "long_sessions",
+      "case": 0,
+      "passed": true
+    },
+    {
+      "variant": "task_memory",
+      "family": "long_sessions",
+      "case": 1,
+      "passed": true
+    },
+    {
+      "variant": "task_memory",
+      "family": "long_sessions",
+      "case": 2,
+      "passed": true
+    },
+    {
+      "variant": "task_memory",
+      "family": "long_sessions",
+      "case": 3,
+      "passed": true
+    },
+    {
+      "variant": "validated_execution",
+      "family": "argument_corrections",
+      "case": 0,
+      "passed": true
+    },
+    {
+      "variant": "validated_execution",
+      "family": "argument_corrections",
+      "case": 1,
+      "passed": true
+    },
+    {
+      "variant": "validated_execution",
+      "family": "argument_corrections",
+      "case": 2,
+      "passed": true
+    },
+    {
+      "variant": "validated_execution",
+      "family": "argument_corrections",
+      "case": 3,
+      "passed": true
+    },
+    {
+      "variant": "validated_execution",
+      "family": "tool_failures",
+      "case": 0,
+      "passed": true
+    },
+    {
+      "variant": "validated_execution",
+      "family": "tool_failures",
+      "case": 1,
+      "passed": true
+    },
+    {
+      "variant": "validated_execution",
+      "family": "tool_failures",
+      "case": 2,
+      "passed": true
+    },
+    {
+      "variant": "validated_execution",
+      "family": "tool_failures",
+      "case": 3,
+      "passed": true
+    },
+    {
+      "variant": "validated_execution",
+      "family": "interruptions",
+      "case": 0,
+      "passed": true
+    },
+    {
+      "variant": "validated_execution",
+      "family": "interruptions",
+      "case": 1,
+      "passed": false
+    },
+    {
+      "variant": "validated_execution",
+      "family": "interruptions",
+      "case": 2,
+      "passed": true
+    },
+    {
+      "variant": "validated_execution",
+      "family": "interruptions",
+      "case": 3,
+      "passed": true
+    },
+    {
+      "variant": "validated_execution",
+      "family": "delayed_feedback",
+      "case": 0,
+      "passed": true
+    },
+    {
+      "variant": "validated_execution",
+      "family": "delayed_feedback",
+      "case": 1,
+      "passed": true
+    },
+    {
+      "variant": "validated_execution",
+      "family": "delayed_feedback",
+      "case": 2,
+      "passed": false
+    },
+    {
+      "variant": "validated_execution",
+      "family": "delayed_feedback",
+      "case": 3,
+      "passed": true
+    },
+    {
+      "variant": "validated_execution",
+      "family": "long_sessions",
+      "case": 0,
+      "passed": false
+    },
+    {
+      "variant": "validated_execution",
+      "family": "long_sessions",
+      "case": 1,
+      "passed": false
+    },
+    {
+      "variant": "validated_execution",
+      "family": "long_sessions",
+      "case": 2,
+      "passed": true
+    },
+    {
+      "variant": "validated_execution",
+      "family": "long_sessions",
+      "case": 3,
+      "passed": false
+    },
+    {
+      "variant": "playback_recovery",
+      "family": "argument_corrections",
+      "case": 0,
+      "passed": false
+    },
+    {
+      "variant": "playback_recovery",
+      "family": "argument_corrections",
+      "case": 1,
+      "passed": false
+    },
+    {
+      "variant": "playback_recovery",
+      "family": "argument_corrections",
+      "case": 2,
+      "passed": true
+    },
+    {
+      "variant": "playback_recovery",
+      "family": "argument_corrections",
+      "case": 3,
+      "passed": true
+    },
+    {
+      "variant": "playback_recovery",
+      "family": "tool_failures",
+      "case": 0,
+      "passed": false
+    },
+    {
+      "variant": "playback_recovery",
+      "family": "tool_failures",
+      "case": 1,
+      "passed": false
+    },
+    {
+      "variant": "playback_recovery",
+      "family": "tool_failures",
+      "case": 2,
+      "passed": false
+    },
+    {
+      "variant": "playback_recovery",
+      "family": "tool_failures",
+      "case": 3,
+      "passed": false
+    },
+    {
+      "variant": "playback_recovery",
+      "family": "interruptions",
+      "case": 0,
+      "passed": false
+    },
+    {
+      "variant": "playback_recovery",
+      "family": "interruptions",
+      "case": 1,
+      "passed": true
+    },
+    {
+      "variant": "playback_recovery",
+      "family": "interruptions",
+      "case": 2,
+      "passed": false
+    },
+    {
+      "variant": "playback_recovery",
+      "family": "interruptions",
+      "case": 3,
+      "passed": true
+    },
+    {
+      "variant": "playback_recovery",
+      "family": "delayed_feedback",
+      "case": 0,
+      "passed": true
+    },
+    {
+      "variant": "playback_recovery",
+      "family": "delayed_feedback",
+      "case": 1,
+      "passed": false
+    },
+    {
+      "variant": "playback_recovery",
+      "family": "delayed_feedback",
+      "case": 2,
+      "passed": false
+    },
+    {
+      "variant": "playback_recovery",
+      "family": "delayed_feedback",
+      "case": 3,
+      "passed": false
+    },
+    {
+      "variant": "playback_recovery",
+      "family": "long_sessions",
+      "case": 0,
+      "passed": false
+    },
+    {
+      "variant": "playback_recovery",
+      "family": "long_sessions",
+      "case": 1,
+      "passed": false
+    },
+    {
+      "variant": "playback_recovery",
+      "family": "long_sessions",
+      "case": 2,
+      "passed": true
+    },
+    {
+      "variant": "playback_recovery",
+      "family": "long_sessions",
+      "case": 3,
+      "passed": false
+    },
+    {
+      "variant": "combined",
+      "family": "argument_corrections",
+      "case": 0,
+      "passed": true
+    },
+    {
+      "variant": "combined",
+      "family": "argument_corrections",
+      "case": 1,
+      "passed": true
+    },
+    {
+      "variant": "combined",
+      "family": "argument_corrections",
+      "case": 2,
+      "passed": true
+    },
+    {
+      "variant": "combined",
+      "family": "argument_corrections",
+      "case": 3,
+      "passed": true
+    },
+    {
+      "variant": "combined",
+      "family": "tool_failures",
+      "case": 0,
+      "passed": true
+    },
+    {
+      "variant": "combined",
+      "family": "tool_failures",
+      "case": 1,
+      "passed": true
+    },
+    {
+      "variant": "combined",
+      "family": "tool_failures",
+      "case": 2,
+      "passed": true
+    },
+    {
+      "variant": "combined",
+      "family": "tool_failures",
+      "case": 3,
+      "passed": true
+    },
+    {
+      "variant": "combined",
+      "family": "interruptions",
+      "case": 0,
+      "passed": true
+    },
+    {
+      "variant": "combined",
+      "family": "interruptions",
+      "case": 1,
+      "passed": true
+    },
+    {
+      "variant": "combined",
+      "family": "interruptions",
+      "case": 2,
+      "passed": true
+    },
+    {
+      "variant": "combined",
+      "family": "interruptions",
+      "case": 3,
+      "passed": true
+    },
+    {
+      "variant": "combined",
+      "family": "delayed_feedback",
+      "case": 0,
+      "passed": true
+    },
+    {
+      "variant": "combined",
+      "family": "delayed_feedback",
+      "case": 1,
+      "passed": true
+    },
+    {
+      "variant": "combined",
+      "family": "delayed_feedback",
+      "case": 2,
+      "passed": true
+    },
+    {
+      "variant": "combined",
+      "family": "delayed_feedback",
+      "case": 3,
+      "passed": true
+    },
+    {
+      "variant": "combined",
+      "family": "long_sessions",
+      "case": 0,
+      "passed": true
+    },
+    {
+      "variant": "combined",
+      "family": "long_sessions",
+      "case": 1,
+      "passed": true
+    },
+    {
+      "variant": "combined",
+      "family": "long_sessions",
+      "case": 2,
+      "passed": true
+    },
+    {
+      "variant": "combined",
+      "family": "long_sessions",
+      "case": 3,
+      "passed": true
+    }
+  ],
+  "status": "passed"
+}

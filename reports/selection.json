@@ -1,0 +1,8 @@
+{
+  "winner": "combined",
+  "gain_over_baseline": 0.75,
+  "target_met": true,
+  "rule": "zero duplicate actions and unsupported claims; then completion, recovery, controller p95",
+  "live_audio_qualified": false,
+  "manifest_sha256": "7c19015e4923316615bddf3c9c9e1ab333d916bb0f31f88c3423f18b726f4dd9"
+}

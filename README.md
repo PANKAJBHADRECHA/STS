@@ -70,6 +70,14 @@ The server binds only to 127.0.0.1 and rejects cross-origin requests. Microphone
 
 Response generation is capped and context is bounded to six turns. The selected model sometimes phrases user facts in the first person, and accuracy beyond this small test set is not established. Stop playback stops the speaker; it does not implement full-duplex barge-in.
 
+## Experimental native duplex mode
+
+A smaller **F-Actor/Mimi MLX 4-bit** port now supports simultaneous microphone capture and generated audio playback. The actual browser streaming path was tested with recorded speech. It remains experimental: the best initial five-case run processed audio about **1.94× slower than real time**, and independent transcripts exposed off-topic replies. It is not the selected voice app.
+
+Double-click **Start Duplex Experiment.command** and open **http://127.0.0.1:8767** to inspect it. Use headphones. Startup warms the decoder before capture; bounded queues stop a session if inference falls behind. The user's physical microphone and live human conversation remain untested.
+
+See [native duplex results and reproduction](docs/DUPLEX_RESULTS.md). Hugging Face authentication and PersonaPlex access have been completed locally; [the access probe](reports/hugging-face-access.json) returned HTTP 200. Credentials and weights are excluded from Git.
+
 ## Earlier controller research
 
 The same repository retains the five-policy reliability experiment under **Controller experiments** and **Scenario replay**. Its 1,500 synthetic evaluations measure task-state logic, not speech-model performance. All five variants remain reproducible; the combined controller won that separate suite. See [controller outcomes](reports/RESULTS.md), [evaluation definitions](docs/evaluation.md), [research dossier](docs/research.md) and [build memo](docs/build-memo.md).

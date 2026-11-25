@@ -1,0 +1,43 @@
+{
+  "selected_general_voice": "LFM2.5-Audio-1.5B-4bit with brief prompt",
+  "selected_general_voice_full_duplex": false,
+  "experimental_duplex": "F-Actor q4 with pipelined codec and casual narrative",
+  "best_measured_duplex_timing": "factor-duplex-pipeline.json",
+  "full_duplex_live_qualified": false,
+  "completed_native_duplex_cases": 20,
+  "candidates": [
+    {
+      "report": "factor-duplex.json",
+      "completed_cases": 5,
+      "mean_real_time_factor": 2.3496633274116903,
+      "peak_mlx_bytes": 1486422778,
+      "timing_qualified": false,
+      "quality_qualified": false
+    },
+    {
+      "report": "factor-duplex-pipeline.json",
+      "completed_cases": 5,
+      "mean_real_time_factor": 1.9352356283197878,
+      "peak_mlx_bytes": 1486422778,
+      "timing_qualified": false,
+      "quality_qualified": false
+    },
+    {
+      "report": "factor-duplex-fused.json",
+      "completed_cases": 5,
+      "mean_real_time_factor": 2.4414474358127336,
+      "peak_mlx_bytes": 1486422778,
+      "timing_qualified": false,
+      "quality_qualified": false
+    },
+    {
+      "report": "factor-duplex-casual.json",
+      "completed_cases": 5,
+      "mean_real_time_factor": 2.1550768482484273,
+      "peak_mlx_bytes": 1501168378,
+      "timing_qualified": false,
+      "quality_qualified": false
+    }
+  ],
+  "decision": "Keep LFM as the default native STS app. Retain the F-Actor microphone demo as explicitly unqualified research."
+}

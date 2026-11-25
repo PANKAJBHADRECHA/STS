@@ -1,0 +1,58 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Experimental native duplex</title>
+<style>body{font:18px system-ui;background:#101923;color:#e8edf3;max-width:760px;margin:6vh auto;padding:24px}h1{font-size:32px}button{font:inherit;padding:12px 20px;border:0;border-radius:8px;margin:8px 8px 8px 0}#status{padding:18px;background:#1e2b3a;border-radius:10px}#transcript{line-height:1.6;white-space:pre-wrap}small{color:#afc1d3}a{color:#9bcfff}</style>
+<h1>Experimental native duplex</h1><p>F-Actor listens and generates speech on the same timeline. This Mac has not passed real-time or conversation-quality qualification. Replies may drift or pause; the session stops if processing falls behind.</p>
+<p>Use headphones. The microphone stays active during playback. Audio stays on this Mac. Sessions are limited to 60 seconds.</p>
+<button id="start">Start conversation</button><button id="stop" disabled>Stop</button><p id="status" role="status">Ready to load the model.</p><small id="metrics"></small><p id="transcript"></p><p><a href="http://127.0.0.1:8765">Open the selected turn-based voice app</a></p>
+<script>
+let socket,context,stream,capture,nextTime=0,sources=new Set();
+window.duplexMetrics={sent:0,received:0,captureDuringPlayback:0,playbackFrames:0};
+const start=document.querySelector('#start'),stop=document.querySelector('#stop'),status=document.querySelector('#status');
+async function finish(message){
+  if(socket){const old=socket;socket=null;old.close();}
+  if(capture){capture.disconnect();capture=null;}
+  stream?.getTracks().forEach(track=>track.stop());stream=null;
+  for(const source of sources){try{source.stop();}catch{}}sources.clear();
+  if(context){const old=context;context=null;await old.close();}
+  start.disabled=false;stop.disabled=true;status.textContent=message;
+}
+stop.onclick=()=>finish('Conversation stopped.');
+start.onclick=async()=>{
+  start.disabled=true;stop.disabled=false;document.querySelector('#transcript').textContent='';
+  window.duplexMetrics={sent:0,received:0,captureDuringPlayback:0,playbackFrames:0};
+  try{
+    context=new AudioContext({sampleRate:24000});await context.resume();
+    if(context.sampleRate!==24000)throw Error('This browser did not provide 24 kHz audio.');
+    stream=await navigator.mediaDevices.getUserMedia({audio:{channelCount:1,echoCancellation:true,noiseSuppression:true}});
+    await context.audioWorklet.addModule('/duplex-worklet.js');
+    const ws=new WebSocket('ws://127.0.0.1:8768');socket=ws;ws.binaryType='arraybuffer';
+    ws.onclose=e=>{if(socket===ws)finish(e.reason||'Connection closed.');};
+    ws.onerror=()=>{if(socket===ws)finish('Could not connect to the local duplex engine.');};
+    ws.onmessage=async event=>{
+      if(socket!==ws)return;
+      if(typeof event.data==='string'){
+        const data=JSON.parse(event.data);
+        if(data.status==='loading')status.textContent='Loading native model…';
+        if(data.status==='ready'){
+          const input=context.createMediaStreamSource(stream);capture=new AudioWorkletNode(context,'duplex-capture');
+          const mute=context.createGain();mute.gain.value=0;input.connect(capture).connect(mute).connect(context.destination);
+          capture.port.onmessage=e=>{
+            if(socket?.readyState===WebSocket.OPEN){socket.send(e.data);duplexMetrics.sent++;if(sources.size)duplexMetrics.captureDuringPlayback++;}
+          };
+          status.textContent='Listening and speaking. Microphone remains active.';nextTime=context.currentTime+.24;
+        }
+        if(data.status==='streaming'){
+          document.querySelector('#transcript').textContent+=data.text;
+          document.querySelector('#metrics').textContent=`Frame ${data.frame} · ${data.processing_ms.toFixed(0)} ms processing / 80 ms audio · ${data.queued_frames} frames queued`;
+        }
+        if(data.status==='stopped')finish('Engine stopped: '+data.reason);
+      }else if(context){
+        const pcm=new Float32Array(event.data),buffer=context.createBuffer(1,pcm.length,24000);buffer.copyToChannel(pcm,0);
+        const source=context.createBufferSource();source.buffer=buffer;source.connect(context.destination);
+        nextTime=Math.max(nextTime,context.currentTime+.02);source.start(nextTime);nextTime+=buffer.duration;sources.add(source);
+        source.onended=()=>sources.delete(source);duplexMetrics.received++;duplexMetrics.playbackFrames++;
+      }
+    };
+  }catch(error){await finish(error.message);}
+};
+window.addEventListener('pagehide',()=>{socket?.close();stream?.getTracks().forEach(t=>t.stop());});
+</script></html>

@@ -18,3 +18,5 @@ The login utility is already installed in this checkout's `.venv-sts`. For a fre
 Sources: [Hugging Face CLI login](https://huggingface.co/docs/huggingface_hub/guides/cli), [token permissions](https://huggingface.co/docs/hub/security-tokens), [gated-model access](https://huggingface.co/docs/hub/models-gated).
 
 Acceptance and authentication remove the access blocker; they do not make PersonaPlex's larger weights fit in 8 GB. The working voice application uses the smaller LFM model independently of PersonaPlex access.
+
+Local setup was completed on 2026-11-25: the narrowly scoped read credential is saved through the Hugging Face login utility, and an authenticated PersonaPlex weight-access probe returned HTTP 200. See `reports/hugging-face-access.json`. The credential itself is outside this repository.

@@ -1,0 +1,129 @@
+{
+  "status": "completed",
+  "mode": "actual_native_duplex_inference",
+  "checkpoint": "JSALT2026-Conv-AI-Simulator/f-actor-mimi-behavior-sd",
+  "revision": "7e45bf192ab1c7a3db5e7a26715119f5b6f4f1f1",
+  "quantization_bits": 4,
+  "cases": [
+    {
+      "name": "greeting",
+      "status": "completed",
+      "frames": 160,
+      "input_during_output": true,
+      "last_frame_ms": 202.565582934767,
+      "output_seconds": 12.8,
+      "output_rms": 0.06071416661143303,
+      "model_text": "so    user     requests       are  asked    for  the last    five    report          right",
+      "control_tokens": {
+        "[SILENCE_PAD]": 111,
+        "[EPAD]": 10,
+        "[WORD_PAD]": 26,
+        "[UTTERANCE_PAD]": 2
+      },
+      "overlapping_speech_frames": 9,
+      "wall_seconds": 30.192329083103687,
+      "real_time_factor": 2.3559104817104526,
+      "frame_p50_ms": 178.47897903993726,
+      "frame_p95_ms": 347.5797017803415,
+      "peak_mlx_bytes": 1415244720
+    },
+    {
+      "name": "correction",
+      "status": "completed",
+      "frames": 160,
+      "input_during_output": true,
+      "last_frame_ms": 127.48212506994605,
+      "output_seconds": 12.8,
+      "output_rms": 0.099977046251297,
+      "model_text": "hey  user    you  know    i was  thinking    about    the new  project       we're handling          and  i believe     we  really   need   to focus     on  the key   objectives        first     to identify        any  gaps     in the market     analysis       section          because      if   we don't  market    quickly      we'll      uh",
+      "control_tokens": {
+        "[SILENCE_PAD]": 1,
+        "[EPAD]": 33,
+        "[WORD_PAD]": 73,
+        "[UTTERANCE_PAD]": 7
+      },
+      "overlapping_speech_frames": 20,
+      "wall_seconds": 29.74819824984297,
+      "real_time_factor": 2.3214172079678974,
+      "frame_p50_ms": 159.4808748923242,
+      "frame_p95_ms": 325.2441838150843,
+      "peak_mlx_bytes": 1486422778
+    },
+    {
+      "name": "interruption",
+      "status": "completed",
+      "frames": 160,
+      "input_during_output": true,
+      "last_frame_ms": 114.182332996279,
+      "output_seconds": 12.8,
+      "output_rms": 0.06677862256765366,
+      "model_text": "hey   user            yeah     that's  fine                                     nice                   it's all  good           not   too  much  time    to  ask",
+      "control_tokens": {
+        "[SILENCE_PAD]": 103,
+        "[EPAD]": 14,
+        "[WORD_PAD]": 25,
+        "[UTTERANCE_PAD]": 1
+      },
+      "overlapping_speech_frames": 8,
+      "wall_seconds": 29.99445008393377,
+      "real_time_factor": 2.3400316048355307,
+      "frame_p50_ms": 169.34160375967622,
+      "frame_p95_ms": 310.77177724800964,
+      "peak_mlx_bytes": 1486422778
+    },
+    {
+      "name": "noise",
+      "status": "completed",
+      "frames": 160,
+      "input_during_output": true,
+      "last_frame_ms": 214.1756657510996,
+      "output_seconds": 12.8,
+      "output_rms": 0.06252118945121765,
+      "model_text": "hi  user         did   you  manage    to  finish     the report       on  the project      deadlines",
+      "control_tokens": {
+        "[SILENCE_PAD]": 107,
+        "[EPAD]": 11,
+        "[WORD_PAD]": 26,
+        "[UTTERANCE_PAD]": 3
+      },
+      "overlapping_speech_frames": 3,
+      "wall_seconds": 33.472483249846846,
+      "real_time_factor": 2.607407334035088,
+      "frame_p50_ms": 200.98022953607142,
+      "frame_p95_ms": 388.1780091440303,
+      "peak_mlx_bytes": 1486422778
+    },
+    {
+      "name": "silence",
+      "status": "completed",
+      "frames": 160,
+      "input_during_output": true,
+      "last_frame_ms": 488.2068750448525,
+      "output_seconds": 12.8,
+      "output_rms": 0.0980706736445427,
+      "model_text": "so      um           i  wanted    to go  over  the  budget    allocation       for next    week's  event           i think   it's critical     to       like       establish        a system      that  can  properly       allocate      resources       now   and then",
+      "control_tokens": {
+        "[SILENCE_PAD]": 28,
+        "[EPAD]": 25,
+        "[WORD_PAD]": 61,
+        "[UTTERANCE_PAD]": 13
+      },
+      "overlapping_speech_frames": 0,
+      "wall_seconds": 33.13142245914787,
+      "real_time_factor": 2.5824705505146994,
+      "frame_p50_ms": 187.65847943723202,
+      "frame_p95_ms": 406.0733736027028,
+      "peak_mlx_bytes": 1486422778
+    }
+  ],
+  "physical_microphone_tested": false,
+  "inference_mocked": false,
+  "live_qualified": false,
+  "quality_qualified": false,
+  "codec_pipeline": true,
+  "starts_first": true,
+  "depth_evaluation": "single_sync",
+  "load_seconds": 1.0863912501372397,
+  "load_peak_mlx_bytes": 1270597134,
+  "timing_qualified": false
+}

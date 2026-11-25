@@ -1,0 +1,26 @@
+{
+  "evaluation_only": "Whisper tiny.en, not part of the STS serving path.",
+  "limitations": "ASR can make mistakes. No human listening or quality rating is claimed.",
+  "outputs": [
+    {
+      "file": "correction-reply.wav",
+      "transcript": "user, you know, I was thinking about the new project we're handling, and I believe we really need to focus on the key objectives first to identify any gaps in the market now as a section, because if we don't market quickly, we'll"
+    },
+    {
+      "file": "greeting-reply.wav",
+      "transcript": "So, user requirements are asked for the last five report, right?"
+    },
+    {
+      "file": "interruption-reply.wav",
+      "transcript": "Hey user. Yeah, that's fine. Nice. It's all good. Not too much time to ask"
+    },
+    {
+      "file": "noise-reply.wav",
+      "transcript": "Hi user, did you manage to finish the report on the project deadlines?"
+    },
+    {
+      "file": "silence-reply.wav",
+      "transcript": "So, um, I wanted to go over budget allocation for next week's event.  I think it's critical too, like bestialysis system that can properly allocate resources now and then."
+    }
+  ]
+}

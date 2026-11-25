@@ -1,0 +1,129 @@
+{
+  "status": "completed",
+  "mode": "actual_native_duplex_inference",
+  "checkpoint": "JSALT2026-Conv-AI-Simulator/f-actor-mimi-behavior-sd",
+  "revision": "7e45bf192ab1c7a3db5e7a26715119f5b6f4f1f1",
+  "quantization_bits": 4,
+  "cases": [
+    {
+      "name": "greeting",
+      "status": "completed",
+      "frames": 160,
+      "input_during_output": true,
+      "last_frame_ms": 161.1142917536199,
+      "output_seconds": 12.8,
+      "output_rms": 0.11472155898809433,
+      "model_text": "so       uh      today    was  quite    eventful     you  know        but  then   again      we  went  to  that   new caf\u00e9           on  our  way  to  the  office           they  have   this  espresso      that's  supposed   to be  amazing       and  i  was  super    excited       about  the  new  project       we",
+      "control_tokens": {
+        "[SILENCE_PAD]": 7,
+        "[EPAD]": 40,
+        "[WORD_PAD]": 59,
+        "[UTTERANCE_PAD]": 10
+      },
+      "overlapping_speech_frames": 7,
+      "wall_seconds": 22.9388392502442,
+      "real_time_factor": 1.7878599287723773,
+      "frame_p50_ms": 133.25927034020424,
+      "frame_p95_ms": 283.03393074311316,
+      "peak_mlx_bytes": 1424944048
+    },
+    {
+      "name": "correction",
+      "status": "completed",
+      "frames": 160,
+      "input_during_output": true,
+      "last_frame_ms": 203.41920806095004,
+      "output_seconds": 12.8,
+      "output_rms": 0.05403875559568405,
+      "model_text": "hey  user        so   what   did you  do  today",
+      "control_tokens": {
+        "[SILENCE_PAD]": 133,
+        "[EPAD]": 7,
+        "[WORD_PAD]": 9,
+        "[UTTERANCE_PAD]": 3
+      },
+      "overlapping_speech_frames": 14,
+      "wall_seconds": 29.550651375204325,
+      "real_time_factor": 2.304358297478757,
+      "frame_p50_ms": 169.6169376373291,
+      "frame_p95_ms": 322.7069693617523,
+      "peak_mlx_bytes": 1501168378
+    },
+    {
+      "name": "interruption",
+      "status": "completed",
+      "frames": 160,
+      "input_during_output": true,
+      "last_frame_ms": 115.76812528073788,
+      "output_seconds": 12.8,
+      "output_rms": 0.08830323815345764,
+      "model_text": "hey  user          how's   your  day   been  going    so   far                               good                   mine   was  hectic          how   about    you",
+      "control_tokens": {
+        "[SILENCE_PAD]": 94,
+        "[EPAD]": 16,
+        "[WORD_PAD]": 29,
+        "[UTTERANCE_PAD]": 4
+      },
+      "overlapping_speech_frames": 7,
+      "wall_seconds": 25.127783041913062,
+      "real_time_factor": 1.9610151723827585,
+      "frame_p50_ms": 133.27131234109402,
+      "frame_p95_ms": 294.44190380163474,
+      "peak_mlx_bytes": 1501168378
+    },
+    {
+      "name": "noise",
+      "status": "completed",
+      "frames": 160,
+      "input_during_output": true,
+      "last_frame_ms": 136.40487473458052,
+      "output_seconds": 12.8,
+      "output_rms": 0.06516410410404205,
+      "model_text": "hi     you  know  how i  was  thinking    about  today's    weather",
+      "control_tokens": {
+        "[SILENCE_PAD]": 130,
+        "[EPAD]": 9,
+        "[WORD_PAD]": 10
+      },
+      "overlapping_speech_frames": 1,
+      "wall_seconds": 25.39037162484601,
+      "real_time_factor": 1.981449866834737,
+      "frame_p50_ms": 137.17714650556445,
+      "frame_p95_ms": 262.8875295165923,
+      "peak_mlx_bytes": 1501168378
+    },
+    {
+      "name": "silence",
+      "status": "completed",
+      "frames": 160,
+      "input_during_output": true,
+      "last_frame_ms": 453.03983287885785,
+      "output_seconds": 12.8,
+      "output_rms": 0.12640589475631714,
+      "model_text": "so   you know   how  we're both    in  the same    day    right          like    today        we're meeting    new  people       and     um        i  just   think   there's so  many   things    to  do  around    here       like   the project      deadline           and   then you  know  the  afternoon       at the park",
+      "control_tokens": {
+        "[SILENCE_PAD]": 9,
+        "[EPAD]": 34,
+        "[WORD_PAD]": 61,
+        "[UTTERANCE_PAD]": 10
+      },
+      "overlapping_speech_frames": 0,
+      "wall_seconds": 35.13745504198596,
+      "real_time_factor": 2.740700975773507,
+      "frame_p50_ms": 197.89297902025282,
+      "frame_p95_ms": 373.66743611637474,
+      "peak_mlx_bytes": 1501168378
+    }
+  ],
+  "physical_microphone_tested": false,
+  "inference_mocked": false,
+  "live_qualified": false,
+  "quality_qualified": false,
+  "codec_pipeline": true,
+  "starts_first": true,
+  "casual_narrative": true,
+  "depth_evaluation": "per_codebook_sync",
+  "load_seconds": 1.1048268750309944,
+  "load_peak_mlx_bytes": 1270597134,
+  "timing_qualified": false
+}

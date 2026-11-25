@@ -1,0 +1,6 @@
+{
+  "semantic_codebook_byte_identical": true,
+  "compared_bytes": 2097152,
+  "hf_model": "kyutai/mimi",
+  "local_checkpoint": "tokenizer-e351c8d8-checkpoint125.safetensors"
+}

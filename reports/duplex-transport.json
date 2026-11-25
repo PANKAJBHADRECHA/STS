@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "native_inference_mocked": false,
+  "cases": [
+    {
+      "name": "foreign_origin",
+      "http_status": 403,
+      "passed": true
+    },
+    {
+      "name": "malformed_audio_frame",
+      "passed": true
+    },
+    {
+      "name": "queue_overload",
+      "close_code": 1013,
+      "passed": true
+    }
+  ]
+}

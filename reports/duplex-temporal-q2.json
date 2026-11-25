@@ -1,0 +1,32 @@
+{
+  "mode": "actual_duplex_model_frame_probe",
+  "status": "resource_stopped",
+  "cases": [
+    {
+      "name": "greeting",
+      "status": "resource_stopped",
+      "frames": 2,
+      "last_frame_ms": 56413.863291963935,
+      "reason": "Frame exceeded 30 seconds or case exceeded 180 seconds",
+      "output_seconds": 0.08,
+      "output_rms": 0.02116297371685505,
+      "audio_seconds": 0.16,
+      "wall_seconds": 62.17479991680011,
+      "frame_p50_ms": 31045.932437526062,
+      "frame_p95_ms": 53877.07020652015,
+      "real_time_factor": 388.0741554690758,
+      "model_text": " into",
+      "peak_mlx_bytes": 3329728920
+    }
+  ],
+  "checkpoint": "kyutai/moshiko-mlx-q4",
+  "revision": "18e4df760a34d5977a34517d7d1580e07acbb2f1",
+  "local_variant": "model.temporal-q2.safetensors",
+  "live_qualified": false,
+  "physical_microphone_tested": false,
+  "quality_qualified": false,
+  "input_during_output": true,
+  "load_seconds": 5.5258735828101635,
+  "load_peak_mlx_bytes": 3162404720,
+  "timing_qualified": false
+}

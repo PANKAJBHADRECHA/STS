@@ -1,0 +1,26 @@
+{
+  "evaluation_only": "Whisper tiny.en, not part of the STS serving path.",
+  "limitations": "ASR can make mistakes. No human listening or quality rating is claimed.",
+  "outputs": [
+    {
+      "file": "correction-reply.wav",
+      "transcript": "Hey sir, so what did you do today?"
+    },
+    {
+      "file": "greeting-reply.wav",
+      "transcript": "So, uh, today was quite a vent fire, you know, but then again, went to that new chef,  they are away to the office.  They have this press booth that's supposed to be amazing and I was super excited about  the new project."
+    },
+    {
+      "file": "interruption-reply.wav",
+      "transcript": "He used her. How's your day been going so far?  Good.  Mine was hectic. How about you?"
+    },
+    {
+      "file": "noise-reply.wav",
+      "transcript": "Hey, you know, I was thinking about today's weather."
+    },
+    {
+      "file": "silence-reply.wav",
+      "transcript": "So you know how we're both in the same day right like today we're meeting new people and I just think there's so many things to do around here  Like the project deadline and then you know the afternoon that the"
+    }
+  ]
+}

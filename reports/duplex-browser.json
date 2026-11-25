@@ -1,0 +1,18 @@
+{
+  "status": "streaming_path_passed",
+  "inference_mocked": false,
+  "physical_microphone_tested": false,
+  "device": "Chromium WAV-backed microphone",
+  "metrics": {
+    "sent": 14,
+    "received": 13,
+    "captureDuringPlayback": 11,
+    "playbackFrames": 13
+  },
+  "observed_status": "Listening and speaking. Microphone remains active.",
+  "stop_released_microphone_and_audio_context": true,
+  "mobile_overflow": false,
+  "sustained_real_time_qualified": false,
+  "conversation_quality_qualified": false,
+  "console_errors": []
+}

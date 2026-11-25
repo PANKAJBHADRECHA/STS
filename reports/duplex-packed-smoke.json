@@ -1,0 +1,12 @@
+{
+  "mode": "actual_duplex_model_frame_probe",
+  "status": "resource_stopped",
+  "cases": [],
+  "live_qualified": false,
+  "load_seconds": 18.948067041113973,
+  "load_peak_mlx_bytes": 4806571888,
+  "reason": "Stopped after first frame took 88.293 seconds under memory pressure.",
+  "first_frame_ms": 88293,
+  "frames_completed": 1,
+  "timing_qualified": false
+}

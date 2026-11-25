@@ -24,6 +24,7 @@ def main():
             page.on("pageerror",lambda e:errors.append(str(e)))
             page.on("console",lambda m:errors.append(m.text) if m.type=="error" else None)
             page.goto(url);expect(page.locator("tbody tr")).to_have_count(5)
+            page.get_by_role('button',name='Controller experiments',exact=True).click()
             with page.expect_response(lambda r:r.url.endswith('/api/evaluate') and r.request.method=='POST') as response:
                 page.locator('#run').click()
             assert response.value.status==200
@@ -51,7 +52,7 @@ def main():
                 page.get_by_role('button',name=label,exact=True).click()
                 expect(page.locator('#document-body')).not_to_have_text('Loading document…')
                 assert len(page.locator('#document-body').inner_text())>500
-            page.get_by_role('button',name='Experiment',exact=True).click()
+            page.get_by_role('button',name='Controller experiments',exact=True).click()
             with page.expect_download() as download:
                 page.locator('#export').click()
             assert download.value.suggested_filename.endswith('.json')

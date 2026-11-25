@@ -46,3 +46,7 @@ The separate Moshi smoke test uses the public q4 checkpoint at a pinned Hugging 
 The child worker has explicit RSS, swap-growth and wall-clock budgets. If it fails or is stopped, the report preserves the outcome and no live-mode claim is made. PersonaPlex access is checked separately; an HTTP 401 is a blocked access gate, not a failed model-quality evaluation.
 
 No actual microphone session, native tool-calling model integration, neural self-listening ablation, official τ-Voice run or thirty-minute wall-clock speech soak is represented by the controller report.
+
+## Working native voice addition
+
+The current Voice chat tab uses LFM2.5-Audio directly for actual waveform input and generated speech. Its own recipe comparison, microphone-path browser tests and limitations are in `reports/VOICE_RESULTS.md`. Those new results are separate from the controller report described above. A fixture-backed browser microphone is tested without mocking model responses; no physical microphone/human conversation or full-duplex capability is claimed.

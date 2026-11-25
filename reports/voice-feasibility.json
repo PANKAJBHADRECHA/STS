@@ -1,0 +1,32 @@
+{
+  "platform": "Darwin",
+  "architecture": "arm64",
+  "python": "3.12.7",
+  "memory_bytes": 8589934592,
+  "free_disk_bytes": 26297475072,
+  "packages": {
+    "mlx": true,
+    "moshi_mlx": false,
+    "personaplex_mlx": false
+  },
+  "hf_token_configured": false,
+  "capabilities": {
+    "controller_simulation": true,
+    "wav_validation": true,
+    "native_sts_inference_verified": true,
+    "live_audio_qualified": true,
+    "turn_based_voice_verified": true,
+    "full_duplex_verified": false,
+    "native_tool_call_integration": false,
+    "neural_self_listening": false
+  },
+  "runtime_revisions": {
+    "personaplex_mlx": "7b29cfc4d9110f6b9d831b141e62f3d16f0bbe77",
+    "moshi": "e6a55d2722a65870ef52a6c9f6ecfc0e90f38362"
+  },
+  "notes": [
+    "Installed packages do not establish model availability or live performance.",
+    "PersonaPlex runtime may fall back from missing q4 weights to full precision; do not use that fallback on 8 GB.",
+    "Playback acknowledgements prove client rendering, not that a human heard or understood audio."
+  ]
+}

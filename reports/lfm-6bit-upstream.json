@@ -1,0 +1,162 @@
+{
+  "mode": "actual_native_audio_conversations",
+  "checkpoint": ".runtime/lfm-6bit",
+  "sampling": "upstream",
+  "cases": [
+    {
+      "case": "greeting",
+      "text": "I\u2019m doing well, thanks! How can I help you today?",
+      "input_seconds": 1.715,
+      "output": {
+        "sample_rate": 24000,
+        "channels": 1,
+        "samples_per_channel": 126720,
+        "duration_seconds": 5.28,
+        "rms": 0.044505645353481935,
+        "clipped_fraction": 0.0
+      },
+      "wall_seconds": 10.785942875314504,
+      "generation_seconds": 10.326032291166484,
+      "first_token_seconds": 1.154058791231364,
+      "first_audio_token_seconds": 1.5550579582341015,
+      "audio_frames": 66,
+      "generated_tokens": 82,
+      "truncated": false,
+      "turn": 1,
+      "model_peak_memory_bytes": 2090458948,
+      "mode": "native_sts_turn_based",
+      "sampling": "upstream",
+      "real_time_factor": 2.0427922112338073
+    },
+    {
+      "case": "arithmetic",
+      "text": "Two plus three equals five.",
+      "input_seconds": 2.533375,
+      "output": {
+        "sample_rate": 24000,
+        "channels": 1,
+        "samples_per_channel": 51840,
+        "duration_seconds": 2.16,
+        "rms": 0.03880955338427266,
+        "clipped_fraction": 0.0
+      },
+      "wall_seconds": 4.473321916069835,
+      "generation_seconds": 4.308141374960542,
+      "first_token_seconds": 0.3563723750412464,
+      "first_audio_token_seconds": 1.0543716251850128,
+      "audio_frames": 27,
+      "generated_tokens": 35,
+      "truncated": false,
+      "turn": 1,
+      "model_peak_memory_bytes": 2433631780,
+      "mode": "native_sts_turn_based",
+      "sampling": "upstream",
+      "real_time_factor": 2.0709823685508497
+    },
+    {
+      "case": "memory_start",
+      "text": "Got it, Maya and coffee sound great. What\u2019s your favorite coffee flavor?",
+      "input_seconds": 4.009666666666667,
+      "output": {
+        "sample_rate": 24000,
+        "channels": 1,
+        "samples_per_channel": 111360,
+        "duration_seconds": 4.64,
+        "rms": 0.042078920592600884,
+        "clipped_fraction": 0.0
+      },
+      "wall_seconds": 9.236706040799618,
+      "generation_seconds": 9.046370540745556,
+      "first_token_seconds": 0.5893687079660594,
+      "first_audio_token_seconds": 1.0506886248476803,
+      "audio_frames": 58,
+      "generated_tokens": 77,
+      "truncated": false,
+      "turn": 1,
+      "model_peak_memory_bytes": 2448458396,
+      "mode": "native_sts_turn_based",
+      "sampling": "upstream",
+      "real_time_factor": 1.9906694053447453
+    },
+    {
+      "case": "memory_followup",
+      "text": "I\u2019m Maya, and my favorite drink is a smooth latte with a hint of cinnamon. How about you?",
+      "input_seconds": 1.9992916666666667,
+      "output": {
+        "sample_rate": 24000,
+        "channels": 1,
+        "samples_per_channel": 168960,
+        "duration_seconds": 7.04,
+        "rms": 0.03805600094808222,
+        "clipped_fraction": 0.0
+      },
+      "wall_seconds": 14.626474834047258,
+      "generation_seconds": 14.124636916909367,
+      "first_token_seconds": 0.9046252500265837,
+      "first_audio_token_seconds": 1.5037417919375002,
+      "audio_frames": 88,
+      "generated_tokens": 113,
+      "truncated": false,
+      "turn": 2,
+      "model_peak_memory_bytes": 2584048224,
+      "mode": "native_sts_turn_based",
+      "sampling": "upstream",
+      "real_time_factor": 2.0776242661998947
+    },
+    {
+      "case": "correction",
+      "text": "I\u2019m sorry, I can\u2019t see your calendar, but you can open it and look for the Tuesday entry. Does that work for you?",
+      "input_seconds": 4.825875,
+      "output": {
+        "sample_rate": 24000,
+        "channels": 1,
+        "samples_per_channel": 241920,
+        "duration_seconds": 10.08,
+        "rms": 0.037656530731375704,
+        "clipped_fraction": 0.0
+      },
+      "wall_seconds": 19.09283824963495,
+      "generation_seconds": 18.767152207903564,
+      "first_token_seconds": 0.7198620829731226,
+      "first_audio_token_seconds": 1.252778624650091,
+      "audio_frames": 126,
+      "generated_tokens": 157,
+      "truncated": false,
+      "turn": 1,
+      "model_peak_memory_bytes": 2584048224,
+      "mode": "native_sts_turn_based",
+      "sampling": "upstream",
+      "real_time_factor": 1.8941307787336261
+    },
+    {
+      "case": "upstream_recording",
+      "text": "Sure! How about something like \"Handcrafted Woodworking, Perfectly Made for You\" or \"Your Home Made with Passion and Precision.\" Does either of these capture the vibe you want?",
+      "input_seconds": 4.9039375,
+      "output": {
+        "sample_rate": 24000,
+        "channels": 1,
+        "samples_per_channel": 297600,
+        "duration_seconds": 12.4,
+        "rms": 0.048395307359008335,
+        "clipped_fraction": 0.0
+      },
+      "wall_seconds": 23.37863533385098,
+      "generation_seconds": 23.020016999915242,
+      "first_token_seconds": 0.44332029204815626,
+      "first_audio_token_seconds": 1.1638587499037385,
+      "audio_frames": 155,
+      "generated_tokens": 199,
+      "truncated": false,
+      "turn": 1,
+      "model_peak_memory_bytes": 2584048224,
+      "mode": "native_sts_turn_based",
+      "sampling": "upstream",
+      "real_time_factor": 1.8853738172460468
+    }
+  ],
+  "limitations": [
+    "User fixture speech is synthesized except the upstream recorded question.",
+    "No live human microphone session or full-duplex barge-in is claimed."
+  ],
+  "load_seconds": 1.2744257091544569
+}

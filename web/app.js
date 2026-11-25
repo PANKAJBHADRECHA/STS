@@ -30,13 +30,11 @@ document.querySelectorAll('nav button').forEach(button=>button.onclick=async()=>
   document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b===button));
   document.querySelectorAll('.view').forEach(v=>v.hidden=true);
   const name=button.dataset.view;
-  if(['experiment','replay'].includes(name)){$(name).hidden=false;return;}
+  if(['voice','experiment','replay'].includes(name)){$(name).hidden=false;return;}
   $('document').hidden=false;$('document-title').textContent=button.textContent;$('document-body').textContent='Loading document…';
   try {const doc=await request('/api/document?name='+encodeURIComponent(name));if(token===viewRequest)$('document-body').textContent=doc.text;} catch(e) {if(token===viewRequest)status(e.message,true);}
 });
 async function init() {
-  try {const caps=await request('/api/status');$('inference-status').textContent=caps.capabilities.native_sts_inference_verified?'Check the native audio probe report':'Live STS unavailable · controller lab ready';} catch(e){status(e.message,true);}
-  try {const probe=await request('/api/native-report');$('inference-status').textContent=`Native audio probe: ${probe.status.replaceAll('_',' ')}. Live STS is not qualified.`;} catch(e) { /* No probe report is a valid pre-run state. */ }
   try{render(await request('/api/report'));status('Saved evaluation loaded. Rerun or inspect any scenario.');}catch(e){status('Ready. Run all experiments to generate a comparison.');}
 }
 init();

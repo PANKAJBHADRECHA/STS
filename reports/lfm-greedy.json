@@ -1,0 +1,162 @@
+{
+  "mode": "actual_native_audio_conversations",
+  "checkpoint": ".runtime/lfm-4bit",
+  "sampling": "greedy",
+  "cases": [
+    {
+      "case": "greeting",
+      "text": "I'm doing well, thanks! How can I help you today?",
+      "input_seconds": 1.715,
+      "output": {
+        "sample_rate": 24000,
+        "channels": 1,
+        "samples_per_channel": 307200,
+        "duration_seconds": 12.8,
+        "rms": 0.02847827021654995,
+        "clipped_fraction": 0.0
+      },
+      "wall_seconds": 20.291291375178844,
+      "generation_seconds": 19.2814509999007,
+      "first_token_seconds": 0.3806268749758601,
+      "first_audio_token_seconds": 0.6270460421219468,
+      "audio_frames": 160,
+      "generated_tokens": 176,
+      "truncated": false,
+      "turn": 1,
+      "model_peak_memory_bytes": 1884327384,
+      "mode": "native_sts_turn_based",
+      "sampling": "greedy",
+      "real_time_factor": 1.5852571386858472
+    },
+    {
+      "case": "arithmetic",
+      "text": "Two plus three equals five.",
+      "input_seconds": 2.533375,
+      "output": {
+        "sample_rate": 24000,
+        "channels": 1,
+        "samples_per_channel": 78720,
+        "duration_seconds": 3.28,
+        "rms": 0.037016740855326094,
+        "clipped_fraction": 0.0
+      },
+      "wall_seconds": 5.436498250346631,
+      "generation_seconds": 5.1765055833384395,
+      "first_token_seconds": 0.34926754143089056,
+      "first_audio_token_seconds": 0.8504188330844045,
+      "audio_frames": 41,
+      "generated_tokens": 49,
+      "truncated": false,
+      "turn": 1,
+      "model_peak_memory_bytes": 2102412328,
+      "mode": "native_sts_turn_based",
+      "sampling": "greedy",
+      "real_time_factor": 1.6574689787642167
+    },
+    {
+      "case": "memory_start",
+      "text": "Sounds like you\u2019re excited about Maya and coffee! What\u2019s the best coffee you\u2019ve tried so far?",
+      "input_seconds": 4.009666666666667,
+      "output": {
+        "sample_rate": 24000,
+        "channels": 1,
+        "samples_per_channel": 132480,
+        "duration_seconds": 5.52,
+        "rms": 0.04256481251100622,
+        "clipped_fraction": 0.0
+      },
+      "wall_seconds": 11.216678583063185,
+      "generation_seconds": 10.937185415998101,
+      "first_token_seconds": 0.537961000110954,
+      "first_audio_token_seconds": 1.344265416264534,
+      "audio_frames": 69,
+      "generated_tokens": 93,
+      "truncated": false,
+      "turn": 1,
+      "model_peak_memory_bytes": 2118451360,
+      "mode": "native_sts_turn_based",
+      "sampling": "greedy",
+      "real_time_factor": 2.03200698968536
+    },
+    {
+      "case": "memory_followup",
+      "text": "I\u2019m Maya, and my favorite drink is a smooth latte with a hint of vanilla. How about you?",
+      "input_seconds": 1.9992916666666667,
+      "output": {
+        "sample_rate": 24000,
+        "channels": 1,
+        "samples_per_channel": 316800,
+        "duration_seconds": 13.2,
+        "rms": 0.03253503390635841,
+        "clipped_fraction": 0.0
+      },
+      "wall_seconds": 24.47973974980414,
+      "generation_seconds": 24.098600916564465,
+      "first_token_seconds": 0.9403257919475436,
+      "first_audio_token_seconds": 1.2469447078183293,
+      "audio_frames": 165,
+      "generated_tokens": 190,
+      "truncated": false,
+      "turn": 2,
+      "model_peak_memory_bytes": 2283214524,
+      "mode": "native_sts_turn_based",
+      "sampling": "greedy",
+      "real_time_factor": 1.8545257386215257
+    },
+    {
+      "case": "correction",
+      "text": "I\u2019m sorry, I can\u2019t help with that. Is there something else you\u2019d like to know?",
+      "input_seconds": 4.825875,
+      "output": {
+        "sample_rate": 24000,
+        "channels": 1,
+        "samples_per_channel": 238080,
+        "duration_seconds": 9.92,
+        "rms": 0.029278695515164724,
+        "clipped_fraction": 0.0
+      },
+      "wall_seconds": 19.141438582912087,
+      "generation_seconds": 18.761153916828334,
+      "first_token_seconds": 0.5195095418021083,
+      "first_audio_token_seconds": 0.9347437499091029,
+      "audio_frames": 124,
+      "generated_tokens": 147,
+      "truncated": false,
+      "turn": 1,
+      "model_peak_memory_bytes": 2283214524,
+      "mode": "native_sts_turn_based",
+      "sampling": "greedy",
+      "real_time_factor": 1.9295805023096861
+    },
+    {
+      "case": "upstream_recording",
+      "text": "Sure! How about something like \"Crafting Your Dream Home,\" \"Handcrafted Woodworking, Your Home's Best Companion,\" or \"Timeless Woodworking, Modern Comforts.\" Each of these highlights quality, craftsmanship, and the unique touch of your business.",
+      "input_seconds": 4.9039375,
+      "output": {
+        "sample_rate": 24000,
+        "channels": 1,
+        "samples_per_channel": 376320,
+        "duration_seconds": 15.68,
+        "rms": 0.027377026481821543,
+        "clipped_fraction": 0.0
+      },
+      "wall_seconds": 28.65645179199055,
+      "generation_seconds": 28.191067124716938,
+      "first_token_seconds": 0.4281436246819794,
+      "first_audio_token_seconds": 0.8469986249692738,
+      "audio_frames": 196,
+      "generated_tokens": 256,
+      "truncated": true,
+      "turn": 1,
+      "model_peak_memory_bytes": 2283214524,
+      "mode": "native_sts_turn_based",
+      "sampling": "greedy",
+      "real_time_factor": 1.8275798336728666
+    }
+  ],
+  "limitations": [
+    "User fixture speech is synthesized except the upstream recorded question.",
+    "No live human microphone session or full-duplex barge-in is claimed."
+  ],
+  "load_seconds": 0.9491860000416636
+}

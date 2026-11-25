@@ -1,0 +1,110 @@
+{
+  "evaluation_only": "Whisper tiny.en independently transcribes generated WAVs; not part of the STS inference path.",
+  "limitations": "ASR errors remain possible; no human listening or acoustic-quality benchmark is claimed.",
+  "outputs": [
+    {
+      "file": "6bit-upstream-arithmetic-reply.wav",
+      "transcript": "2 plus 3 equals 5."
+    },
+    {
+      "file": "6bit-upstream-correction-reply.wav",
+      "transcript": "I'm sorry, I can see your calendar, but you can open it and look for the Tuesday  entry. Does that work for you?"
+    },
+    {
+      "file": "6bit-upstream-greeting-reply.wav",
+      "transcript": "I'm doing well. Thanks. How can I help you today?"
+    },
+    {
+      "file": "6bit-upstream-memory_followup-reply.wav",
+      "transcript": "I'm Maya and my favorite drink is a smooth latte with a hint of cinnamon.  How about you?"
+    },
+    {
+      "file": "6bit-upstream-memory_start-reply.wav",
+      "transcript": "Got it, my end coffee soundbreak.  What's your favorite coffee flavor?"
+    },
+    {
+      "file": "6bit-upstream-upstream_recording-reply.wav",
+      "transcript": "Sure, how about something like handcrafted woodworking perfectly made for you, or your  home made with passion and precision?  Does either of these capture the vibe you want?"
+    },
+    {
+      "file": "brief-upstream-arithmetic-reply.wav",
+      "transcript": "2 plus 3 equals 5."
+    },
+    {
+      "file": "brief-upstream-correction-reply.wav",
+      "transcript": "I chose Friday."
+    },
+    {
+      "file": "brief-upstream-greeting-reply.wav",
+      "transcript": "I'm done well. Thanks for asking. How can I help you today?"
+    },
+    {
+      "file": "brief-upstream-memory_followup-reply.wav",
+      "transcript": "My name is Maya and my favorite drink is coffee."
+    },
+    {
+      "file": "brief-upstream-memory_start-reply.wav",
+      "transcript": "My name is Nia, and my favorite drink is coffee."
+    },
+    {
+      "file": "brief-upstream-upstream_recording-reply.wav",
+      "transcript": "Sure, how about handcrafted woodworking? Precision made for you."
+    },
+    {
+      "file": "browser-mic-reply.wav",
+      "transcript": "I'm doing well.  Thanks for asking.  How can I help you today?"
+    },
+    {
+      "file": "browser-upload-reply.wav",
+      "transcript": "2 plus 3 equals 5."
+    },
+    {
+      "file": "greedy-arithmetic-reply.wav",
+      "transcript": "2 plus 3 equals 5."
+    },
+    {
+      "file": "greedy-correction-reply.wav",
+      "transcript": "I'm sorry, I can help with that.  Is there something else you'd like to know?"
+    },
+    {
+      "file": "greedy-greeting-reply.wav",
+      "transcript": "I'm doing well.  How can I help you today?"
+    },
+    {
+      "file": "greedy-memory_followup-reply.wav",
+      "transcript": "I'm Maya, and my favorite drink is a smooth latte with a hint of vanilla.  How about you?"
+    },
+    {
+      "file": "greedy-memory_start-reply.wav",
+      "transcript": "Sounds like you're excited about Maya and coffee.  What's the best coffee you've tried so far?"
+    },
+    {
+      "file": "greedy-upstream_recording-reply.wav",
+      "transcript": "Sure, how about something like crafting your dream home?  Handcrafted woodworking."
+    },
+    {
+      "file": "upstream-arithmetic-reply.wav",
+      "transcript": "2 plus 3 equals 5."
+    },
+    {
+      "file": "upstream-correction-reply.wav",
+      "transcript": "I'm sorry. I can help with that. Is there something else he'd like to  discuss?"
+    },
+    {
+      "file": "upstream-greeting-reply.wav",
+      "transcript": "I'm doing well. Thanks for asking. How can I help you today?"
+    },
+    {
+      "file": "upstream-memory_followup-reply.wav",
+      "transcript": "I'm Maya, and my favorite drink is a smooth latte with a hint of vanilla.  How about you?  What's your go-to coffee or drink?"
+    },
+    {
+      "file": "upstream-memory_start-reply.wav",
+      "transcript": "Sounds like you're excited about Maya and coffee.  What's the best coffee you've tried so far?"
+    },
+    {
+      "file": "upstream-upstream_recording-reply.wav",
+      "transcript": "Sure, how about something like crafting your dream home, handcrafted woodworking, unmatched  quality, or turning wood into beautiful homes.  Each of these highlights the quality and creativity of your work."
+    }
+  ]
+}

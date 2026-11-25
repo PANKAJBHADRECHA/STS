@@ -1,0 +1,77 @@
+{
+  "winner": "lfm-brief-upstream.json",
+  "model": "mlx-community/LFM2.5-Audio-1.5B-4bit",
+  "revision": "55d4de65fa10fa935561aaaa995271d8b8ff2ee0",
+  "mode": "native_sts_turn_based",
+  "full_duplex": false,
+  "candidates": [
+    {
+      "recipe": "lfm-upstream.json",
+      "checks": {
+        "greeting": true,
+        "arithmetic": true,
+        "two_turn_facts": false,
+        "latest_correction": false,
+        "recorded_question": true
+      },
+      "spot_checks_passed": 3,
+      "audio_turns_passed": 6,
+      "audio_turns_total": 6,
+      "median_wall_seconds": 13.026759938104078,
+      "peak_mlx_memory_bytes": 2280758744
+    },
+    {
+      "recipe": "lfm-greedy.json",
+      "checks": {
+        "greeting": true,
+        "arithmetic": true,
+        "two_turn_facts": false,
+        "latest_correction": false,
+        "recorded_question": true
+      },
+      "spot_checks_passed": 3,
+      "audio_turns_passed": 5,
+      "audio_turns_total": 6,
+      "median_wall_seconds": 19.716364979045466,
+      "peak_mlx_memory_bytes": 2283214524
+    },
+    {
+      "recipe": "lfm-6bit-upstream.json",
+      "checks": {
+        "greeting": true,
+        "arithmetic": true,
+        "two_turn_facts": false,
+        "latest_correction": false,
+        "recorded_question": true
+      },
+      "spot_checks_passed": 3,
+      "audio_turns_passed": 6,
+      "audio_turns_total": 6,
+      "median_wall_seconds": 12.706208854680881,
+      "peak_mlx_memory_bytes": 2584048224
+    },
+    {
+      "recipe": "lfm-brief-upstream.json",
+      "checks": {
+        "greeting": true,
+        "arithmetic": true,
+        "two_turn_facts": true,
+        "latest_correction": true,
+        "recorded_question": true
+      },
+      "spot_checks_passed": 5,
+      "audio_turns_passed": 6,
+      "audio_turns_total": 6,
+      "median_wall_seconds": 8.64592183358036,
+      "peak_mlx_memory_bytes": 2297910394
+    }
+  ],
+  "selection_rule": "All six turns must generate valid non-silent untruncated audio; then five semantic spot checks, median wall time, memory.",
+  "limitations": [
+    "Tiny known test set; prompt was tuned after observing failures, not a blind benchmark.",
+    "Keyword checks do not certify overall reasoning, speaker-role correctness or voice quality.",
+    "Tests used synthesized input speech plus an upstream recorded question, not a live human caller.",
+    "Host load was not isolated; timing comparisons are descriptive.",
+    "The model can still confuse user/assistant pronouns; factual spot checks do not remove that limitation."
+  ]
+}

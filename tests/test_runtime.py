@@ -6,6 +6,14 @@ from sts_lab.runtime import probe_model_access
 
 
 class AccessTests(unittest.TestCase):
+    def test_cli_saved_token_is_used_without_being_reported(self):
+        from pathlib import Path
+        import tempfile
+        from sts_lab.runtime import saved_hf_token
+        with tempfile.TemporaryDirectory() as directory:
+            Path(directory,'token').write_text('local-test-credential')
+            with patch.dict('os.environ',{'HF_HOME':directory,'HF_TOKEN':''},clear=False):
+                self.assertEqual(saved_hf_token(),'local-test-credential')
     def test_access_failure_is_explicit_and_secret_free(self):
         error=HTTPError('https://example.invalid',401,'secret response',{},None)
         with patch('urllib.request.urlopen',side_effect=error),patch.dict('os.environ',{'HF_TOKEN':'sensitive-test-value'}):

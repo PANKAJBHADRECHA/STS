@@ -1,4 +1,6 @@
-# Measured outcomes
+# Earlier controller and large-model outcomes
+
+**Update:** Actual smaller-model STS is now implemented separately. See [native voice results](VOICE_RESULTS.md) and the current README. The results below describe the original controller experiments and failed larger Moshi probe.
 
 Generator 1.1.0; all measurements from this checkout on the local M2 / 8 GB Mac.
 

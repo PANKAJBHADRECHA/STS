@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "generator_version": "1.1.0",
-  "generated_at": "2026-11-24T23:28:52.516323+00:00",
+  "generated_at": "2026-11-25T04:23:03.612590+00:00",
   "mode": "controller_simulation",
   "split": "held_out",
   "seeds": [
@@ -12,7 +12,7 @@
   "scenario_manifest_sha256": "7c19015e4923316615bddf3c9c9e1ab333d916bb0f31f88c3423f18b726f4dd9",
   "scenario_count": 300,
   "run_count": 1500,
-  "wall_seconds": 0.9044592082500458,
+  "wall_seconds": 0.9105016672983766,
   "selection": {
     "winner": "combined",
     "gain_over_baseline": 0.75,
@@ -42,8 +42,8 @@
       "unsupported_claims": 45,
       "recovery_tasks": 0,
       "injected_failure_tasks": 30,
-      "controller_runtime_p50_ms": 0.2348960842937231,
-      "controller_runtime_p95_ms": 1.444708090275526,
+      "controller_runtime_p50_ms": 0.2320625353604555,
+      "controller_runtime_p95_ms": 1.43716624006629,
       "by_family": {
         "argument_corrections": {
           "passed": 30,
@@ -81,8 +81,8 @@
       "unsupported_claims": 45,
       "recovery_tasks": 0,
       "injected_failure_tasks": 30,
-      "controller_runtime_p50_ms": 0.2282292116433382,
-      "controller_runtime_p95_ms": 1.4067920856177807,
+      "controller_runtime_p50_ms": 0.2309794072061777,
+      "controller_runtime_p95_ms": 1.438292209059,
       "by_family": {
         "argument_corrections": {
           "passed": 30,
@@ -120,8 +120,8 @@
       "unsupported_claims": 0,
       "recovery_tasks": 30,
       "injected_failure_tasks": 30,
-      "controller_runtime_p50_ms": 0.21687429398298264,
-      "controller_runtime_p95_ms": 1.4286250807344913,
+      "controller_runtime_p50_ms": 0.21597952581942081,
+      "controller_runtime_p95_ms": 1.4194170944392681,
       "by_family": {
         "argument_corrections": {
           "passed": 60,
@@ -159,8 +159,8 @@
       "unsupported_claims": 45,
       "recovery_tasks": 0,
       "injected_failure_tasks": 30,
-      "controller_runtime_p50_ms": 0.22741639986634254,
-      "controller_runtime_p95_ms": 1.4263750053942204,
+      "controller_runtime_p50_ms": 0.22900034673511982,
+      "controller_runtime_p95_ms": 1.419499982148409,
       "by_family": {
         "argument_corrections": {
           "passed": 30,
@@ -198,8 +198,8 @@
       "unsupported_claims": 0,
       "recovery_tasks": 30,
       "injected_failure_tasks": 30,
-      "controller_runtime_p50_ms": 0.20927097648382187,
-      "controller_runtime_p95_ms": 1.3972916640341282,
+      "controller_runtime_p50_ms": 0.21454156376421452,
+      "controller_runtime_p95_ms": 1.3969587162137032,
       "by_family": {
         "argument_corrections": {
           "passed": 60,

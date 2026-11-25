@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "inference_mocked": false,
+  "physical_microphone_tested": false,
+  "capture_device": "Chromium WAV-backed microphone",
+  "cases": [
+    {
+      "path": "WAV upload",
+      "text": "2 plus 3 equals 5.",
+      "wall_seconds": 3.1851223753765225,
+      "turn": 1
+    },
+    {
+      "path": "Browser microphone capture (fixture device)",
+      "text": "I'm doing well, thanks for asking. How can I help you today?",
+      "input_seconds": 2.56,
+      "wall_seconds": 9.207277375273407,
+      "turn": 1
+    }
+  ],
+  "audio_playback_decoded": true,
+  "console_errors": [],
+  "desktop": "1440x1000",
+  "mobile": "390x844"
+}

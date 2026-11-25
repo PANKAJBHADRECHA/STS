@@ -1,76 +1,79 @@
-# STS Reliability Lab
+# Local native speech-to-speech on Mac
 
-A local experiment for speech-agent **system reliability**: implement five controllers, inject five classes of conversational failures, evaluate every combination, and select the best measured controller.
+**Actual microphone audio in, model-generated speech out**, running locally on Apple Silicon. The selected model is **LFM2.5-Audio-1.5B, MLX 4-bit**, with a tested brief-response prompt. Its audio encoder takes the waveform directly; interleaved model audio tokens are decoded into a spoken answer. No separate speech-to-text/chat/text-to-speech pipeline is used for replies.
 
-**Current scope:** structured-event controller experiments, an interactive replay interface, a source-grounded research dossier and a separately instrumented Moshi audio probe. This is not a trained new STS model or a live tool-using voice assistant. No controller result is presented as speech-model performance.
+This version is **turn-based English voice chat**, not PersonaPlex-style simultaneous listening/speaking. Record, stop and send, then listen to the generated reply. Model replies can take several seconds on an 8 GB M2 and may contain factual or pronoun errors.
 
-## Start locally
+## Run on this Mac
 
-Python 3.12 or later is sufficient for the controller lab; it has no third-party runtime dependencies. Native Moshi testing uses Python 3.12 on Apple Silicon.
+Double-click **Start Voice.command**, or run:
 
 ```bash
-python3.12 -m venv .venv
-.venv/bin/python -m sts_lab evaluate
-.venv/bin/python -m sts_lab serve
+./.venv-sts/bin/python -m sts_lab serve
 ```
 
-Open **http://127.0.0.1:8765**. The server binds only to loopback. In the UI, rerun all experiments, select any variant/failure family, inspect event traces and read the research/memo. The chosen winner becomes the default replay policy; all five remain available.
+Open **http://127.0.0.1:8765**, click **Load voice model**, then **Record voice**. Allow microphone access in the browser when it requests it. Speak for up to 20 seconds, click **Stop and send**, and the model will reply with playable audio. WAV upload is also supported. Start a new conversation after six turns.
 
-## Five variants, five failure families
+The native runtime and pinned 4-bit model are already installed in this checkout. They are ignored by Git; source and reproducible tests are pushed to the private repository.
 
-The variants are baseline, task memory, validated execution, playback recovery and combined. Ablations share one backend, proposal-fault generator, observation stream and evaluator. The independent SQLite backend checks schemas/identity and records authoritative receipts for every variant.
+## Fresh installation
 
-The families are argument corrections, tool failures, interruptions, delayed feedback and long sessions. Four scenario subtypes per family cover changed facts, missing identity, unavailable slots, unknown commits, cancellations, backchannels, stale results, partially played confirmations and forgotten task facts. The long-session test uses thirty minutes of **virtual time**, not a wall-clock speech-model soak.
-
-The frozen held-out evaluation contains 100 tasks × 3 seeds × 5 variants = **1,500 controller runs**. Seed variants share templates; they are not independent human conversations. See [evaluation definitions](docs/evaluation.md) and [complete results](reports/held_out.json).
-
-Full manifests and failure traces are losslessly compressed as `*-manifest.json.gz` and `*-failures.json.gz` to keep generated artifacts manageable. Read them with Python's `gzip.open()` or any gzip utility; scenario replay is available directly in the UI.
-
-The selected controller must have zero duplicate actions and zero unsupported execution claims. Eligible variants rank by task completion, recovery and controller p95 runtime. Task completion requires correct database state **and** complete accurate confirmation. Exact measurements and the selected default are in [selection.json](reports/selection.json); the simulator target is not an official τ-Voice result.
-
-## Tests and reproduction
+macOS 26 on Apple Silicon and Python 3.12 match the tested environment.
 
 ```bash
-.venv/bin/python -m unittest discover -s tests -v
-.venv/bin/python -m sts_lab evaluate --split development --output reports
-.venv/bin/python -m sts_lab evaluate --split held_out --output reports
-.venv/bin/python -m sts_lab doctor --network --output reports/feasibility.json
+python3.12 -m venv .venv-sts
+.venv-sts/bin/python -m pip install -r requirements-voice.txt
+.venv-sts/bin/python scripts/setup_voice.py
+.venv-sts/bin/python -m sts_lab serve
 ```
 
-The controller tests include 100 randomized correction-ordering trials and regression tests for discovered bugs. To reproduce browser QA:
+The model download is approximately 1.8 GB. `setup_voice.py` pins the checkpoint revision and never substitutes a larger model. The full tested environment, including optional audio-evaluation tools, is in `requirements-voice-macos.lock.txt`.
+
+## Actual audio verification
+
+Four real-inference recipes were compared: 4-bit/default, 4-bit/greedy audio, 6-bit/default and 4-bit/brief prompt. Each ran six spoken turns covering five scenarios: greeting, arithmetic, two-turn fact recall, a spoken correction and an upstream recorded question. These are actual native model responses, not controller simulations.
+
+The selected brief-prompt recipe generated non-silent, untruncated speech for all six turns and passed the five disclosed factual spot checks. Its measured median response time and peak MLX memory are in [voice-selection.json](reports/voice-selection.json). The prompt was tuned using these examples, so this is a small regression set, not a blind reasoning benchmark.
+
+[Voice browser verification](reports/voice-browser.json) exercises actual model loading, WAV upload, browser microphone capture, response decoding/playback and mobile layout. Automated capture uses Chromium's recorded-audio microphone device; **the user's physical microphone and a live human conversation were not tested unattended**. The same capture code is used when you click Record voice.
+
+[Independent ASR checks](reports/lfm-audio-transcripts.json) transcribe generated WAVs with Whisper tiny.en to check that output is speech. Whisper is used only for evaluation and is absent from the serving path. It can make transcription mistakes and is not a human quality rating.
 
 ```bash
-.venv/bin/python -m pip install -r requirements-dev.txt
-.venv/bin/python -m playwright install chromium
+.venv-sts/bin/python scripts/lfm_probe.py --brief
+.venv-sts/bin/python scripts/select_voice.py
+python3.12 -m unittest discover -s tests -v
+```
+
+Browser tests use Playwright in the separate `.venv` environment:
+
+```bash
+.venv/bin/python scripts/voice_browser_test.py
 .venv/bin/python scripts/browser_test.py
 ```
 
-The browser script starts an isolated ephemeral server, checks all 25 policy/family combinations with four subtypes each (100 replays), reruns evaluation, checks documents/export and mobile layout, then closes its browser/server. Results and screenshots are in `reports/`.
+See [native voice results](reports/VOICE_RESULTS.md), [voice-engine implementation](sts_lab/voice_engine.py) and [model documentation](https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B).
 
-## Native audio probe
+## Hugging Face and PersonaPlex access
 
-The public Moshi checkpoint is pinned to `kyutai/moshiko-mlx-q4@18e4df760a34d5977a34517d7d1580e07acbb2f1`. The tested runtime is `moshi_mlx==0.3.0`; this is different from the newer source revision reviewed in the dossier. Model artifacts consume approximately 5.2 GB and are ignored by Git.
+The working LFM voice model is public and requires no account. For PersonaPlex, accept its model terms under your Hugging Face account, create a read token, then run the installed interactive login:
 
 ```bash
-.venv/bin/python -m pip install -r requirements-native-macos.lock.txt
-.venv/bin/python scripts/native_probe.py --download
+./.venv-sts/bin/hf auth login
 ```
 
-This creates synthetic fixture speech with macOS `say`, uses Mimi/Moshi directly for audio input/output, and records frame timings/real-time factors if inference succeeds. There is no STT→LLM→TTS replacement inference path; OS TTS only creates test inputs. The watchdog stops the worker if RSS exceeds 6 GiB, swap grows by 768 MiB or wall time exceeds 180 seconds. Native smoke tests do not test task execution or true interactive interruption recovery. See [native probe outcome](reports/native-audio.json).
+Keep the token in the local login utility, not chat or repository files. Full steps and official links: [Hugging Face access](docs/HUGGING_FACE.md). Authentication does not remove PersonaPlex's memory requirements.
 
-PersonaPlex is a separate access gate. The official model requires Hugging Face license acceptance. The inspected community runtime can fall back from a missing q4 file to its 16.7 GB full-precision model; that path is not enabled on this 8 GB Mac. Tokens belong in the environment, never this repository.
+## Privacy and limitations
 
-## Research and limitations
+The server binds only to 127.0.0.1 and rejects cross-origin requests. Microphone capture starts only after your click. Audio stays on the Mac; server-side input/output files are temporary and removed after a reply. The browser holds playable replies until you reset or close it. No external actions or model fine-tuning occur.
 
-- [Technical dossier: ten models, training, latency, benchmarks, research threads and source map](docs/research.md)
-- [Six-section differentiation/build memo and 8–12-week research experiment](docs/build-memo.md)
-- [Evaluation methodology and untested capabilities](docs/evaluation.md)
-- [Final measured outcomes](reports/RESULTS.md)
+Response generation is capped and context is bounded to six turns. The selected model sometimes phrases user facts in the first person, and accuracy beyond this small test set is not established. Stop playback stops the speaker; it does not implement full-duplex barge-in.
 
-Not established by this prototype: conversational reasoning quality, persona consistency, neural self-listening, speech-to-tool argument grounding, live voice-agent performance, official τ-Voice/FDB improvements or commercial-model superiority. The speech model is not wired to the simulated controller. The local interface does not capture a microphone or record user audio.
+## Earlier controller research
 
-Reports contain synthetic data only. Checkpoint weights, audio fixtures, virtual environments, caches and credentials are excluded from Git. Code is MIT; model licenses remain separate. See [third-party notices](THIRD_PARTY_NOTICES.md).
+The same repository retains the five-policy reliability experiment under **Controller experiments** and **Scenario replay**. Its 1,500 synthetic evaluations measure task-state logic, not speech-model performance. All five variants remain reproducible; the combined controller won that separate suite. See [controller outcomes](reports/RESULTS.md), [evaluation definitions](docs/evaluation.md), [research dossier](docs/research.md) and [build memo](docs/build-memo.md).
 
-## CI template
+Full controller manifests and traces are compressed JSON artifacts. The failed larger Moshi probe remains documented; it does not describe the smaller working LFM path.
 
-`ci/github-actions.yml` reproduces controller and browser verification on Ubuntu. It is stored as a template because the available GitHub OAuth token lacks the `workflow` scope; GitHub rejected installing it under `.github/workflows/`. Local verification completed successfully. No credential permissions were changed.
+Code is MIT; model licenses are separate. LFM model use is subject to [Liquid's model license](https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B/blob/main/LICENSE). The CI configuration remains a template in `ci/github-actions.yml` because the available GitHub token lacks workflow-write scope. Recorded test results are from local execution.

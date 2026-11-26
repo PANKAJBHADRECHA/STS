@@ -1,0 +1,251 @@
+{
+  "power_source": "Now drawing from 'Battery Power'",
+  "session_duration_s": 300.0546533749439,
+  "continuous_capture_completed": true,
+  "actual_hardware": true,
+  "fixture_speaker": {
+    "original_state": {
+      "muted": 1,
+      "volume": 1.0
+    },
+    "temporary_fixture_volume": 0.55,
+    "default_output_unchanged": true,
+    "restored_state": {
+      "muted": 1,
+      "volume": 1.0
+    },
+    "restoration_verified": true
+  },
+  "human_participant": false,
+  "fake_audio_capture": false,
+  "source": "OS-generated speech through built-in speakers, air and built-in microphone",
+  "cases": [
+    {
+      "case": "normal",
+      "passed": true,
+      "answer_number": 4.0,
+      "speech_end_to_device_start_s": 1.864,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 2,
+        "first_token_s": 0.7431317078880966,
+        "first_audio_s": 0.8401144999079406,
+        "audio_s": 0.5340416666666666,
+        "wall_s": 0.8450194159522653,
+        "peak_mlx_bytes": 1236709024,
+        "cached_prompt_tokens": 0
+      },
+      "speech_end_to_reply_done_s": 1.8901689578779042,
+      "duration_s": 6.031424082815647
+    },
+    {
+      "case": "memory",
+      "passed": false,
+      "answer_number": null,
+      "speech_end_to_device_start_s": 1.8510999999046325,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 5,
+        "first_token_s": 0.6652052090503275,
+        "first_audio_s": 0.8206717921420932,
+        "audio_s": 1.9620833333333332,
+        "wall_s": 1.0007631247863173,
+        "peak_mlx_bytes": 1236709024,
+        "cached_prompt_tokens": 0
+      },
+      "speech_end_to_reply_done_s": 2.050911375321448,
+      "ui_status": "Listening",
+      "error_type": "TimeoutError",
+      "duration_s": 25.220119334291667
+    },
+    {
+      "case": "recall",
+      "passed": false,
+      "ui_status": "Listening",
+      "error_type": "TimeoutError",
+      "duration_s": 23.63537958310917
+    },
+    {
+      "case": "correction",
+      "passed": false,
+      "ui_status": "Listening",
+      "error_type": "TimeoutError",
+      "duration_s": 25.44427075004205
+    },
+    {
+      "case": "changed_question",
+      "passed": false,
+      "answer_number": null,
+      "speech_end_to_device_start_s": 10.753299999713898,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 37,
+        "first_token_s": 0.42079804092645645,
+        "first_audio_s": 0.6430837078951299,
+        "audio_s": 2.13625,
+        "wall_s": 0.7977094161324203,
+        "peak_mlx_bytes": 1530692346,
+        "cached_prompt_tokens": 0
+      },
+      "speech_end_to_reply_done_s": 10.923493792302907,
+      "duration_s": 17.39318099990487
+    },
+    {
+      "case": "fast_speech",
+      "passed": false,
+      "ui_status": "Listening",
+      "error_type": "TimeoutError",
+      "duration_s": 21.678863917011768
+    },
+    {
+      "case": "slow_speech",
+      "passed": false,
+      "answer_number": 7.0,
+      "speech_end_to_device_start_s": 1.6024000000953675,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 57,
+        "first_token_s": 0.7015841249376535,
+        "first_audio_s": 0.9623099169693887,
+        "audio_s": 1.729875,
+        "wall_s": 1.0450884578749537,
+        "peak_mlx_bytes": 1530692346,
+        "cached_prompt_tokens": 0
+      },
+      "speech_end_to_reply_done_s": 1.698475250042975,
+      "ui_status": "Listening",
+      "error_type": "TimeoutError",
+      "duration_s": 24.243678458034992
+    },
+    {
+      "case": "background_noise",
+      "passed": false,
+      "answer_number": 8.0,
+      "speech_end_to_device_start_s": 3.2197999997138975,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 73,
+        "first_token_s": 0.6701454166322947,
+        "first_audio_s": 0.8766352916136384,
+        "audio_s": 1.2538749999999999,
+        "wall_s": 0.9232887499965727,
+        "peak_mlx_bytes": 1530692346,
+        "cached_prompt_tokens": 0
+      },
+      "speech_end_to_reply_done_s": 3.277813083026558,
+      "ui_status": "Listening",
+      "error_type": "TimeoutError",
+      "duration_s": 24.915919041726738
+    },
+    {
+      "case": "rapid_1",
+      "passed": true,
+      "answer_number": 5.0,
+      "speech_end_to_device_start_s": 1.5615999999046326,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 79,
+        "first_token_s": 0.6847418332472444,
+        "first_audio_s": 0.7716999580152333,
+        "audio_s": 0.592125,
+        "wall_s": 0.7765926658175886,
+        "peak_mlx_bytes": 1530692346,
+        "cached_prompt_tokens": 0
+      },
+      "speech_end_to_reply_done_s": 1.5833224579691887,
+      "duration_s": 3.677257207687944
+    },
+    {
+      "case": "rapid_2",
+      "passed": true,
+      "answer_number": 7.0,
+      "speech_end_to_device_start_s": 1.3672999997138977,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 82,
+        "first_token_s": 0.6834841249510646,
+        "first_audio_s": 0.7722849589772522,
+        "audio_s": 0.592125,
+        "wall_s": 0.7782339169643819,
+        "peak_mlx_bytes": 1530692346,
+        "cached_prompt_tokens": 0
+      },
+      "speech_end_to_reply_done_s": 1.3763497918844223,
+      "duration_s": 3.4447295418940485
+    },
+    {
+      "case": "rapid_3",
+      "passed": true,
+      "answer_number": 9.0,
+      "speech_end_to_device_start_s": 7.12210000038147,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 85,
+        "first_token_s": 0.6898538749665022,
+        "first_audio_s": 0.8900941666215658,
+        "audio_s": 1.0216666666666667,
+        "wall_s": 0.9251240827143192,
+        "peak_mlx_bytes": 1530692346,
+        "cached_prompt_tokens": 0
+      },
+      "speech_end_to_reply_done_s": 7.1587872500531375,
+      "duration_s": 9.692923957947642
+    },
+    {
+      "case": "spoken_interruption",
+      "passed": false,
+      "answer_number": null,
+      "cancellation_s": 0.5339000000953674,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 93,
+        "first_token_s": 0.8683090000413358,
+        "first_audio_s": 1.7216786248609424,
+        "audio_s": 0.777875,
+        "wall_s": 1.9299612920731306,
+        "peak_mlx_bytes": 1530692346,
+        "cached_prompt_tokens": 0
+      }
+    }
+  ],
+  "metrics": {
+    "capture_settings": {
+      "echoCancellation": true,
+      "noiseSuppression": true,
+      "autoGainControl": true,
+      "sampleRate": 48000,
+      "channelCount": 1,
+      "latency": 0.01
+    },
+    "audio_context_rate": 48000,
+    "last_error": null,
+    "engine_metrics": {
+      "audio_frames": 14822,
+      "input_overflows": 274,
+      "asr_wall_s": 170.5878798775375,
+      "input_s": 296.44000000002035,
+      "interruptions": 44,
+      "utterances": 54,
+      "replies": 15,
+      "errors": 0
+    },
+    "configuration": {
+      "model": "qwen-2b",
+      "asr": "MEDIUM_STREAMING",
+      "voice": "piper_en_US-lessac-medium",
+      "audio": "browser"
+    },
+    "frames": 15536,
+    "output_frames": 568,
+    "devices": {
+      "input": "Default - MacBook Air Microphone (Built-in)",
+      "output": "Default - MacBook Air Speakers (Built-in)"
+    },
+    "speakers_muted": false,
+    "device_status_events": 0,
+    "synthesis_starvation_frames": 0
+  },
+  "microphone_released": true,
+  "console_errors": [],
+  "status": "failed"
+}

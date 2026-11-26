@@ -1,0 +1,312 @@
+{
+  "mode": "text_only_multi_turn_regression",
+  "sampling": "greedy",
+  "profiles": [
+    {
+      "model": "qwen-08b",
+      "prompt": "simple",
+      "passed": 6,
+      "total": 7,
+      "cases": [
+        {
+          "case": "arithmetic",
+          "text": "Two plus two equals four.",
+          "passed": true,
+          "wall_s": 0.2787990840151906
+        },
+        {
+          "case": "remember",
+          "text": "Maya is from Pune, India.",
+          "passed": true,
+          "wall_s": 0.16614991705864668
+        },
+        {
+          "case": "recall",
+          "text": "Maya is from Pune, India.",
+          "passed": true,
+          "wall_s": 0.18311612494289875
+        },
+        {
+          "case": "correction",
+          "text": "Friday.",
+          "passed": true,
+          "wall_s": 0.18353891698643565
+        },
+        {
+          "case": "update",
+          "text": "Monday.",
+          "passed": true,
+          "wall_s": 0.26383820781484246
+        },
+        {
+          "case": "new_question",
+          "text": "Three plus three equals six.",
+          "passed": true,
+          "wall_s": 0.3678047498688102
+        },
+        {
+          "case": "retained_state",
+          "text": "Maya is from Pune, India. My meeting is on Monday.",
+          "passed": false,
+          "wall_s": 0.6569742076098919
+        }
+      ],
+      "system_text": "You are a helpful voice assistant. Give brief, direct answers. User facts belong to the user. Follow the latest correction."
+    },
+    {
+      "model": "qwen-08b",
+      "prompt": "detailed",
+      "passed": 2,
+      "total": 7,
+      "cases": [
+        {
+          "case": "arithmetic",
+          "text": "Two plus two equals four.",
+          "passed": true,
+          "wall_s": 0.4479435421526432
+        },
+        {
+          "case": "remember",
+          "text": "Maya, I am Sol and I am in Pune.",
+          "passed": false,
+          "wall_s": 0.5924739171750844
+        },
+        {
+          "case": "recall",
+          "text": "Maya, I am Sol and I live in Pune.",
+          "passed": false,
+          "wall_s": 0.6215647920034826
+        },
+        {
+          "case": "correction",
+          "text": "Maya, I am Sol and I am in Pune.",
+          "passed": false,
+          "wall_s": 0.9058674173429608
+        },
+        {
+          "case": "update",
+          "text": "Maya, I am Sol and I am in Pune.",
+          "passed": false,
+          "wall_s": 1.163985500112176
+        },
+        {
+          "case": "new_question",
+          "text": "Three plus three equals six.",
+          "passed": true,
+          "wall_s": 0.8465522914193571
+        },
+        {
+          "case": "retained_state",
+          "text": "Maya, I am Sol and my meeting is on Monday.",
+          "passed": false,
+          "wall_s": 0.8875739159993827
+        }
+      ],
+      "system_text": "You are Sol, a helpful AI voice assistant. The user is a different person. Address the user as you; never speak as if you were the user. Answer the latest question directly in one or two short sentences, under 45 words. Use plain spoken English, no markdown. Remember what the user tells you, using the latest correction. User facts belong to the user: say your name or your meeting, not my name or my meeting. Do not add filler like I can confirm that. If interrupted, follow the new request. Do not invent facts or pretend to have performed actions. An interrupted assistant message contains only speech rendered before cancellation."
+    },
+    {
+      "model": "qwen-2b",
+      "prompt": "simple",
+      "passed": 7,
+      "total": 7,
+      "cases": [
+        {
+          "case": "arithmetic",
+          "text": "4",
+          "passed": true,
+          "wall_s": 0.4481258327141404
+        },
+        {
+          "case": "remember",
+          "text": "Got it, Maya. I'll keep that in mind.",
+          "passed": true,
+          "wall_s": 0.6376837091520429
+        },
+        {
+          "case": "recall",
+          "text": "Your name is Maya, and you live in Pune.",
+          "passed": true,
+          "wall_s": 1.089430124964565
+        },
+        {
+          "case": "correction",
+          "text": "Friday",
+          "passed": true,
+          "wall_s": 0.9311996661126614
+        },
+        {
+          "case": "update",
+          "text": "Monday",
+          "passed": true,
+          "wall_s": 0.9410263751633465
+        },
+        {
+          "case": "new_question",
+          "text": "6",
+          "passed": true,
+          "wall_s": 0.79103699978441
+        },
+        {
+          "case": "retained_state",
+          "text": "Your name is Maya, and your meeting is on Monday.",
+          "passed": true,
+          "wall_s": 1.4035569578409195
+        }
+      ],
+      "system_text": "You are a helpful voice assistant. Give brief, direct answers. User facts belong to the user. Follow the latest correction."
+    },
+    {
+      "model": "qwen-2b",
+      "prompt": "detailed",
+      "passed": 7,
+      "total": 7,
+      "cases": [
+        {
+          "case": "arithmetic",
+          "text": "Two plus two equals four.",
+          "passed": true,
+          "wall_s": 0.9426200003363192
+        },
+        {
+          "case": "remember",
+          "text": "Got it, Maya. I'll keep that in mind for our conversation.",
+          "passed": true,
+          "wall_s": 1.203475082758814
+        },
+        {
+          "case": "recall",
+          "text": "Your name is Maya and you live in Pune.",
+          "passed": true,
+          "wall_s": 1.1473941253498197
+        },
+        {
+          "case": "correction",
+          "text": "Your meeting is Friday.",
+          "passed": true,
+          "wall_s": 1.347413250245154
+        },
+        {
+          "case": "update",
+          "text": "Your meeting is now Monday.",
+          "passed": true,
+          "wall_s": 1.2899336251430213
+        },
+        {
+          "case": "new_question",
+          "text": "Three plus three equals six.",
+          "passed": true,
+          "wall_s": 1.3897298332303762
+        },
+        {
+          "case": "retained_state",
+          "text": "Your name is Maya and your meeting is now Monday.",
+          "passed": true,
+          "wall_s": 1.7030020002275705
+        }
+      ],
+      "system_text": "You are Sol, a helpful AI voice assistant. The user is a different person. Address the user as you; never speak as if you were the user. Answer the latest question directly in one or two short sentences, under 45 words. Use plain spoken English, no markdown. Remember what the user tells you, using the latest correction. User facts belong to the user: say your name or your meeting, not my name or my meeting. Do not add filler like I can confirm that. If interrupted, follow the new request. Do not invent facts or pretend to have performed actions. An interrupted assistant message contains only speech rendered before cancellation."
+    },
+    {
+      "model": "lfm-text",
+      "prompt": "simple",
+      "passed": 7,
+      "total": 7,
+      "cases": [
+        {
+          "case": "arithmetic",
+          "text": "Two plus two equals four.",
+          "passed": true,
+          "wall_s": 0.6170246670953929
+        },
+        {
+          "case": "remember",
+          "text": "Hello Maya! Your name is remembered. Two plus two equals four.",
+          "passed": true,
+          "wall_s": 0.3923523328267038
+        },
+        {
+          "case": "recall",
+          "text": "Your name is Maya, and you live in Pune.",
+          "passed": true,
+          "wall_s": 0.5928194588050246
+        },
+        {
+          "case": "correction",
+          "text": "Your meeting is on Friday.",
+          "passed": true,
+          "wall_s": 0.5875465422868729
+        },
+        {
+          "case": "update",
+          "text": "Your meeting is now on Monday.",
+          "passed": true,
+          "wall_s": 0.6861090827733278
+        },
+        {
+          "case": "new_question",
+          "text": "Three plus three equals six.",
+          "passed": true,
+          "wall_s": 0.7481437497772276
+        },
+        {
+          "case": "retained_state",
+          "text": "Your name is Maya, and your meeting is on Monday.",
+          "passed": true,
+          "wall_s": 0.9023920833133161
+        }
+      ],
+      "system_text": "You are a helpful voice assistant. Give brief, direct answers. User facts belong to the user. Follow the latest correction."
+    },
+    {
+      "model": "lfm-text",
+      "prompt": "detailed",
+      "passed": 6,
+      "total": 7,
+      "cases": [
+        {
+          "case": "arithmetic",
+          "text": "Two plus two equals four. That's a simple math fact.",
+          "passed": true,
+          "wall_s": 0.6818314166739583
+        },
+        {
+          "case": "remember",
+          "text": "Hello Maya! I understand you're from Pune. Let me know if you need any assistance.",
+          "passed": true,
+          "wall_s": 0.972511749714613
+        },
+        {
+          "case": "recall",
+          "text": "Hello Maya! I'm here to help. Your name is Maya, and you live in Pune.",
+          "passed": true,
+          "wall_s": 1.2786058341152966
+        },
+        {
+          "case": "correction",
+          "text": "Your meeting is on Friday.",
+          "passed": true,
+          "wall_s": 0.960192957893014
+        },
+        {
+          "case": "update",
+          "text": "The current meeting day is Monday.",
+          "passed": true,
+          "wall_s": 0.9905596668832004
+        },
+        {
+          "case": "new_question",
+          "text": "Three plus three equals six.",
+          "passed": true,
+          "wall_s": 1.057978707831353
+        },
+        {
+          "case": "retained_state",
+          "text": "Your name is Maya, and your meeting is on Friday.",
+          "passed": false,
+          "wall_s": 1.182339542079717
+        }
+      ],
+      "system_text": "You are Sol, a helpful AI voice assistant. The user is a different person. Address the user as you; never speak as if you were the user. Answer the latest question directly in one or two short sentences, under 45 words. Use plain spoken English, no markdown. Remember what the user tells you, using the latest correction. User facts belong to the user: say your name or your meeting, not my name or my meeting. Do not add filler like I can confirm that. If interrupted, follow the new request. Do not invent facts or pretend to have performed actions. An interrupted assistant message contains only speech rendered before cancellation."
+    }
+  ]
+}

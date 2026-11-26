@@ -1,0 +1,23 @@
+{
+  "mode": "actual_text_inference_only",
+  "cases": [
+    {
+      "question": "What is four plus five",
+      "string": "8",
+      "tokens": "8",
+      "same_ids": true
+    },
+    {
+      "question": "What is four plus five?",
+      "string": "9",
+      "tokens": "9",
+      "same_ids": true
+    },
+    {
+      "question": "What is 4 + 5?",
+      "string": "9",
+      "tokens": "9",
+      "same_ids": true
+    }
+  ]
+}

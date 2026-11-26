@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "tests": 79,
+  "duration_s": 2.922,
+  "failures": 0,
+  "errors": 0,
+  "includes_real_model_inference": false,
+  "command": ".venv-live/bin/python -m unittest discover -s tests -v",
+  "scope": "unit, controller, API, checkpoint packing, real DSP attenuation, live state/render invariants",
+  "review_date": "2026-11-27"
+}

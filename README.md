@@ -1,87 +1,87 @@
-# Local native speech-to-speech on Mac
+# Local duplex voice on Mac
 
-**Actual microphone audio in, model-generated speech out**, running locally on Apple Silicon. The selected model is **LFM2.5-Audio-1.5B, MLX 4-bit**, with a tested brief-response prompt. Its audio encoder takes the waveform directly; interleaved model audio tokens are decoded into a spoken answer. No separate speech-to-text/chat/text-to-speech pipeline is used for replies.
+A local voice application for Apple Silicon: **Moonshine Medium streaming English ASR → Qwen3.5 2B MLX 4-bit → Piper neural speech**. Microphone capture and recognition continue during generated speech. Speaking ducks playback; confirmed new speech cancels the old reply and updates the conversation. No cloud inference or paid API is required.
 
-This version is **turn-based English voice chat**, not PersonaPlex-style simultaneous listening/speaking. Record, stop and send, then listen to the generated reply. Model replies can take several seconds on an 8 GB M2 and may contain factual or pronoun errors.
+**Experimental: repeated acoustic tests still expose false interruptions and occasional overload. The requested consistently natural phone-call experience is not achieved.** The previous working turn-based app remains available below.
 
-## Run on this Mac
+This is a streaming cascade, rather than an audio-native PersonaPlex model. Actual acoustic microphone/speaker interruption has been demonstrated automatically, including the corrected spoken answer. The [qualification results](docs/LIVE_RESULTS.md) distinguish hardware tests, recorded-input tests and remaining failures. No human naturalness rating has been performed, and sub-500 ms end-to-end voice latency is not established.
 
-Double-click **Start Voice.command**, or run:
+## Launch on this Mac
 
-```bash
-./.venv-sts/bin/python -m sts_lab serve
-```
+Double-click **Start Conversation.command**, or open [Local Conversation](http://127.0.0.1:8765) when the server is running. Click **Start conversation**, then speak in English. The app shows the selected microphone/output and listening/speaking state. **Interrupt** clears queued speech; **End** releases both devices. **New conversation** clears context and pending recognition. Spoken “stop,” “wait” and “cancel” also stop speech without starting another generated answer.
 
-Open **http://127.0.0.1:8765**, click **Load voice model**, then **Record voice**. Allow microphone access in the browser when it requests it. Speak for up to 20 seconds, click **Stop and send**, and the model will reply with playable audio. WAV upload is also supported. Start a new conversation after six turns.
+The default audio path uses the browser’s real microphone with WebRTC echo cancellation, noise suppression and gain control. Generated speech plays through a local AudioWorklet. Model inference remains entirely on this Mac. The browser uses the current default devices and the app preserves their volume settings. Unmute the selected output to hear replies; startup reports mute state. Restart the conversation after changing devices. Allow microphone access in the browser when requested. macOS may also request permission. Speak when the status changes to Listening. Chrome/Chromium is the tested browser; use headphones if another browser lacks reliable echo cancellation.
 
-The native runtime and pinned 4-bit model are already installed in this checkout. They are ignored by Git; source and reproducible tests are pushed to the private repository.
+## Installation
 
-## Fresh installation
-
-macOS 26 on Apple Silicon and Python 3.12 match the tested environment.
+Tested on **MacBook Air M2, 8 GB unified memory, macOS 26, Python 3.12**. Allow 5 GiB free disk. Setup also installs SpeexDSP through Homebrew for the optional native adapter. Setup needs internet; conversations use local files only.
 
 ```bash
-python3.12 -m venv .venv-sts
-.venv-sts/bin/python -m pip install -r requirements-voice.txt
-.venv-sts/bin/python scripts/setup_voice.py
-.venv-sts/bin/python -m sts_lab serve
+./"Setup Conversation.command"
+./"Start Conversation.command"
 ```
 
-The model download is approximately 1.8 GB. `setup_voice.py` pins the checkpoint revision and never substitutes a larger model. The full tested environment, including optional audio-evaluation tools, is in `requirements-voice-macos.lock.txt`.
+The dedicated environment, models, installed app and Python caches live under `~/Library/Application Support/STS`, outside cloud-managed Documents. The source repository stays here. Setup creates `.venv-live` as a convenience symlink on a fresh installation. Set `STS_LIVE_HOME` to override the installation directory.
 
-## Actual audio verification
+[Setup](scripts/setup_conversation.py) pins Qwen's exact revision and checks the speech asset revision. Dependencies are in [requirements-live.txt](requirements-live.txt); the [tested lockfile](requirements-live-macos.lock.txt) includes optional test tools. The selected public models require no Hugging Face login. Tokens and weights are excluded from Git.
 
-Four real-inference recipes were compared: 4-bit/default, 4-bit/greedy audio, 6-bit/default and 4-bit/brief prompt. Each ran six spoken turns covering five scenarios: greeting, arithmetic, two-turn fact recall, a spoken correction and an upstream recorded question. These are actual native model responses, not controller simulations.
-
-The selected brief-prompt recipe generated non-silent, untruncated speech for all six turns and passed the five disclosed factual spot checks. Its measured median response time and peak MLX memory are in [voice-selection.json](reports/voice-selection.json). The prompt was tuned using these examples, so this is a small regression set, not a blind reasoning benchmark.
-
-[Voice browser verification](reports/voice-browser.json) exercises actual model loading, WAV upload, browser microphone capture, response decoding/playback and mobile layout. Automated capture uses Chromium's recorded-audio microphone device; **the user's physical microphone and a live human conversation were not tested unattended**. The same capture code is used when you click Record voice.
-
-[Independent ASR checks](reports/lfm-audio-transcripts.json) transcribe generated WAVs with Whisper tiny.en to check that output is speech. Whisper is used only for evaluation and is absent from the serving path. It can make transcription mistakes and is not a human quality rating.
+To develop directly from the checkout:
 
 ```bash
-.venv-sts/bin/python scripts/lfm_probe.py --brief
-.venv-sts/bin/python scripts/select_voice.py
-python3.12 -m unittest discover -s tests -v
+.venv-live/bin/python scripts/live_server.py --port 8765
 ```
 
-Browser tests use Playwright in the separate `.venv` environment:
+Add `--audio native` to use the earlier CoreAudio adapter, preferably with headphones. The browser path is selected for speaker echo handling.
+
+Only loopback ports 8765/8766 are used. One session is permitted per server. Avoid running another local model benchmark during a conversation on this 8 GB Mac: competing model loads can starve audio processing. Battery/Low Power Mode can increase latency; the final hardware report records its power condition.
+
+## Implementation
+
+A browser AudioWorklet continuously transfers 20 ms microphone frames to an independent ASR worker. WebRTC handles acoustic echo. A lightweight local energy gate ducks playback promptly; recognized new speech invalidates the reply epoch. The optional native adapter uses a sample-synchronous output reference and SpeexDSP. Late audio, completion events and acknowledgements cannot revive cancelled speech. Local streaming synthesis overlaps MLX token generation.
+
+Context contains user messages and completed rendered assistant phrases. An explicit, non-spoken cancellation marker separates turns when no phrase finished, preventing the small model from merging abandoned and replacement requests. Missing question punctuation is restored without changing recognized words. Older context is summarized locally; recent turns remain verbatim. Input, output and context are bounded. Each reply uses MLX-LM's normal generation cache; manual cross-turn cache reuse is disabled.
+
+[Architecture and alternatives](docs/LIVE_AUDIT.md) cover Moshi/PersonaPlex, F-Actor, Dessa, compact language models and streaming speech components. [Measured results](docs/LIVE_RESULTS.md) explain profile selection, correctness checks, latency definitions and limits. Test answers are generated by the models; no canned conversation replies or calculator substitute is used in serving.
+
+## Reproduce tests
+
+Install optional tools first:
 
 ```bash
-.venv/bin/python scripts/voice_browser_test.py
-.venv/bin/python scripts/browser_test.py
+.venv-live/bin/python -m pip install -r requirements-live-test.txt
+.venv-live/bin/python -m playwright install chromium
+.venv-live/bin/python -m unittest discover -s tests -v
 ```
 
-See [native voice results](reports/VOICE_RESULTS.md), [voice-engine implementation](sts_lab/voice_engine.py) and [model documentation](https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B).
-
-## Hugging Face and PersonaPlex access
-
-The working LFM voice model is public and requires no account. For PersonaPlex, accept its model terms under your Hugging Face account, create a read token, then run the installed interactive login:
+With a server running, the acoustic suite plays OS-generated test questions through the built-in speakers and recaptures them through the real microphone. The explicit fixture flag temporarily enables **only the fixture speaker**, then restores its exact mute/volume state. It does not change the default output selection.
 
 ```bash
-./.venv-sts/bin/hf auth login
+.venv-live/bin/python scripts/live_hardware_browser_test.py --port 8765 --enable-fixture-speaker --extended --hold-seconds 300
+.venv-live/bin/python scripts/live_ui_test.py --port 8765
 ```
 
-Keep the token in the local login utility, not chat or repository files. Full steps and official links: [Hugging Face access](docs/HUGGING_FACE.md). Authentication does not remove PersonaPlex's memory requirements.
+Separate checks:
 
-## Privacy and limitations
+```bash
+# Neural inference with recorded input and software rendering, not hardware:
+.venv-live/bin/python scripts/live_inference_test.py
+# The earlier native-only typed-context probe requires a native-mode server:
+# .venv-live/bin/python scripts/live_server.py --audio native --port 8770
+.venv-live/bin/python scripts/live_session_test.py --port 8770 --seconds 300
+# Reproduce the interrupted-turn context investigation:
+.venv-live/bin/python scripts/benchmark_interruption_context.py
+```
 
-The server binds only to 127.0.0.1 and rejects cross-origin requests. Microphone capture starts only after your click. Audio stays on the Mac; server-side input/output files are temporary and removed after a reply. The browser holds playable replies until you reset or close it. No external actions or model fine-tuning occur.
+Run these sequentially. Acoustic tests use real devices and air transmission, with an automated speech source; they are not live-human conversations. Arithmetic checks inspect the answer, rather than accepting a matching operand. The scripts retain individual failures rather than silently skipping them.
 
-Response generation is capped and context is bounded to six turns. The selected model sometimes phrases user facts in the first person, and accuracy beyond this small test set is not established. Stop playback stops the speaker; it does not implement full-duplex barge-in.
+## Limits and privacy
 
-## Experimental native duplex mode
+ASR errors, echoes, long pauses, accents and factual mistakes remain possible. The optional native mode can mistake exact short repetitions for echo; speaker echo handling is stronger in the browser mode. Recognition segments are capped at 25 seconds and generated replies at 96 tokens; long speech can be segmented or truncated. This is not a hard-real-time or universally error-free system.
 
-A smaller **F-Actor/Mimi MLX 4-bit** port now supports simultaneous microphone capture and generated audio playback. The actual browser streaming path was tested with recorded speech. It remains experimental: the best initial five-case run processed audio about **1.94× slower than real time**, and independent transcripts exposed off-topic replies. It is not the selected voice app.
+Normal serving saves neither microphone recordings nor chat transcripts. Conversation state stays in process/page memory until reset or close. The optional `--diagnostics` mode saves a bounded private test trace and error details in Application Support; it is off in the normal launcher. Test fixtures, diagnostics, environments, credentials and weights are outside Git. Device playback acknowledgements establish delivery, not that a person heard or understood every word.
 
-Double-click **Start Duplex Experiment.command** and open **http://127.0.0.1:8767** to inspect it. Use headphones. Startup warms the decoder before capture; bounded queues stop a session if inference falls behind. The user's physical microphone and live human conversation remain untested.
+## Preserved earlier work
 
-See [native duplex results and reproduction](docs/DUPLEX_RESULTS.md). Hugging Face authentication and PersonaPlex access have been completed locally; [the access probe](reports/hugging-face-access.json) returned HTTP 200. Credentials and weights are excluded from Git.
+**Start Voice.command** opens the previous LFM2.5-Audio turn-based app on port **8769**. Its separate setup and historical measurements remain in [legacy voice instructions](docs/LEGACY_VOICE.md). [F-Actor results](docs/DUPLEX_RESULTS.md) document its slower-than-real-time and off-topic behavior; it is not the selected app. The [controller lab](reports/RESULTS.md) remains preserved; its synthetic scores are not voice-performance evidence.
 
-## Earlier controller research
-
-The same repository retains the five-policy reliability experiment under **Controller experiments** and **Scenario replay**. Its 1,500 synthetic evaluations measure task-state logic, not speech-model performance. All five variants remain reproducible; the combined controller won that separate suite. See [controller outcomes](reports/RESULTS.md), [evaluation definitions](docs/evaluation.md), [research dossier](docs/research.md) and [build memo](docs/build-memo.md).
-
-Full controller manifests and traces are compressed JSON artifacts. The failed larger Moshi probe remains documented; it does not describe the smaller working LFM path.
-
-Code is MIT; model licenses are separate. LFM model use is subject to [Liquid's model license](https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B/blob/main/LICENSE). The CI configuration remains a template in `ci/github-actions.yml` because the available GitHub token lacks workflow-write scope. Recorded test results are from local execution.
+Code is MIT; model/library licenses are separate. See [Qwen](https://huggingface.co/mlx-community/Qwen3.5-2B-4bit), [Moonshine](https://github.com/moonshine-ai/moonshine) and [SpeexDSP](https://www.speex.org/). Existing Hugging Face/PersonaPlex access remains configured locally, but PersonaPlex is not the selected model. The existing CI template is in `ci/github-actions.yml`; reported checks were executed locally.

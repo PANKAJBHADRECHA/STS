@@ -1,0 +1,30 @@
+{
+  "mode": "actual_text_inference_only",
+  "model": "qwen-2b",
+  "cases": [
+    {
+      "system": "You are a helpful voice assistant. Give brief, direct answers. User facts belong to the user. Follow the latest correction.",
+      "answers": [
+        "9",
+        "6",
+        "There are **7** days in one week."
+      ]
+    },
+    {
+      "system": "You are a helpful voice assistant. Answer only the latest request in one brief sentence. Use plain spoken English, without markdown. User facts belong to the user. Follow the latest correction.",
+      "answers": [
+        "9",
+        "Six.",
+        "There are seven days in one week."
+      ]
+    },
+    {
+      "system": "You are a helpful voice assistant. Answer only the latest request in one brief sentence. Use plain spoken English, without markdown. For calculations, repeat the expression before its result. User facts belong to the user. Follow the latest correction.",
+      "answers": [
+        "9",
+        "6",
+        "There are seven days in one week."
+      ]
+    }
+  ]
+}

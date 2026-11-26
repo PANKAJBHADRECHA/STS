@@ -1,0 +1,235 @@
+{
+  "actual_hardware": true,
+  "input": "MacBook Air Microphone",
+  "output": "MacBook Air Speakers",
+  "fake_audio_capture": false,
+  "human_participant": false,
+  "cases": [
+    {
+      "case": "normal",
+      "input": "What is two plus two?",
+      "reply": "Two plus two equals four.",
+      "speech_end_to_reply_done_s": 4.116886541247368,
+      "speech_end_to_first_audio_s": 2.3655999999046324,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 2,
+        "text": "Two plus two equals four.",
+        "first_token_s": 0.38131433306261897,
+        "first_audio_s": 1.8079158328473568,
+        "audio_s": 2.3,
+        "wall_s": 3.5724814580753446,
+        "peak_mlx_bytes": 645978646,
+        "cached_prompt_tokens": 139
+      }
+    }
+  ],
+  "metrics": {
+    "captureFrames": 439,
+    "outputFrames": 3,
+    "captureDuringPlayback": 118,
+    "cancellations": [],
+    "replies": [
+      {
+        "type": "reply_done",
+        "epoch": 2,
+        "text": "Two plus two equals four.",
+        "first_token_s": 0.38131433306261897,
+        "first_audio_s": 1.8079158328473568,
+        "audio_s": 2.3,
+        "wall_s": 3.5724814580753446,
+        "peak_mlx_bytes": 645978646,
+        "cached_prompt_tokens": 139
+      }
+    ],
+    "events": [
+      {
+        "type": "loading",
+        "epoch": null,
+        "at_ms": 765.0999999046326
+      },
+      {
+        "type": "ready",
+        "epoch": null,
+        "at_ms": 9064.099999904633
+      },
+      {
+        "type": "audio_stats",
+        "epoch": null,
+        "at_ms": 10093.39999961853
+      },
+      {
+        "type": "speech_start",
+        "epoch": null,
+        "at_ms": 10427.699999809265
+      },
+      {
+        "type": "cancel",
+        "epoch": 0,
+        "at_ms": 10972
+      },
+      {
+        "type": "partial",
+        "epoch": null,
+        "at_ms": 10972.5
+      },
+      {
+        "type": "audio_stats",
+        "epoch": null,
+        "at_ms": 11090.39999961853
+      },
+      {
+        "type": "partial",
+        "epoch": null,
+        "at_ms": 11790.599999904633
+      },
+      {
+        "type": "partial",
+        "epoch": null,
+        "at_ms": 12024.099999904633
+      },
+      {
+        "type": "speech_end",
+        "epoch": null,
+        "at_ms": 12024.5
+      },
+      {
+        "type": "cancel",
+        "epoch": 1,
+        "at_ms": 12024.599999904633
+      },
+      {
+        "type": "user",
+        "epoch": 2,
+        "at_ms": 12024.699999809265
+      },
+      {
+        "type": "audio_stats",
+        "epoch": null,
+        "at_ms": 12093
+      },
+      {
+        "type": "reply_start",
+        "epoch": 2,
+        "at_ms": 12323.5
+      },
+      {
+        "type": "audio_stats",
+        "epoch": null,
+        "at_ms": 13157.599999904633
+      },
+      {
+        "type": "audio_meta",
+        "epoch": 2,
+        "at_ms": 13833.89999961853
+      },
+      {
+        "type": "audio_stats",
+        "epoch": null,
+        "at_ms": 14097.39999961853
+      },
+      {
+        "type": "audio_stats",
+        "epoch": null,
+        "at_ms": 15100.89999961853
+      },
+      {
+        "type": "audio_meta",
+        "epoch": 2,
+        "at_ms": 15181.799999713898
+      },
+      {
+        "type": "audio_meta",
+        "epoch": 2,
+        "at_ms": 15595.39999961853
+      },
+      {
+        "type": "reply_done",
+        "epoch": 2,
+        "at_ms": 15601.799999713898
+      },
+      {
+        "type": "audio_stats",
+        "epoch": null,
+        "at_ms": 16093.39999961853
+      },
+      {
+        "type": "listening",
+        "epoch": 2,
+        "at_ms": 16966.799999713898
+      },
+      {
+        "type": "audio_stats",
+        "epoch": null,
+        "at_ms": 17092.099999904633
+      }
+    ],
+    "audioStarts": [
+      {
+        "epoch": 2,
+        "at_ms": 13879.89999961853
+      }
+    ],
+    "audioStats": [
+      {
+        "type": "audio_stats",
+        "raw_rms": 0.0026195140089839697,
+        "clean_rms": 0.0012600667541846633,
+        "reference_rms": 0,
+        "speech": false
+      },
+      {
+        "type": "audio_stats",
+        "raw_rms": 0.004470165353268385,
+        "clean_rms": 0.0042242202907800674,
+        "reference_rms": 0,
+        "speech": true
+      },
+      {
+        "type": "audio_stats",
+        "raw_rms": 0.003722539870068431,
+        "clean_rms": 0.00020222213061060756,
+        "reference_rms": 0,
+        "speech": false
+      },
+      {
+        "type": "audio_stats",
+        "raw_rms": 0.0026328847743570805,
+        "clean_rms": 0.00021605470101349056,
+        "reference_rms": 0,
+        "speech": false
+      },
+      {
+        "type": "audio_stats",
+        "raw_rms": 0.003535551019012928,
+        "clean_rms": 0.0003713133046403527,
+        "reference_rms": 1.153152061306173e-05,
+        "speech": false
+      },
+      {
+        "type": "audio_stats",
+        "raw_rms": 0.0028564538806676865,
+        "clean_rms": 0.0002533200313337147,
+        "reference_rms": 0,
+        "speech": false
+      },
+      {
+        "type": "audio_stats",
+        "raw_rms": 0.0032918602228164673,
+        "clean_rms": 0.0004426396917551756,
+        "reference_rms": 0.04661216959357262,
+        "speech": false
+      },
+      {
+        "type": "audio_stats",
+        "raw_rms": 0.003216793294996023,
+        "clean_rms": 0.00019592100579757243,
+        "reference_rms": 0,
+        "speech": false
+      }
+    ]
+  },
+  "console_errors": [],
+  "status": "passed",
+  "scope": "Development experiment, not final qualification. Early arithmetic checks could accept a matching operand; consult live-hardware-final.json for strict final scoring."
+}

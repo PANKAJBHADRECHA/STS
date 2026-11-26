@@ -1,0 +1,18 @@
+{
+  "actual_hardware": true,
+  "input": "MacBook Air Microphone",
+  "output": "MacBook Air Speakers",
+  "capture_seconds": 6.25875,
+  "rms": 0.023521210998296738,
+  "transcript": null,
+  "asr_wall_s": 0.4331902079284191,
+  "recognized_friday": false,
+  "test_output_volume": 70,
+  "test_input_volume": 50,
+  "human_participant": false,
+  "fixture": "OS-generated speech played through built-in speaker, recaptured through air",
+  "status": "failed",
+  "transcript_saved": false,
+  "redaction_reason": "Unrecognized capture may contain ambient speech; not published",
+  "scope": "Development experiment, not final qualification. Early arithmetic checks could accept a matching operand; consult live-hardware-final.json for strict final scoring."
+}

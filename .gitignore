@@ -13,3 +13,5 @@ node_modules/
 *.pt
 *.sqlite*
 reports/private/
+
+.venv-live

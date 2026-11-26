@@ -1,0 +1,56 @@
+{
+  "mode": "actual_neural_inference_recorded_input",
+  "configuration": {
+    "model": "lfm-text",
+    "voice": "kokoro_af_heart",
+    "asr": "TINY_STREAMING"
+  },
+  "hardware": false,
+  "inference_mocked": false,
+  "renderer": "timed software acknowledgements",
+  "frames_sent": 749,
+  "engine_metrics": {
+    "audio_frames": 749,
+    "asr_wall_s": 1.5586803648620844,
+    "input_s": 14.97999999999977,
+    "interruptions": 0,
+    "utterances": 2,
+    "replies": 2,
+    "errors": 0
+  },
+  "cases": [
+    {
+      "case": "normal",
+      "recognized": "What is 2 plus 2?",
+      "passed": true,
+      "result": {
+        "type": "reply_done",
+        "epoch": 2,
+        "text": "The answer is 4.",
+        "first_token_s": 0.6924814996309578,
+        "first_audio_s": 1.050852166954428,
+        "audio_s": 1.8,
+        "wall_s": 1.712155458983034,
+        "peak_mlx_bytes": 753088236,
+        "cached_prompt_tokens": 34
+      }
+    },
+    {
+      "case": "memory",
+      "recognized": "My name is Alex and I live in London, remember that.",
+      "passed": false,
+      "result": {
+        "type": "reply_done",
+        "epoch": 4,
+        "text": "I don't have personal information about you, but I know that 2 plus 2 equals 4.",
+        "first_token_s": 0.42770395800471306,
+        "first_audio_s": 1.7083588331006467,
+        "audio_s": 5.4,
+        "wall_s": 8.007912833243608,
+        "peak_mlx_bytes": 801222660,
+        "cached_prompt_tokens": 54
+      }
+    }
+  ],
+  "status": "failed"
+}

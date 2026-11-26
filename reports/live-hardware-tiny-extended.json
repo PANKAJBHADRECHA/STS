@@ -1,0 +1,191 @@
+{
+  "actual_hardware": true,
+  "human_participant": false,
+  "status": "failed",
+  "error_type": "TimeoutError",
+  "completed_cases": [
+    {
+      "case": "normal",
+      "passed": true,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 2,
+        "first_token_s": 0.5108203338459134,
+        "first_audio_s": 0.6189464167691767,
+        "audio_s": 0.5456666666666666,
+        "wall_s": 0.6200818750075996,
+        "peak_mlx_bytes": 1281494060,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 1.1931589590385556,
+      "duration_s": 5.40070675034076
+    },
+    {
+      "case": "memory",
+      "passed": true,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 5,
+        "first_token_s": 0.43282854184508324,
+        "first_audio_s": 0.5594956669956446,
+        "audio_s": 2.229125,
+        "wall_s": 0.7219797498546541,
+        "peak_mlx_bytes": 1281494060,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 1.2724184999242425,
+      "duration_s": 6.133047041948885
+    },
+    {
+      "case": "recall",
+      "passed": true,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 7,
+        "first_token_s": 0.6556652919389307,
+        "first_audio_s": 1.0227509578689933,
+        "audio_s": 2.7515833333333335,
+        "wall_s": 1.3489638329483569,
+        "peak_mlx_bytes": 1330600104,
+        "cached_prompt_tokens": 46
+      },
+      "speech_end_to_reply_done_s": 1.8314022500999272,
+      "duration_s": 7.2360032089054585
+    },
+    {
+      "case": "correction",
+      "passed": true,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 10,
+        "first_token_s": 0.4870529589243233,
+        "first_audio_s": 0.6001311670988798,
+        "audio_s": 0.568875,
+        "wall_s": 0.6015311246737838,
+        "peak_mlx_bytes": 1330600104,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 1.1433749161660671,
+      "duration_s": 6.5653639999218285
+    },
+    {
+      "case": "changed_question",
+      "passed": true,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 13,
+        "first_token_s": 0.44880958274006844,
+        "first_audio_s": 0.6385328746400774,
+        "audio_s": 2.8560416666666666,
+        "wall_s": 0.8411945407278836,
+        "peak_mlx_bytes": 1330600104,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 2.553845625370741,
+      "duration_s": 9.59808108303696
+    },
+    {
+      "case": "fast_speech",
+      "passed": true,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 16,
+        "first_token_s": 0.45801612501963973,
+        "first_audio_s": 0.5204380410723388,
+        "audio_s": 0.66175,
+        "wall_s": 0.5274781249463558,
+        "peak_mlx_bytes": 1330600104,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 1.3277510832995176,
+      "duration_s": 3.5476819169707596
+    },
+    {
+      "case": "slow_speech",
+      "passed": false,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 19,
+        "first_token_s": 0.5081164170987904,
+        "first_audio_s": 0.7460379172116518,
+        "audio_s": 1.7066666666666668,
+        "wall_s": 0.7813283749856055,
+        "peak_mlx_bytes": 1330600104,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 2.1600487921386957,
+      "duration_s": 6.156008625403047
+    },
+    {
+      "case": "background_noise",
+      "passed": false,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 22,
+        "first_token_s": 0.5303810001350939,
+        "first_audio_s": 0.6686194161884487,
+        "audio_s": 2.0897916666666667,
+        "wall_s": 0.8504142081364989,
+        "peak_mlx_bytes": 1330600104,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 2.9316181670874357,
+      "duration_s": 6.403839583043009
+    },
+    {
+      "case": "rapid_1",
+      "passed": false,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 25,
+        "first_token_s": 0.5995875839143991,
+        "first_audio_s": 0.6778207919560373,
+        "audio_s": 0.6153333333333333,
+        "wall_s": 0.6840742090716958,
+        "peak_mlx_bytes": 1330600104,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 2.294956583995372,
+      "error_type": "TimeoutError",
+      "duration_s": 24.511746749747545
+    },
+    {
+      "case": "rapid_2",
+      "passed": true,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 29,
+        "first_token_s": 1.8965191668830812,
+        "first_audio_s": 2.2327094580978155,
+        "audio_s": 0.5572916666666666,
+        "wall_s": 2.2429229170084,
+        "peak_mlx_bytes": 1330600104,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 2.799515208695084,
+      "duration_s": 4.868545333854854
+    },
+    {
+      "case": "rapid_3",
+      "passed": true,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 32,
+        "first_token_s": 0.5411760420538485,
+        "first_audio_s": 0.6403800831176341,
+        "audio_s": 0.568875,
+        "wall_s": 0.6417230828665197,
+        "peak_mlx_bytes": 1330600104,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 1.2607200001366436,
+      "duration_s": 3.4103779583238065
+    }
+  ],
+  "configuration": {
+    "model": "qwen-2b",
+    "asr": "TINY_STREAMING",
+    "voice": "piper_en_US-lessac-medium"
+  },
+  "scope": "Development experiment, not final qualification. Early arithmetic checks could accept a matching operand; consult live-hardware-final.json for strict final scoring."
+}

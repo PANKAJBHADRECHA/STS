@@ -1,0 +1,96 @@
+{
+  "mode": "actual_neural_inference_recorded_input",
+  "hardware": false,
+  "inference_mocked": false,
+  "renderer": "timed software acknowledgements",
+  "frames_sent": 1730,
+  "cases": [
+    {
+      "case": "normal",
+      "recognized": "What is 2 + 2?",
+      "passed": true,
+      "result": {
+        "type": "reply_done",
+        "epoch": 2,
+        "text": "4",
+        "first_token_s": 0.661772542167455,
+        "first_audio_s": 1.2673419998027384,
+        "audio_s": 1.2999999999999998,
+        "wall_s": 1.9078819579444826,
+        "peak_mlx_bytes": 1181551547,
+        "cached_prompt_tokens": 33
+      }
+    },
+    {
+      "case": "memory",
+      "recognized": "My name is Alex and I live in London, remember that.",
+      "passed": true,
+      "result": {
+        "type": "reply_done",
+        "epoch": 4,
+        "text": "Understood.",
+        "first_token_s": 0.6242441250942647,
+        "first_audio_s": 1.0560267502442002,
+        "audio_s": 1.5750000000000002,
+        "wall_s": 1.357559041120112,
+        "peak_mlx_bytes": 1284861312,
+        "cached_prompt_tokens": 43
+      }
+    },
+    {
+      "case": "recall",
+      "recognized": "What is my name and where do I live?",
+      "passed": true,
+      "result": {
+        "type": "reply_done",
+        "epoch": 6,
+        "text": "Your name is Alex and you live in London.",
+        "first_token_s": 0.5816782922483981,
+        "first_audio_s": 1.2812257502228022,
+        "audio_s": 2.8499999999999996,
+        "wall_s": 3.406624708324671,
+        "peak_mlx_bytes": 1303234640,
+        "cached_prompt_tokens": 67
+      }
+    },
+    {
+      "case": "correction",
+      "recognized": "My meeting is Tuesday, sorry, I mean Friday, which day is my meeting?",
+      "passed": true,
+      "result": {
+        "type": "reply_done",
+        "epoch": 8,
+        "text": "Friday",
+        "first_token_s": 0.5470030419528484,
+        "first_audio_s": 0.8409146252088249,
+        "audio_s": 1.425,
+        "wall_s": 1.1850897502154112,
+        "peak_mlx_bytes": 1303234640,
+        "cached_prompt_tokens": 90
+      }
+    },
+    {
+      "case": "spoken_interruption",
+      "passed": true,
+      "result": {
+        "type": "reply_done",
+        "epoch": 14,
+        "text": "6",
+        "first_token_s": 0.9992373329587281,
+        "first_audio_s": 2.369945124723017,
+        "audio_s": 1.275,
+        "wall_s": 3.083694291766733,
+        "peak_mlx_bytes": 1303234640,
+        "cached_prompt_tokens": 155
+      },
+      "time_to_cancellation_s": 3.809326082933694
+    }
+  ],
+  "status": "passed",
+  "scope": "Historical recorded-input development test with permissive answer checks; not final physical qualification.",
+  "configuration": {
+    "model": "qwen-2b",
+    "asr": "SMALL_STREAMING",
+    "voice": "kokoro_af_heart"
+  }
+}

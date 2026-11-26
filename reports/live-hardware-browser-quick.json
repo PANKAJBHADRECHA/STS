@@ -1,0 +1,83 @@
+{
+  "power_source": "Now drawing from 'Battery Power'",
+  "session_duration_s": 6.080041584093124,
+  "continuous_capture_completed": true,
+  "actual_hardware": true,
+  "fixture_speaker": {
+    "original_state": {
+      "muted": 0,
+      "volume": 0.5625
+    },
+    "temporary_fixture_volume": 0.55,
+    "default_output_unchanged": true,
+    "restored_state": {
+      "muted": 0,
+      "volume": 0.5625
+    },
+    "restoration_verified": true
+  },
+  "human_participant": false,
+  "fake_audio_capture": false,
+  "source": "OS-generated speech through built-in speakers, air and built-in microphone",
+  "cases": [
+    {
+      "case": "normal",
+      "passed": true,
+      "answer_number": 4.0,
+      "speech_end_to_device_start_s": 1.3142000002861023,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 2,
+        "first_token_s": 0.6797872083261609,
+        "first_audio_s": 0.7898222920484841,
+        "audio_s": 0.5572916666666666,
+        "wall_s": 0.7919299169443548,
+        "peak_mlx_bytes": 1234332676,
+        "cached_prompt_tokens": 0
+      },
+      "speech_end_to_reply_done_s": 1.3648465420119464,
+      "duration_s": 5.5025392500683665
+    }
+  ],
+  "metrics": {
+    "capture_settings": {
+      "echoCancellation": true,
+      "noiseSuppression": true,
+      "autoGainControl": true,
+      "sampleRate": 48000,
+      "channelCount": 1,
+      "latency": 0.01
+    },
+    "audio_context_rate": 48000,
+    "last_error": null,
+    "engine_metrics": {
+      "audio_frames": 311,
+      "input_overflows": 0,
+      "asr_wall_s": 1.754262674599886,
+      "input_s": 6.219999999999955,
+      "interruptions": 0,
+      "utterances": 1,
+      "replies": 1,
+      "errors": 0
+    },
+    "configuration": {
+      "model": "qwen-2b",
+      "asr": "MEDIUM_STREAMING",
+      "voice": "piper_en_US-lessac-medium",
+      "audio": "browser"
+    },
+    "frames": 639,
+    "output_frames": 21,
+    "devices": {
+      "input": "Default - MacBook Air Microphone (Built-in)",
+      "output": "Default - MacBook Air Speakers (Built-in)"
+    },
+    "speakers_muted": false,
+    "device_status_events": 0,
+    "synthesis_starvation_frames": 0
+  },
+  "microphone_released": true,
+  "console_errors": [],
+  "status": "passed",
+  "scope": "Development experiment, not final qualification. Early arithmetic checks could accept a matching operand; consult live-hardware-final.json for strict final scoring."
+}

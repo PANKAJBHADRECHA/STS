@@ -1,0 +1,22 @@
+{
+  "actual_hardware": true,
+  "human_participant": false,
+  "status": "failed",
+  "error_type": "TimeoutError",
+  "error": "Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#reset\")\n    - locator resolved to <button disabled id=\"reset\">New conversation</button>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n      - waiting 100ms\n    57 \u00d7 waiting for element to be visible, enabled and stable\n       - element is not enabled\n     - retrying click action\n       - waiting 500ms\n",
+  "completed_cases": [
+    {
+      "case": "normal",
+      "passed": false,
+      "ui_status": "Invalid audio or overloaded input; start again",
+      "error_type": "TimeoutError",
+      "duration_s": 23.830665375106037
+    }
+  ],
+  "build_date": "2026-11-27",
+  "scoring": "strict_final_answer_v2",
+  "fixture_restored_state": {
+    "muted": 1,
+    "volume": 1.0
+  }
+}

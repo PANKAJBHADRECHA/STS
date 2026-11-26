@@ -1,0 +1,587 @@
+{
+  "scope": "Isolated final Medium-ASR native acoustic run and microphone hold; system-wide GPU",
+  "gpu_is_model_specific": false,
+  "cpu_100_percent_means_one_core": true,
+  "duration_s": 100.29871641704813,
+  "samples": [
+    {
+      "elapsed_s": 1.0309848343022168,
+      "process_cpu_percent": 4.9,
+      "process_rss_bytes": 34291712,
+      "system_gpu_utilization_percent": 37
+    },
+    {
+      "elapsed_s": 2.1052902922965586,
+      "process_cpu_percent": 6.1,
+      "process_rss_bytes": 40796160,
+      "system_gpu_utilization_percent": 0
+    },
+    {
+      "elapsed_s": 3.1365636251866817,
+      "process_cpu_percent": 142.8,
+      "process_rss_bytes": 387694592,
+      "system_gpu_utilization_percent": 0
+    },
+    {
+      "elapsed_s": 4.187464792281389,
+      "process_cpu_percent": 58.1,
+      "process_rss_bytes": 186712064,
+      "system_gpu_utilization_percent": 94
+    },
+    {
+      "elapsed_s": 5.23653683392331,
+      "process_cpu_percent": 7.6,
+      "process_rss_bytes": 157237248,
+      "system_gpu_utilization_percent": 0
+    },
+    {
+      "elapsed_s": 6.278087584301829,
+      "process_cpu_percent": 8.0,
+      "process_rss_bytes": 152010752,
+      "system_gpu_utilization_percent": 3
+    },
+    {
+      "elapsed_s": 7.318300084210932,
+      "process_cpu_percent": 8.9,
+      "process_rss_bytes": 151846912,
+      "system_gpu_utilization_percent": 5
+    },
+    {
+      "elapsed_s": 8.37533516716212,
+      "process_cpu_percent": 7.5,
+      "process_rss_bytes": 93716480,
+      "system_gpu_utilization_percent": 5
+    },
+    {
+      "elapsed_s": 9.422161334194243,
+      "process_cpu_percent": 7.6,
+      "process_rss_bytes": 79478784,
+      "system_gpu_utilization_percent": 0
+    },
+    {
+      "elapsed_s": 10.471463874913752,
+      "process_cpu_percent": 6.1,
+      "process_rss_bytes": 54444032,
+      "system_gpu_utilization_percent": 1
+    },
+    {
+      "elapsed_s": 11.518968500196934,
+      "process_cpu_percent": 6.8,
+      "process_rss_bytes": 46137344,
+      "system_gpu_utilization_percent": 2
+    },
+    {
+      "elapsed_s": 12.566104625351727,
+      "process_cpu_percent": 6.4,
+      "process_rss_bytes": 39960576,
+      "system_gpu_utilization_percent": 4
+    },
+    {
+      "elapsed_s": 13.614797084126621,
+      "process_cpu_percent": 6.8,
+      "process_rss_bytes": 39387136,
+      "system_gpu_utilization_percent": 0
+    },
+    {
+      "elapsed_s": 14.664313375018537,
+      "process_cpu_percent": 6.8,
+      "process_rss_bytes": 39911424,
+      "system_gpu_utilization_percent": 2
+    },
+    {
+      "elapsed_s": 15.715871584136039,
+      "process_cpu_percent": 6.5,
+      "process_rss_bytes": 39747584,
+      "system_gpu_utilization_percent": 3
+    },
+    {
+      "elapsed_s": 16.76545041706413,
+      "process_cpu_percent": 5.9,
+      "process_rss_bytes": 38813696,
+      "system_gpu_utilization_percent": 0
+    },
+    {
+      "elapsed_s": 17.8174091251567,
+      "process_cpu_percent": 6.0,
+      "process_rss_bytes": 35700736,
+      "system_gpu_utilization_percent": 2
+    },
+    {
+      "elapsed_s": 18.867280667182058,
+      "process_cpu_percent": 6.1,
+      "process_rss_bytes": 35848192,
+      "system_gpu_utilization_percent": 5
+    },
+    {
+      "elapsed_s": 19.90313466731459,
+      "process_cpu_percent": 7.9,
+      "process_rss_bytes": 41844736,
+      "system_gpu_utilization_percent": 4
+    },
+    {
+      "elapsed_s": 20.952054667286575,
+      "process_cpu_percent": 7.6,
+      "process_rss_bytes": 43696128,
+      "system_gpu_utilization_percent": 2
+    },
+    {
+      "elapsed_s": 22.001648042351007,
+      "process_cpu_percent": 7.7,
+      "process_rss_bytes": 42795008,
+      "system_gpu_utilization_percent": 3
+    },
+    {
+      "elapsed_s": 23.066580042243004,
+      "process_cpu_percent": 7.7,
+      "process_rss_bytes": 42598400,
+      "system_gpu_utilization_percent": 44
+    },
+    {
+      "elapsed_s": 24.111785708926618,
+      "process_cpu_percent": 5.6,
+      "process_rss_bytes": 33095680,
+      "system_gpu_utilization_percent": 25
+    },
+    {
+      "elapsed_s": 25.159781750291586,
+      "process_cpu_percent": 5.4,
+      "process_rss_bytes": 34963456,
+      "system_gpu_utilization_percent": 0
+    },
+    {
+      "elapsed_s": 26.211093416903168,
+      "process_cpu_percent": 5.9,
+      "process_rss_bytes": 35241984,
+      "system_gpu_utilization_percent": 1
+    },
+    {
+      "elapsed_s": 27.254839959088713,
+      "process_cpu_percent": 5.8,
+      "process_rss_bytes": 35061760,
+      "system_gpu_utilization_percent": 31
+    },
+    {
+      "elapsed_s": 28.30422000028193,
+      "process_cpu_percent": 7.0,
+      "process_rss_bytes": 35061760,
+      "system_gpu_utilization_percent": 21
+    },
+    {
+      "elapsed_s": 29.33854337502271,
+      "process_cpu_percent": 6.0,
+      "process_rss_bytes": 34832384,
+      "system_gpu_utilization_percent": 5
+    },
+    {
+      "elapsed_s": 30.37737529212609,
+      "process_cpu_percent": 6.9,
+      "process_rss_bytes": 31096832,
+      "system_gpu_utilization_percent": 4
+    },
+    {
+      "elapsed_s": 31.412035250104964,
+      "process_cpu_percent": 6.1,
+      "process_rss_bytes": 33931264,
+      "system_gpu_utilization_percent": 17
+    },
+    {
+      "elapsed_s": 32.452362624928355,
+      "process_cpu_percent": 5.7,
+      "process_rss_bytes": 34013184,
+      "system_gpu_utilization_percent": 4
+    },
+    {
+      "elapsed_s": 33.48809741716832,
+      "process_cpu_percent": 6.6,
+      "process_rss_bytes": 34144256,
+      "system_gpu_utilization_percent": 4
+    },
+    {
+      "elapsed_s": 34.51553612528369,
+      "process_cpu_percent": 6.2,
+      "process_rss_bytes": 35356672,
+      "system_gpu_utilization_percent": 2
+    },
+    {
+      "elapsed_s": 35.55874804221094,
+      "process_cpu_percent": 5.9,
+      "process_rss_bytes": 35504128,
+      "system_gpu_utilization_percent": 2
+    },
+    {
+      "elapsed_s": 36.60550704225898,
+      "process_cpu_percent": 9.3,
+      "process_rss_bytes": 43466752,
+      "system_gpu_utilization_percent": 4
+    },
+    {
+      "elapsed_s": 37.65443591726944,
+      "process_cpu_percent": 8.0,
+      "process_rss_bytes": 43581440,
+      "system_gpu_utilization_percent": 2
+    },
+    {
+      "elapsed_s": 38.68494566716254,
+      "process_cpu_percent": 5.5,
+      "process_rss_bytes": 42516480,
+      "system_gpu_utilization_percent": 31
+    },
+    {
+      "elapsed_s": 39.728789834305644,
+      "process_cpu_percent": 5.8,
+      "process_rss_bytes": 32309248,
+      "system_gpu_utilization_percent": 17
+    },
+    {
+      "elapsed_s": 40.77181545924395,
+      "process_cpu_percent": 7.3,
+      "process_rss_bytes": 32440320,
+      "system_gpu_utilization_percent": 8
+    },
+    {
+      "elapsed_s": 41.80270737502724,
+      "process_cpu_percent": 5.3,
+      "process_rss_bytes": 31997952,
+      "system_gpu_utilization_percent": 8
+    },
+    {
+      "elapsed_s": 42.838171584066004,
+      "process_cpu_percent": 5.8,
+      "process_rss_bytes": 28884992,
+      "system_gpu_utilization_percent": 0
+    },
+    {
+      "elapsed_s": 43.89437754219398,
+      "process_cpu_percent": 6.9,
+      "process_rss_bytes": 29016064,
+      "system_gpu_utilization_percent": 0
+    },
+    {
+      "elapsed_s": 44.94577545905486,
+      "process_cpu_percent": 5.1,
+      "process_rss_bytes": 29278208,
+      "system_gpu_utilization_percent": 0
+    },
+    {
+      "elapsed_s": 45.9968490418978,
+      "process_cpu_percent": 6.5,
+      "process_rss_bytes": 29360128,
+      "system_gpu_utilization_percent": 1
+    },
+    {
+      "elapsed_s": 47.05232608411461,
+      "process_cpu_percent": 6.5,
+      "process_rss_bytes": 29327360,
+      "system_gpu_utilization_percent": 3
+    },
+    {
+      "elapsed_s": 48.10267854202539,
+      "process_cpu_percent": 6.0,
+      "process_rss_bytes": 29327360,
+      "system_gpu_utilization_percent": 0
+    },
+    {
+      "elapsed_s": 49.144243666902184,
+      "process_cpu_percent": 5.9,
+      "process_rss_bytes": 28327936,
+      "system_gpu_utilization_percent": 6
+    },
+    {
+      "elapsed_s": 50.17833312507719,
+      "process_cpu_percent": 5.3,
+      "process_rss_bytes": 27623424,
+      "system_gpu_utilization_percent": 30
+    },
+    {
+      "elapsed_s": 51.2074062502943,
+      "process_cpu_percent": 5.1,
+      "process_rss_bytes": 28131328,
+      "system_gpu_utilization_percent": 52
+    },
+    {
+      "elapsed_s": 52.248408334329724,
+      "process_cpu_percent": 7.1,
+      "process_rss_bytes": 28033024,
+      "system_gpu_utilization_percent": 48
+    },
+    {
+      "elapsed_s": 53.29359433427453,
+      "process_cpu_percent": 5.6,
+      "process_rss_bytes": 26951680,
+      "system_gpu_utilization_percent": 54
+    },
+    {
+      "elapsed_s": 54.32325250003487,
+      "process_cpu_percent": 6.9,
+      "process_rss_bytes": 28278784,
+      "system_gpu_utilization_percent": 5
+    },
+    {
+      "elapsed_s": 55.37802012497559,
+      "process_cpu_percent": 6.1,
+      "process_rss_bytes": 28246016,
+      "system_gpu_utilization_percent": 4
+    },
+    {
+      "elapsed_s": 56.41548862494528,
+      "process_cpu_percent": 7.6,
+      "process_rss_bytes": 35160064,
+      "system_gpu_utilization_percent": 0
+    },
+    {
+      "elapsed_s": 57.45642129192129,
+      "process_cpu_percent": 8.8,
+      "process_rss_bytes": 36159488,
+      "system_gpu_utilization_percent": 0
+    },
+    {
+      "elapsed_s": 58.4900580001995,
+      "process_cpu_percent": 6.2,
+      "process_rss_bytes": 29917184,
+      "system_gpu_utilization_percent": 58
+    },
+    {
+      "elapsed_s": 59.532031334005296,
+      "process_cpu_percent": 4.5,
+      "process_rss_bytes": 27508736,
+      "system_gpu_utilization_percent": 59
+    },
+    {
+      "elapsed_s": 60.56898320931941,
+      "process_cpu_percent": 7.6,
+      "process_rss_bytes": 33619968,
+      "system_gpu_utilization_percent": 41
+    },
+    {
+      "elapsed_s": 61.61610362492502,
+      "process_cpu_percent": 7.6,
+      "process_rss_bytes": 35635200,
+      "system_gpu_utilization_percent": 15
+    },
+    {
+      "elapsed_s": 62.65599320922047,
+      "process_cpu_percent": 6.8,
+      "process_rss_bytes": 35454976,
+      "system_gpu_utilization_percent": 10
+    },
+    {
+      "elapsed_s": 63.68787525035441,
+      "process_cpu_percent": 6.0,
+      "process_rss_bytes": 26918912,
+      "system_gpu_utilization_percent": 59
+    },
+    {
+      "elapsed_s": 64.71025658398867,
+      "process_cpu_percent": 4.6,
+      "process_rss_bytes": 27394048,
+      "system_gpu_utilization_percent": 69
+    },
+    {
+      "elapsed_s": 65.75060604233295,
+      "process_cpu_percent": 6.0,
+      "process_rss_bytes": 27426816,
+      "system_gpu_utilization_percent": 67
+    },
+    {
+      "elapsed_s": 66.78071016725153,
+      "process_cpu_percent": 6.6,
+      "process_rss_bytes": 27639808,
+      "system_gpu_utilization_percent": 68
+    },
+    {
+      "elapsed_s": 67.82262045890093,
+      "process_cpu_percent": 6.1,
+      "process_rss_bytes": 27705344,
+      "system_gpu_utilization_percent": 66
+    },
+    {
+      "elapsed_s": 68.86364737525582,
+      "process_cpu_percent": 5.8,
+      "process_rss_bytes": 27426816,
+      "system_gpu_utilization_percent": 69
+    },
+    {
+      "elapsed_s": 69.91083929222077,
+      "process_cpu_percent": 6.7,
+      "process_rss_bytes": 27230208,
+      "system_gpu_utilization_percent": 65
+    },
+    {
+      "elapsed_s": 70.95783616695553,
+      "process_cpu_percent": 7.7,
+      "process_rss_bytes": 27459584,
+      "system_gpu_utilization_percent": 66
+    },
+    {
+      "elapsed_s": 72.01038670912385,
+      "process_cpu_percent": 7.9,
+      "process_rss_bytes": 27672576,
+      "system_gpu_utilization_percent": 8
+    },
+    {
+      "elapsed_s": 73.05021629203111,
+      "process_cpu_percent": 7.5,
+      "process_rss_bytes": 27672576,
+      "system_gpu_utilization_percent": 12
+    },
+    {
+      "elapsed_s": 74.09379391698167,
+      "process_cpu_percent": 10.6,
+      "process_rss_bytes": 35536896,
+      "system_gpu_utilization_percent": 11
+    },
+    {
+      "elapsed_s": 75.14178395923227,
+      "process_cpu_percent": 7.2,
+      "process_rss_bytes": 37224448,
+      "system_gpu_utilization_percent": 10
+    },
+    {
+      "elapsed_s": 76.20004820916802,
+      "process_cpu_percent": 10.3,
+      "process_rss_bytes": 37847040,
+      "system_gpu_utilization_percent": 12
+    },
+    {
+      "elapsed_s": 77.24425654206425,
+      "process_cpu_percent": 6.9,
+      "process_rss_bytes": 37797888,
+      "system_gpu_utilization_percent": 14
+    },
+    {
+      "elapsed_s": 78.27024491690099,
+      "process_cpu_percent": 7.0,
+      "process_rss_bytes": 37683200,
+      "system_gpu_utilization_percent": 14
+    },
+    {
+      "elapsed_s": 79.32107195910066,
+      "process_cpu_percent": 6.3,
+      "process_rss_bytes": 37519360,
+      "system_gpu_utilization_percent": 11
+    },
+    {
+      "elapsed_s": 80.35340441716835,
+      "process_cpu_percent": 6.0,
+      "process_rss_bytes": 27967488,
+      "system_gpu_utilization_percent": 11
+    },
+    {
+      "elapsed_s": 81.38581083435565,
+      "process_cpu_percent": 5.7,
+      "process_rss_bytes": 27541504,
+      "system_gpu_utilization_percent": 11
+    },
+    {
+      "elapsed_s": 82.41833879193291,
+      "process_cpu_percent": 8.6,
+      "process_rss_bytes": 35831808,
+      "system_gpu_utilization_percent": 10
+    },
+    {
+      "elapsed_s": 83.45268216729164,
+      "process_cpu_percent": 5.0,
+      "process_rss_bytes": 35831808,
+      "system_gpu_utilization_percent": 9
+    },
+    {
+      "elapsed_s": 84.48915433418006,
+      "process_cpu_percent": 6.7,
+      "process_rss_bytes": 35045376,
+      "system_gpu_utilization_percent": 12
+    },
+    {
+      "elapsed_s": 85.54341450007632,
+      "process_cpu_percent": 5.5,
+      "process_rss_bytes": 29868032,
+      "system_gpu_utilization_percent": 19
+    },
+    {
+      "elapsed_s": 86.5887259170413,
+      "process_cpu_percent": 4.2,
+      "process_rss_bytes": 27361280,
+      "system_gpu_utilization_percent": 3
+    },
+    {
+      "elapsed_s": 87.62694925023243,
+      "process_cpu_percent": 5.2,
+      "process_rss_bytes": 26247168,
+      "system_gpu_utilization_percent": 7
+    },
+    {
+      "elapsed_s": 88.66789179202169,
+      "process_cpu_percent": 4.3,
+      "process_rss_bytes": 26361856,
+      "system_gpu_utilization_percent": 3
+    },
+    {
+      "elapsed_s": 89.71481283428147,
+      "process_cpu_percent": 7.2,
+      "process_rss_bytes": 35700736,
+      "system_gpu_utilization_percent": 10
+    },
+    {
+      "elapsed_s": 90.76441716728732,
+      "process_cpu_percent": 6.9,
+      "process_rss_bytes": 35815424,
+      "system_gpu_utilization_percent": 0
+    },
+    {
+      "elapsed_s": 91.78939329227433,
+      "process_cpu_percent": 4.3,
+      "process_rss_bytes": 27443200,
+      "system_gpu_utilization_percent": 11
+    },
+    {
+      "elapsed_s": 92.81886987527832,
+      "process_cpu_percent": 4.7,
+      "process_rss_bytes": 25985024,
+      "system_gpu_utilization_percent": 0
+    },
+    {
+      "elapsed_s": 93.85176945896819,
+      "process_cpu_percent": 5.0,
+      "process_rss_bytes": 24985600,
+      "system_gpu_utilization_percent": 0
+    },
+    {
+      "elapsed_s": 94.87625679234043,
+      "process_cpu_percent": 4.4,
+      "process_rss_bytes": 25919488,
+      "system_gpu_utilization_percent": 0
+    },
+    {
+      "elapsed_s": 95.93623891705647,
+      "process_cpu_percent": 4.7,
+      "process_rss_bytes": 26050560,
+      "system_gpu_utilization_percent": 1
+    },
+    {
+      "elapsed_s": 97.02158520929515,
+      "process_cpu_percent": 4.2,
+      "process_rss_bytes": 24870912,
+      "system_gpu_utilization_percent": 20
+    },
+    {
+      "elapsed_s": 98.12633041711524,
+      "process_cpu_percent": 22.6,
+      "process_rss_bytes": 81575936,
+      "system_gpu_utilization_percent": 15
+    },
+    {
+      "elapsed_s": 99.2299204999581,
+      "process_cpu_percent": 34.4,
+      "process_rss_bytes": 99041280,
+      "system_gpu_utilization_percent": 23
+    },
+    {
+      "elapsed_s": 100.29862641729414,
+      "process_cpu_percent": 36.0,
+      "process_rss_bytes": 184352768,
+      "system_gpu_utilization_percent": 11
+    }
+  ],
+  "process_cpu_percent_peak": 142.8,
+  "process_rss_peak_bytes": 387694592,
+  "system_gpu_utilization_percent_peak": 94
+}

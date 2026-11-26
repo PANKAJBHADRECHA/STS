@@ -1,0 +1,62 @@
+{
+  "mode": "actual_neural_inference_recorded_input",
+  "hardware": false,
+  "inference_mocked": false,
+  "renderer": "timed software acknowledgements",
+  "frames_sent": 1124,
+  "engine_metrics": {
+    "audio_frames": 1124,
+    "asr_wall_s": 9.556229213718325,
+    "input_s": 22.47999999999961,
+    "interruptions": 1,
+    "utterances": 3,
+    "replies": 2,
+    "errors": 0
+  },
+  "cases": [
+    {
+      "case": "normal",
+      "recognized": "What is 2 + 2?",
+      "passed": true,
+      "result": {
+        "type": "reply_done",
+        "epoch": 2,
+        "text": "4",
+        "first_token_s": 3.884692708030343,
+        "first_audio_s": 5.115430333185941,
+        "audio_s": 1.2999999999999998,
+        "wall_s": 5.379046416841447,
+        "peak_mlx_bytes": 1181551547,
+        "cached_prompt_tokens": 33
+      }
+    },
+    {
+      "case": "memory",
+      "recognized": "My name is Alex and I live in London, remember that.",
+      "passed": true,
+      "result": {
+        "type": "reply_done",
+        "epoch": 4,
+        "text": "Understood.",
+        "first_token_s": 7.142558083869517,
+        "first_audio_s": 10.456928667146713,
+        "audio_s": 1.5750000000000002,
+        "wall_s": 11.387068834155798,
+        "peak_mlx_bytes": 1284861056,
+        "cached_prompt_tokens": 43
+      }
+    },
+    {
+      "case": "recall",
+      "recognized": "What is my name and where do I live?",
+      "passed": false,
+      "result": null
+    }
+  ],
+  "status": "failed",
+  "configuration": {
+    "model": "qwen-2b",
+    "asr": "SMALL_STREAMING",
+    "voice": "kokoro_af_heart"
+  }
+}

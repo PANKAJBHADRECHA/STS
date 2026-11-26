@@ -1,0 +1,20 @@
+[
+  {
+    "input": "What is two plus two?",
+    "output": "Two plus two equals four.",
+    "first_token_s": 2.012110791169107,
+    "wall_s": 2.1139118331484497
+  },
+  {
+    "input": "My meeting is Tuesday. Sorry, I mean Friday. Which day is my meeting?",
+    "output": "Your meeting is on Friday.",
+    "first_token_s": 0.2722162501886487,
+    "wall_s": 0.3738449583761394
+  },
+  {
+    "input": "Remember: my name is Maya and I live in Pune. What is my name and where do I live?",
+    "output": "Your name is Maya and you live in Pune.",
+    "first_token_s": 0.24728633277118206,
+    "wall_s": 0.41115862457081676
+  }
+]

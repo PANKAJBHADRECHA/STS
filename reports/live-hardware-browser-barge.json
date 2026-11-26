@@ -1,0 +1,82 @@
+{
+  "power_source": "Now drawing from 'Battery Power'",
+  "session_duration_s": 8.08892733277753,
+  "continuous_capture_completed": true,
+  "actual_hardware": true,
+  "fixture_speaker": {
+    "original_state": {
+      "muted": 0,
+      "volume": 0.5625
+    },
+    "temporary_fixture_volume": 0.55,
+    "default_output_unchanged": true,
+    "restored_state": {
+      "muted": 0,
+      "volume": 0.5625
+    },
+    "restoration_verified": true
+  },
+  "human_participant": false,
+  "fake_audio_capture": false,
+  "source": "OS-generated speech through built-in speakers, air and built-in microphone",
+  "cases": [
+    {
+      "case": "spoken_interruption",
+      "passed": true,
+      "answer_number": 6.0,
+      "onset_to_render_suppression_s": 1.4875,
+      "cancellation_s": 2.885300000190735,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 3,
+        "first_token_s": 0.9326423332095146,
+        "first_audio_s": 1.0238121249713004,
+        "audio_s": 0.464375,
+        "wall_s": 1.024406332988292,
+        "peak_mlx_bytes": 1246257762,
+        "cached_prompt_tokens": 0
+      }
+    }
+  ],
+  "metrics": {
+    "capture_settings": {
+      "echoCancellation": true,
+      "noiseSuppression": true,
+      "autoGainControl": true,
+      "sampleRate": 48000,
+      "channelCount": 1,
+      "latency": 0.01
+    },
+    "audio_context_rate": 48000,
+    "last_error": null,
+    "engine_metrics": {
+      "audio_frames": 412,
+      "input_overflows": 0,
+      "asr_wall_s": 3.6094485367648304,
+      "input_s": 8.239999999999913,
+      "interruptions": 1,
+      "utterances": 2,
+      "replies": 1,
+      "errors": 0
+    },
+    "configuration": {
+      "model": "qwen-2b",
+      "asr": "MEDIUM_STREAMING",
+      "voice": "piper_en_US-lessac-medium",
+      "audio": "browser"
+    },
+    "frames": 1013,
+    "output_frames": 156,
+    "devices": {
+      "input": "Default - MacBook Air Microphone (Built-in)",
+      "output": "Default - USB-Audio-1.0 (12d1:3a06)"
+    },
+    "speakers_muted": false,
+    "device_status_events": 0,
+    "synthesis_starvation_frames": 0
+  },
+  "microphone_released": true,
+  "console_errors": [],
+  "status": "passed",
+  "scope": "Development experiment, not final qualification. Early arithmetic checks could accept a matching operand; consult live-hardware-final.json for strict final scoring."
+}

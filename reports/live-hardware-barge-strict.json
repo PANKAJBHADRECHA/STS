@@ -1,0 +1,73 @@
+{
+  "power_source": "Now drawing from 'AC Power'",
+  "session_duration_s": 8.510717167053372,
+  "continuous_capture_completed": true,
+  "actual_hardware": true,
+  "fixture_speaker": {
+    "original_state": {
+      "muted": 0,
+      "volume": 0.1875000149011612
+    },
+    "temporary_fixture_volume": 0.55,
+    "default_output_unchanged": true,
+    "restored_state": {
+      "muted": 0,
+      "volume": 0.1875000149011612
+    },
+    "restoration_verified": true
+  },
+  "human_participant": false,
+  "fake_audio_capture": false,
+  "source": "OS-generated speech through built-in speakers, air and built-in microphone",
+  "cases": [
+    {
+      "case": "spoken_interruption",
+      "passed": true,
+      "answer_number": 6.0,
+      "onset_to_render_suppression_s": 0.3083000001907349,
+      "cancellation_s": 1.6368000001907348,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 3,
+        "first_token_s": 0.6700209998525679,
+        "first_audio_s": 0.8686615419574082,
+        "audio_s": 1.3351250000000001,
+        "wall_s": 0.9271361669525504,
+        "peak_mlx_bytes": 1249895422,
+        "cached_prompt_tokens": 0
+      }
+    }
+  ],
+  "metrics": {
+    "last_error": null,
+    "engine_metrics": {
+      "audio_frames": 527,
+      "input_overflows": 0,
+      "asr_wall_s": 3.284614865668118,
+      "input_s": 10.539999999999864,
+      "interruptions": 1,
+      "utterances": 2,
+      "replies": 1,
+      "errors": 0
+    },
+    "configuration": {
+      "model": "qwen-2b",
+      "asr": "MEDIUM_STREAMING",
+      "voice": "piper_en_US-lessac-medium"
+    },
+    "frames": 500,
+    "output_frames": 25,
+    "devices": {
+      "input": "MacBook Air Microphone",
+      "output": "MacBook Air Speakers"
+    },
+    "speakers_muted": false,
+    "device_status_events": 0,
+    "synthesis_starvation_frames": 0
+  },
+  "microphone_released": true,
+  "console_errors": [],
+  "status": "passed",
+  "scoring": "strict_final_answer_v2",
+  "scope": "Development experiment, not final qualification. Early arithmetic checks could accept a matching operand; consult live-hardware-final.json for strict final scoring."
+}

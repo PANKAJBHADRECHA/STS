@@ -1,0 +1,186 @@
+{
+  "mode": "actual_neural_inference_recorded_input",
+  "configuration": {
+    "model": "qwen-2b",
+    "voice": "piper_en_US-lessac-medium",
+    "asr": "TINY_STREAMING"
+  },
+  "hardware": false,
+  "inference_mocked": false,
+  "renderer": "timed software acknowledgements",
+  "frames_sent": 2715,
+  "engine_metrics": {
+    "audio_frames": 2715,
+    "input_overflows": 0,
+    "asr_wall_s": 6.884913980960846,
+    "input_s": 54.30000000000289,
+    "interruptions": 2,
+    "utterances": 11,
+    "replies": 10,
+    "errors": 0
+  },
+  "cases": [
+    {
+      "case": "normal",
+      "recognized": "What is 2 plus 2?",
+      "passed": true,
+      "result": {
+        "type": "reply_done",
+        "epoch": 2,
+        "text": "2 plus 2 is 4.",
+        "first_token_s": 2.3343075839802623,
+        "first_audio_s": 2.613749834243208,
+        "audio_s": 1.2538749999999999,
+        "wall_s": 2.660033875145018,
+        "peak_mlx_bytes": 1181633500,
+        "cached_prompt_tokens": 33
+      }
+    },
+    {
+      "case": "memory",
+      "recognized": "My name is Alex and I live in London, remember that.",
+      "passed": true,
+      "result": {
+        "type": "reply_done",
+        "epoch": 4,
+        "text": "Understood.",
+        "first_token_s": 0.7100889580324292,
+        "first_audio_s": 0.8234090409241617,
+        "audio_s": 0.6965833333333333,
+        "wall_s": 0.8358405409380794,
+        "peak_mlx_bytes": 1324933872,
+        "cached_prompt_tokens": 43
+      }
+    },
+    {
+      "case": "recall",
+      "recognized": "What is my name and where do I live?",
+      "passed": true,
+      "result": {
+        "type": "reply_done",
+        "epoch": 6,
+        "text": "Your name is Alex and you live in London.",
+        "first_token_s": 0.6119201248511672,
+        "first_audio_s": 0.9106862498447299,
+        "audio_s": 2.113,
+        "wall_s": 1.0187106668017805,
+        "peak_mlx_bytes": 1324933872,
+        "cached_prompt_tokens": 74
+      }
+    },
+    {
+      "case": "correction",
+      "recognized": "My meeting is Tuesday, sorry, I mean Friday, which day is my meeting?",
+      "passed": true,
+      "result": {
+        "type": "reply_done",
+        "epoch": 8,
+        "text": "Your meeting is on Friday.",
+        "first_token_s": 0.6445826669223607,
+        "first_audio_s": 0.847318833693862,
+        "audio_s": 1.3699583333333334,
+        "wall_s": 0.8910211250185966,
+        "peak_mlx_bytes": 1324933872,
+        "cached_prompt_tokens": 97
+      }
+    },
+    {
+      "case": "changed_question",
+      "recognized": "What is 5 plus 5? Actually, tell me what 2 plus 3 is.",
+      "passed": true,
+      "result": {
+        "type": "reply_done",
+        "epoch": 10,
+        "text": "5 plus 5 is 10. 2 plus 3 is 5.",
+        "first_token_s": 0.836429875344038,
+        "first_audio_s": 1.84741250006482,
+        "audio_s": 2.87925,
+        "wall_s": 2.458164917305112,
+        "peak_mlx_bytes": 1324933872,
+        "cached_prompt_tokens": 134
+      }
+    },
+    {
+      "case": "background_noise",
+      "recognized": "What is 4 plus 4?",
+      "passed": true,
+      "result": {
+        "type": "reply_done",
+        "epoch": 12,
+        "text": "4 plus 4 is 8.",
+        "first_token_s": 0.5698142908513546,
+        "first_audio_s": 0.7622992498800159,
+        "audio_s": 1.1725833333333333,
+        "wall_s": 0.791591125074774,
+        "peak_mlx_bytes": 1324933872,
+        "cached_prompt_tokens": 170
+      }
+    },
+    {
+      "case": "fast_speech",
+      "recognized": "What is the capital of France?",
+      "passed": true,
+      "result": {
+        "type": "reply_done",
+        "epoch": 14,
+        "text": "Paris.",
+        "first_token_s": 0.6039528753608465,
+        "first_audio_s": 0.7291702092625201,
+        "audio_s": 0.568875,
+        "wall_s": 0.7316468344070017,
+        "peak_mlx_bytes": 1324933872,
+        "cached_prompt_tokens": 206
+      }
+    },
+    {
+      "case": "slow_speech",
+      "recognized": "How many days are there in one week?",
+      "passed": true,
+      "result": {
+        "type": "reply_done",
+        "epoch": 16,
+        "text": "7.",
+        "first_token_s": 0.5861856252886355,
+        "first_audio_s": 0.6866227919235826,
+        "audio_s": 0.4992083333333333,
+        "wall_s": 0.6874781670048833,
+        "peak_mlx_bytes": 1324933872,
+        "cached_prompt_tokens": 231
+      }
+    },
+    {
+      "case": "retained_correction",
+      "recognized": "Which day is my meeting now?",
+      "passed": true,
+      "result": {
+        "type": "reply_done",
+        "epoch": 18,
+        "text": "Your meeting is on Friday.",
+        "first_token_s": 0.5319102918729186,
+        "first_audio_s": 0.6967727919109166,
+        "audio_s": 1.4280416666666667,
+        "wall_s": 0.7339051249437034,
+        "peak_mlx_bytes": 1324933872,
+        "cached_prompt_tokens": 252
+      }
+    },
+    {
+      "case": "spoken_interruption",
+      "passed": true,
+      "result": {
+        "type": "reply_done",
+        "epoch": 22,
+        "text": "3 plus 3 is 6.",
+        "first_token_s": 0.6407329170033336,
+        "first_audio_s": 0.9462462919764221,
+        "audio_s": 1.3467500000000001,
+        "wall_s": 1.008085709065199,
+        "peak_mlx_bytes": 1329531976,
+        "cached_prompt_tokens": 297
+      },
+      "time_to_cancellation_s": 0.925890333019197
+    }
+  ],
+  "status": "passed",
+  "scope": "Historical recorded-input development test with permissive answer checks; not final physical qualification."
+}

@@ -1,0 +1,115 @@
+{
+  "actual_hardware": true,
+  "fixture_speaker": {
+    "original_state": {
+      "muted": 1,
+      "volume": 1.0
+    },
+    "temporary_fixture_volume": 0.55,
+    "default_output_unchanged": true,
+    "restored_state": {
+      "muted": 1,
+      "volume": 1.0
+    },
+    "restoration_verified": true
+  },
+  "human_participant": false,
+  "fake_audio_capture": false,
+  "source": "OS-generated speech through built-in speakers, air and built-in microphone",
+  "cases": [
+    {
+      "case": "normal",
+      "passed": true,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 2,
+        "first_token_s": 0.5537182092666626,
+        "first_audio_s": 0.6976680001243949,
+        "audio_s": 0.5456666666666666,
+        "wall_s": 0.6993574593216181,
+        "peak_mlx_bytes": 1280272468,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 1.2144575831480324,
+      "duration_s": 5.444393333978951
+    },
+    {
+      "case": "memory",
+      "passed": true,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 5,
+        "first_token_s": 0.5066262083128095,
+        "first_audio_s": 0.6322195832617581,
+        "audio_s": 2.229125,
+        "wall_s": 0.7632150421850383,
+        "peak_mlx_bytes": 1280272468,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 2.6291266661137342,
+      "duration_s": 7.4848996247164905
+    },
+    {
+      "case": "recall",
+      "passed": true,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 7,
+        "first_token_s": 0.4613676657900214,
+        "first_audio_s": 0.700530291069299,
+        "audio_s": 2.240708333333333,
+        "wall_s": 0.7703473749570549,
+        "peak_mlx_bytes": 1280272468,
+        "cached_prompt_tokens": 46
+      },
+      "speech_end_to_reply_done_s": 1.1732825408689678,
+      "duration_s": 6.272652832791209
+    },
+    {
+      "case": "correction",
+      "passed": true,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 10,
+        "first_token_s": 0.4920540419407189,
+        "first_audio_s": 0.5595297091640532,
+        "audio_s": 0.7082083333333333,
+        "wall_s": 0.57084666704759,
+        "peak_mlx_bytes": 1281494060,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 1.0959163340739906,
+      "duration_s": 6.611316292081028
+    },
+    {
+      "case": "spoken_interruption",
+      "passed": true,
+      "cancellation_s": 1.092199999809265,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 15,
+        "first_token_s": 0.5077974162995815,
+        "first_audio_s": 0.7416967083700001,
+        "audio_s": 1.4860833333333332,
+        "wall_s": 0.8047882081009448,
+        "peak_mlx_bytes": 1281494060,
+        "cached_prompt_tokens": 51
+      }
+    }
+  ],
+  "metrics": {
+    "frames": 1800,
+    "output_frames": 116,
+    "devices": {
+      "input": "MacBook Air Microphone",
+      "output": "USB-Audio-1.0"
+    },
+    "speakers_muted": false,
+    "device_status_events": 0,
+    "synthesis_starvation_frames": 0
+  },
+  "microphone_released": true,
+  "console_errors": [],
+  "status": "passed",
+  "scope": "Development experiment, not final qualification. Early arithmetic checks could accept a matching operand; consult live-hardware-final.json for strict final scoring."
+}

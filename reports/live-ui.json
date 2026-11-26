@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "mode": "real_audio_ui_typed_prompt",
+  "human_participant": false,
+  "fake_capture": false,
+  "capture_frames": 840,
+  "output_frames": 184,
+  "reply": {
+    "type": "reply_done",
+    "epoch": 1,
+    "text": "4",
+    "first_token_s": 0.18712162505835295,
+    "first_audio_s": 0.26403729198500514,
+    "audio_s": 0.5108333333333334,
+    "wall_s": 0.2682561669498682,
+    "peak_mlx_bytes": 1237656498,
+    "cached_prompt_tokens": 0
+  },
+  "microphone_released": true,
+  "immediate_restart_passed": true,
+  "devices": {
+    "input": "Default - MacBook Air Microphone (Built-in)",
+    "output": "Default - MacBook Air Speakers (Built-in)"
+  },
+  "configuration": {
+    "model": "qwen-2b",
+    "asr": "MEDIUM_STREAMING",
+    "voice": "piper_en_US-lessac-medium",
+    "audio": "browser"
+  },
+  "capture_settings": {
+    "echoCancellation": true,
+    "noiseSuppression": true,
+    "autoGainControl": true,
+    "sampleRate": 48000,
+    "channelCount": 1,
+    "latency": 0.01
+  },
+  "device_status_events": 0,
+  "synthesis_starvation_frames": 0,
+  "console_errors": [],
+  "mobile_overflow": false
+}

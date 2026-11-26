@@ -1,0 +1,215 @@
+{
+  "actual_hardware": true,
+  "human_participant": false,
+  "status": "failed",
+  "error_type": "RuntimeError",
+  "completed_cases": [
+    {
+      "case": "normal",
+      "passed": true,
+      "speech_end_to_device_start_s": 1.7515,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 2,
+        "first_token_s": 0.5727369589731097,
+        "first_audio_s": 0.97191262524575,
+        "audio_s": 1.068125,
+        "wall_s": 0.9961477499455214,
+        "peak_mlx_bytes": 1201520261,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 1.7946632918901742,
+      "duration_s": 6.407798041123897
+    },
+    {
+      "case": "memory",
+      "passed": true,
+      "speech_end_to_device_start_s": 1.1215999999046327,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 5,
+        "first_token_s": 0.4733102498576045,
+        "first_audio_s": 0.6025764588266611,
+        "audio_s": 2.322,
+        "wall_s": 0.7332446668297052,
+        "peak_mlx_bytes": 1201520261,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 1.2553712078370154,
+      "duration_s": 4.896079875063151
+    },
+    {
+      "case": "recall",
+      "passed": true,
+      "speech_end_to_device_start_s": 1.2001999998092652,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 8,
+        "first_token_s": 0.3317905003204942,
+        "first_audio_s": 0.5461229169741273,
+        "audio_s": 2.1826666666666665,
+        "wall_s": 0.5977722499519587,
+        "peak_mlx_bytes": 1270927747,
+        "cached_prompt_tokens": 56
+      },
+      "speech_end_to_reply_done_s": 1.2554723331704736,
+      "duration_s": 4.940516000147909
+    },
+    {
+      "case": "correction",
+      "passed": true,
+      "speech_end_to_device_start_s": 1.0079000000953675,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 11,
+        "first_token_s": 0.42659391602501273,
+        "first_audio_s": 0.5030165831558406,
+        "audio_s": 0.5340416666666666,
+        "wall_s": 0.5037989160045981,
+        "peak_mlx_bytes": 1308174900,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 1.0125415418297052,
+      "duration_s": 6.329441249836236
+    },
+    {
+      "case": "changed_question",
+      "passed": true,
+      "speech_end_to_device_start_s": 1.4702999997138977,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 14,
+        "first_token_s": 0.5907602501101792,
+        "first_audio_s": 0.8160659167915583,
+        "audio_s": 2.8908750000000003,
+        "wall_s": 1.0766021250747144,
+        "peak_mlx_bytes": 1308174900,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 1.7762355003505945,
+      "duration_s": 8.732301542069763
+    },
+    {
+      "case": "fast_speech",
+      "passed": true,
+      "speech_end_to_device_start_s": 1.7562999997138977,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 17,
+        "first_token_s": 0.485489749815315,
+        "first_audio_s": 0.5520143746398389,
+        "audio_s": 0.6501666666666667,
+        "wall_s": 0.5588701660744846,
+        "peak_mlx_bytes": 1308174900,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 1.7714252499863505,
+      "duration_s": 3.952703250106424
+    },
+    {
+      "case": "slow_speech",
+      "passed": true,
+      "speech_end_to_device_start_s": 1.2346999998092651,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 20,
+        "first_token_s": 0.5088184587657452,
+        "first_audio_s": 0.7656302088871598,
+        "audio_s": 1.729875,
+        "wall_s": 0.8133531250059605,
+        "peak_mlx_bytes": 1308174900,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 1.3068429166451097,
+      "duration_s": 5.270863708108664
+    },
+    {
+      "case": "background_noise",
+      "passed": true,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 23,
+        "first_token_s": 0.43733679223805666,
+        "first_audio_s": 0.5301855420693755,
+        "audio_s": 0.45279166666666665,
+        "wall_s": 0.530990875326097,
+        "peak_mlx_bytes": 1308174900,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 1.1254140422679484,
+      "duration_s": 3.092302917037159
+    },
+    {
+      "case": "rapid_1",
+      "passed": true,
+      "speech_end_to_device_start_s": 2.0580999999046328,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 26,
+        "first_token_s": 0.44986429205164313,
+        "first_audio_s": 0.5442195828072727,
+        "audio_s": 0.66175,
+        "wall_s": 0.5571219581179321,
+        "peak_mlx_bytes": 1308174900,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 2.0776441246271133,
+      "duration_s": 4.203880458138883
+    },
+    {
+      "case": "rapid_2",
+      "passed": true,
+      "speech_end_to_device_start_s": 1.2275999999046325,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 29,
+        "first_token_s": 0.5578064997680485,
+        "first_audio_s": 0.6557808751240373,
+        "audio_s": 0.5805,
+        "wall_s": 0.6580612082034349,
+        "peak_mlx_bytes": 1308174900,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 1.2444200837053359,
+      "duration_s": 3.2847754592075944
+    },
+    {
+      "case": "rapid_3",
+      "passed": false,
+      "speech_end_to_device_start_s": -0.8671000003814697,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 31,
+        "first_token_s": 0.699666750151664,
+        "first_audio_s": 0.8121517919935286,
+        "audio_s": 0.6037083333333333,
+        "wall_s": 0.8138012499548495,
+        "peak_mlx_bytes": 1308174900,
+        "cached_prompt_tokens": 33
+      },
+      "speech_end_to_reply_done_s": 0.008478042203933,
+      "duration_s": 1.648877666797489
+    },
+    {
+      "case": "spoken_interruption",
+      "passed": true,
+      "cancellation_s": 1.676,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 37,
+        "first_token_s": 0.5099565838463604,
+        "first_audio_s": 0.7407740000635386,
+        "audio_s": 1.4976666666666667,
+        "wall_s": 0.7783052921295166,
+        "peak_mlx_bytes": 1352558324,
+        "cached_prompt_tokens": 55
+      }
+    }
+  ],
+  "configuration": {
+    "model": "qwen-2b",
+    "asr": "MEDIUM_STREAMING",
+    "voice": "piper_en_US-lessac-medium"
+  },
+  "scope": "Development experiment, not final qualification. Early arithmetic checks could accept a matching operand; consult live-hardware-final.json for strict final scoring."
+}

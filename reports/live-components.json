@@ -1,0 +1,140 @@
+{
+  "asr": [
+    {
+      "model": "TINY_STREAMING",
+      "case": "greeting",
+      "text": "Hello, how are you today?",
+      "wall_s": 0.10134483315050602,
+      "audio_s": 1.715,
+      "rtf": 0.05909319717230672
+    },
+    {
+      "model": "TINY_STREAMING",
+      "case": "arithmetic",
+      "text": "What is 2 plus 3? Give a short answer.",
+      "wall_s": 0.1513632503338158,
+      "audio_s": 2.533375,
+      "rtf": 0.059747668755638556
+    },
+    {
+      "model": "TINY_STREAMING",
+      "case": "correction",
+      "text": "I want to meet on Tuesday, sorry, I mean Friday, which day did I choose?",
+      "wall_s": 0.34295558324083686,
+      "audio_s": 4.825875,
+      "rtf": 0.07106598974089401
+    },
+    {
+      "model": "SMALL_STREAMING",
+      "case": "greeting",
+      "text": "Hello, how are you today?",
+      "wall_s": 0.2104818751104176,
+      "audio_s": 1.715,
+      "rtf": 0.12272995633260501
+    },
+    {
+      "model": "SMALL_STREAMING",
+      "case": "arithmetic",
+      "text": "What is 2 plus 3? Give a short answer.",
+      "wall_s": 0.27969300001859665,
+      "audio_s": 2.533375,
+      "rtf": 0.11040331574227924
+    },
+    {
+      "model": "SMALL_STREAMING",
+      "case": "correction",
+      "text": "I want to meet on Tuesday, sorry, I mean Friday, which day did I choose?",
+      "wall_s": 0.7253705416806042,
+      "audio_s": 4.825875,
+      "rtf": 0.15030860552347589
+    }
+  ],
+  "tts": [
+    {
+      "voice": "piper_en_US-lessac-medium",
+      "trial": 0,
+      "first_audio_s": 0.040810707956552505,
+      "wall_s": 0.06479474995285273,
+      "audio_s": 1.4628333333333334,
+      "rtf": 0.04429400703168695
+    },
+    {
+      "voice": "piper_en_US-lessac-medium",
+      "trial": 1,
+      "first_audio_s": 0.036517417058348656,
+      "wall_s": 0.05839054239913821,
+      "audio_s": 1.3815833333333334,
+      "rtf": 0.04226349651906982
+    },
+    {
+      "voice": "piper_en_US-lessac-medium",
+      "trial": 2,
+      "first_audio_s": 0.035589166916906834,
+      "wall_s": 0.059261417016386986,
+      "audio_s": 1.4628333333333334,
+      "rtf": 0.04051139365367687
+    },
+    {
+      "voice": "kokoro_af_heart",
+      "trial": 0,
+      "first_audio_s": 0.19669704092666507,
+      "wall_s": 0.5792122911661863,
+      "audio_s": 2.125,
+      "rtf": 0.27257048996055827
+    },
+    {
+      "voice": "kokoro_af_heart",
+      "trial": 1,
+      "first_audio_s": 0.19281391706317663,
+      "wall_s": 0.6091725421138108,
+      "audio_s": 2.125,
+      "rtf": 0.28666943158296976
+    },
+    {
+      "voice": "kokoro_af_heart",
+      "trial": 2,
+      "first_audio_s": 0.20241295779123902,
+      "wall_s": 0.5972961247898638,
+      "audio_s": 2.125,
+      "rtf": 0.2810805293128771
+    }
+  ],
+  "llm": [
+    {
+      "model": "qwen-08b",
+      "question": "Hello. How are you?",
+      "text": "Hello! I'm doing well, thanks for asking!",
+      "first_token_s": 0.19424054212868214,
+      "wall_s": 0.282455375418067
+    },
+    {
+      "model": "qwen-08b",
+      "question": "What is two plus two?",
+      "text": "Two plus two equals four.",
+      "first_token_s": 0.06767675001174212,
+      "wall_s": 0.11743108415976167
+    },
+    {
+      "model": "qwen-08b",
+      "question": "My meeting is Tuesday. Sorry, I mean Friday. Which day is my meeting?",
+      "text": "You are meeting on Friday.",
+      "first_token_s": 0.0740333329886198,
+      "wall_s": 0.12744529219344258
+    },
+    {
+      "model": "qwen-08b",
+      "question": "Remember: my name is Maya and I live in Pune. What is my name and where do I live?",
+      "text": "My name is Maya and I live in Pune.",
+      "first_token_s": 0.07547408295795321,
+      "wall_s": 0.16051316633820534
+    },
+    {
+      "model": "qwen-08b",
+      "question": "Explain why the sky looks blue in one short sentence.",
+      "text": "The sky looks blue because the sunlight scatters off the Earth's atmosphere, which is why the blue color is visible to us.",
+      "first_token_s": 0.07218254217877984,
+      "wall_s": 0.29201062489300966
+    }
+  ],
+  "hardware_test": false
+}

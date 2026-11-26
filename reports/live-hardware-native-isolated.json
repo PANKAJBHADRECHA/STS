@@ -1,0 +1,228 @@
+{
+  "actual_hardware": true,
+  "human_participant": false,
+  "status": "failed",
+  "error_type": "TimeoutError",
+  "completed_cases": [
+    {
+      "case": "normal",
+      "passed": true,
+      "answer_number": 4.0,
+      "speech_end_to_device_start_s": 1.1864000000953674,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 2,
+        "first_token_s": 0.48739470774307847,
+        "first_audio_s": 0.5558995408937335,
+        "audio_s": 0.5224583333333334,
+        "wall_s": 0.5572912078350782,
+        "peak_mlx_bytes": 1236709024,
+        "cached_prompt_tokens": 0
+      },
+      "speech_end_to_reply_done_s": 1.187099332921207,
+      "duration_s": 5.275308959186077
+    },
+    {
+      "case": "memory",
+      "passed": false,
+      "answer_number": null,
+      "speech_end_to_device_start_s": 1.0070999999046326,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 5,
+        "first_token_s": 0.44546037493273616,
+        "first_audio_s": 0.5705079580657184,
+        "audio_s": 2.0549583333333334,
+        "wall_s": 0.7034188332036138,
+        "peak_mlx_bytes": 1236709024,
+        "cached_prompt_tokens": 0
+      },
+      "speech_end_to_reply_done_s": 1.137611874844879,
+      "ui_status": "Listening",
+      "error_type": "TimeoutError",
+      "duration_s": 24.02387662511319
+    },
+    {
+      "case": "recall",
+      "passed": false,
+      "answer_number": null,
+      "speech_end_to_device_start_s": 1.439,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 11,
+        "first_token_s": 0.6537505830638111,
+        "first_audio_s": 0.895246499683708,
+        "audio_s": 2.2755416666666664,
+        "wall_s": 0.9513147920370102,
+        "peak_mlx_bytes": 1314879815,
+        "cached_prompt_tokens": 0
+      },
+      "speech_end_to_reply_done_s": 1.4961617076769471,
+      "ui_status": "Listening",
+      "error_type": "TimeoutError",
+      "duration_s": 24.52723224973306
+    },
+    {
+      "case": "correction",
+      "passed": true,
+      "answer_number": null,
+      "speech_end_to_device_start_s": 1.0335,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 17,
+        "first_token_s": 0.4929472911171615,
+        "first_audio_s": 0.5673256660811603,
+        "audio_s": 0.6385416666666667,
+        "wall_s": 0.5733182500116527,
+        "peak_mlx_bytes": 1314879815,
+        "cached_prompt_tokens": 0
+      },
+      "speech_end_to_reply_done_s": 1.0516376672312617,
+      "duration_s": 6.517250540666282
+    },
+    {
+      "case": "changed_question",
+      "passed": true,
+      "answer_number": 5.0,
+      "speech_end_to_device_start_s": 1.7733000001907349,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 20,
+        "first_token_s": 0.535900916904211,
+        "first_audio_s": 0.6992241251282394,
+        "audio_s": 1.4280416666666667,
+        "wall_s": 0.7247109999880195,
+        "peak_mlx_bytes": 1314879815,
+        "cached_prompt_tokens": 0
+      },
+      "speech_end_to_reply_done_s": 1.7968189171515405,
+      "duration_s": 7.559436207637191
+    },
+    {
+      "case": "fast_speech",
+      "passed": true,
+      "answer_number": null,
+      "speech_end_to_device_start_s": 2.4407000002861023,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 23,
+        "first_token_s": 0.6566761657595634,
+        "first_audio_s": 0.7446511657908559,
+        "audio_s": 0.6269166666666667,
+        "wall_s": 0.755072332918644,
+        "peak_mlx_bytes": 1314879815,
+        "cached_prompt_tokens": 0
+      },
+      "speech_end_to_reply_done_s": 2.4753240840509534,
+      "duration_s": 4.5936727919615805
+    },
+    {
+      "case": "slow_speech",
+      "passed": true,
+      "answer_number": 7.0,
+      "speech_end_to_device_start_s": 1.3731999998092652,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 26,
+        "first_token_s": 0.5067781656980515,
+        "first_audio_s": 0.7565572499297559,
+        "audio_s": 1.938875,
+        "wall_s": 0.8330227499827743,
+        "peak_mlx_bytes": 1314879815,
+        "cached_prompt_tokens": 0
+      },
+      "speech_end_to_reply_done_s": 1.465518333017826,
+      "duration_s": 5.655274750199169
+    },
+    {
+      "case": "background_noise",
+      "passed": true,
+      "answer_number": 8.0,
+      "speech_end_to_device_start_s": 1.3468000001907348,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 29,
+        "first_token_s": 0.5182978329248726,
+        "first_audio_s": 0.5816132081672549,
+        "audio_s": 0.4295833333333333,
+        "wall_s": 0.5827482081949711,
+        "peak_mlx_bytes": 1314879815,
+        "cached_prompt_tokens": 0
+      },
+      "speech_end_to_reply_done_s": 1.3516480419784784,
+      "duration_s": 3.2954708747565746
+    },
+    {
+      "case": "rapid_1",
+      "passed": true,
+      "answer_number": 5.0,
+      "speech_end_to_device_start_s": 1.2902000002861023,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 32,
+        "first_token_s": 0.5789354997687042,
+        "first_audio_s": 0.6549640828743577,
+        "audio_s": 0.5224583333333334,
+        "wall_s": 0.656054874882102,
+        "peak_mlx_bytes": 1314879815,
+        "cached_prompt_tokens": 0
+      },
+      "speech_end_to_reply_done_s": 1.3026302908547223,
+      "duration_s": 3.305104000028223
+    },
+    {
+      "case": "rapid_2",
+      "passed": true,
+      "answer_number": 7.0,
+      "speech_end_to_device_start_s": 1.2631000003814696,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 35,
+        "first_token_s": 0.5824645417742431,
+        "first_audio_s": 0.6488193338736892,
+        "audio_s": 0.6037083333333333,
+        "wall_s": 0.6498193335719407,
+        "peak_mlx_bytes": 1314879815,
+        "cached_prompt_tokens": 0
+      },
+      "speech_end_to_reply_done_s": 1.265734541695565,
+      "duration_s": 3.3567277500405908
+    },
+    {
+      "case": "rapid_3",
+      "passed": true,
+      "answer_number": 9.0,
+      "speech_end_to_device_start_s": 2.0537000002861023,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 38,
+        "first_token_s": 0.5915466672740877,
+        "first_audio_s": 1.0580545421689749,
+        "audio_s": 0.6385416666666667,
+        "wall_s": 1.0749230422079563,
+        "peak_mlx_bytes": 1314879815,
+        "cached_prompt_tokens": 0
+      },
+      "speech_end_to_reply_done_s": 2.088893999811262,
+      "duration_s": 4.225617125164717
+    },
+    {
+      "case": "spoken_interruption",
+      "passed": true,
+      "answer_number": 6.0,
+      "onset_to_render_suppression_s": 0.3027000002861023,
+      "cancellation_s": 1.6509000000953675,
+      "reply_metrics": {
+        "type": "reply_done",
+        "epoch": 44,
+        "first_token_s": 0.6424099998548627,
+        "first_audio_s": 0.8239144999533892,
+        "audio_s": 1.3932083333333334,
+        "wall_s": 0.8508026250638068,
+        "peak_mlx_bytes": 1314879815,
+        "cached_prompt_tokens": 0
+      }
+    }
+  ],
+  "scope": "Development experiment, not final qualification. Early arithmetic checks could accept a matching operand; consult live-hardware-final.json for strict final scoring."
+}

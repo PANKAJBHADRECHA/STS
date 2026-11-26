@@ -1,0 +1,331 @@
+{
+  "mode": "native_device_lifecycle_typed_prompts",
+  "human_participant": false,
+  "voice_recognition_qualified": false,
+  "speakers_unmuted_by_test": false,
+  "cases": [
+    {
+      "case": "typed_neural_audio",
+      "passed": true,
+      "reply": {
+        "type": "reply_done",
+        "epoch": 1,
+        "text": "4",
+        "first_token_s": 0.5685349591076374,
+        "first_audio_s": 0.6624508751556277,
+        "audio_s": 0.4992083333333333,
+        "wall_s": 0.6643262919969857,
+        "peak_mlx_bytes": 1181551547,
+        "cached_prompt_tokens": 33
+      }
+    },
+    {
+      "case": "context_seed",
+      "passed": true,
+      "reply": {
+        "type": "reply_done",
+        "epoch": 2,
+        "text": "Understood.",
+        "first_token_s": 0.1548827919177711,
+        "first_audio_s": 0.2554299170151353,
+        "audio_s": 0.7082083333333333,
+        "wall_s": 0.26811029203236103,
+        "peak_mlx_bytes": 1274946522,
+        "cached_prompt_tokens": 41
+      }
+    },
+    {
+      "case": "context_filler_1",
+      "passed": true,
+      "reply": {
+        "type": "reply_done",
+        "epoch": 3,
+        "text": "1",
+        "first_token_s": 0.10926670907065272,
+        "first_audio_s": 0.2251976253464818,
+        "audio_s": 0.5456666666666666,
+        "wall_s": 0.2267742920666933,
+        "peak_mlx_bytes": 1274946522,
+        "cached_prompt_tokens": 63
+      }
+    },
+    {
+      "case": "context_filler_2",
+      "passed": true,
+      "reply": {
+        "type": "reply_done",
+        "epoch": 4,
+        "text": "2",
+        "first_token_s": 0.15737112518399954,
+        "first_audio_s": 0.21779733384028077,
+        "audio_s": 0.5572916666666666,
+        "wall_s": 0.21883304184302688,
+        "peak_mlx_bytes": 1276091122,
+        "cached_prompt_tokens": 75
+      }
+    },
+    {
+      "case": "context_filler_3",
+      "passed": true,
+      "reply": {
+        "type": "reply_done",
+        "epoch": 5,
+        "text": "3",
+        "first_token_s": 0.15448516700416803,
+        "first_audio_s": 0.21036437479779124,
+        "audio_s": 0.45279166666666665,
+        "wall_s": 0.21117529179900885,
+        "peak_mlx_bytes": 1276091122,
+        "cached_prompt_tokens": 93
+      }
+    },
+    {
+      "case": "context_filler_4",
+      "passed": true,
+      "reply": {
+        "type": "reply_done",
+        "epoch": 6,
+        "text": "4",
+        "first_token_s": 0.14991304092109203,
+        "first_audio_s": 0.21480175014585257,
+        "audio_s": 0.568875,
+        "wall_s": 0.21586925024166703,
+        "peak_mlx_bytes": 1276091122,
+        "cached_prompt_tokens": 111
+      }
+    },
+    {
+      "case": "context_filler_5",
+      "passed": true,
+      "reply": {
+        "type": "reply_done",
+        "epoch": 7,
+        "text": "5",
+        "first_token_s": 0.11285654176026583,
+        "first_audio_s": 0.17368650017306209,
+        "audio_s": 0.5340416666666666,
+        "wall_s": 0.17482433281838894,
+        "peak_mlx_bytes": 1276091122,
+        "cached_prompt_tokens": 129
+      }
+    },
+    {
+      "case": "context_filler_6",
+      "passed": true,
+      "reply": {
+        "type": "reply_done",
+        "epoch": 8,
+        "text": "6",
+        "first_token_s": 0.1461367909796536,
+        "first_audio_s": 0.20317674987018108,
+        "audio_s": 0.464375,
+        "wall_s": 0.2040475830435753,
+        "peak_mlx_bytes": 1276091122,
+        "cached_prompt_tokens": 141
+      }
+    },
+    {
+      "case": "context_filler_7",
+      "passed": true,
+      "reply": {
+        "type": "reply_done",
+        "epoch": 9,
+        "text": "7",
+        "first_token_s": 0.15395412500947714,
+        "first_audio_s": 0.22743454203009605,
+        "audio_s": 0.568875,
+        "wall_s": 0.22862637508660555,
+        "peak_mlx_bytes": 1276091122,
+        "cached_prompt_tokens": 159
+      }
+    },
+    {
+      "case": "context_filler_8",
+      "passed": true,
+      "reply": {
+        "type": "reply_done",
+        "epoch": 10,
+        "text": "8",
+        "first_token_s": 0.1173239997588098,
+        "first_audio_s": 0.18777129193767905,
+        "audio_s": 0.4992083333333333,
+        "wall_s": 0.18902916694059968,
+        "peak_mlx_bytes": 1276091122,
+        "cached_prompt_tokens": 177
+      }
+    },
+    {
+      "case": "context_filler_9",
+      "passed": true,
+      "reply": {
+        "type": "reply_done",
+        "epoch": 11,
+        "text": "9",
+        "first_token_s": 0.14755745930597186,
+        "first_audio_s": 0.21310058422386646,
+        "audio_s": 0.6385416666666667,
+        "wall_s": 0.22264416702091694,
+        "peak_mlx_bytes": 1276091122,
+        "cached_prompt_tokens": 189
+      }
+    },
+    {
+      "case": "context_filler_10",
+      "passed": true,
+      "reply": {
+        "type": "reply_done",
+        "epoch": 12,
+        "text": "10",
+        "first_token_s": 0.13591816695407033,
+        "first_audio_s": 0.22274375008419156,
+        "audio_s": 0.5456666666666666,
+        "wall_s": 0.22420587483793497,
+        "peak_mlx_bytes": 1281368020,
+        "cached_prompt_tokens": 207
+      }
+    },
+    {
+      "case": "context_filler_11",
+      "passed": true,
+      "reply": {
+        "type": "reply_done",
+        "epoch": 13,
+        "text": "11",
+        "first_token_s": 0.1142454999499023,
+        "first_audio_s": 0.20245187496766448,
+        "audio_s": 0.685,
+        "wall_s": 0.2130667078308761,
+        "peak_mlx_bytes": 1281368020,
+        "cached_prompt_tokens": 226
+      }
+    },
+    {
+      "case": "context_filler_12",
+      "passed": true,
+      "reply": {
+        "type": "reply_done",
+        "epoch": 14,
+        "text": "12",
+        "first_token_s": 0.14828750025480986,
+        "first_audio_s": 0.22973425034433603,
+        "audio_s": 0.6153333333333333,
+        "wall_s": 0.23896800028160214,
+        "peak_mlx_bytes": 1290101530,
+        "cached_prompt_tokens": 239
+      }
+    },
+    {
+      "case": "context_filler_13",
+      "passed": true,
+      "reply": {
+        "type": "reply_done",
+        "epoch": 15,
+        "text": "13",
+        "first_token_s": 0.7825910407118499,
+        "first_audio_s": 0.8896101657301188,
+        "audio_s": 0.7082083333333333,
+        "wall_s": 0.9165759575553238,
+        "peak_mlx_bytes": 1290101530,
+        "cached_prompt_tokens": 259
+      }
+    },
+    {
+      "case": "context_filler_14",
+      "passed": true,
+      "reply": {
+        "type": "reply_done",
+        "epoch": 16,
+        "text": "14",
+        "first_token_s": 0.14994483394548297,
+        "first_audio_s": 0.2526979590766132,
+        "audio_s": 0.754625,
+        "wall_s": 0.27331587532535195,
+        "peak_mlx_bytes": 1297378896,
+        "cached_prompt_tokens": 272
+      }
+    },
+    {
+      "case": "context_filler_15",
+      "passed": true,
+      "reply": {
+        "type": "reply_done",
+        "epoch": 17,
+        "text": "15",
+        "first_token_s": 0.11640333430841565,
+        "first_audio_s": 0.19904195936396718,
+        "audio_s": 0.66175,
+        "wall_s": 0.2092730002477765,
+        "peak_mlx_bytes": 1297378896,
+        "cached_prompt_tokens": 292
+      }
+    },
+    {
+      "case": "context_filler_16",
+      "passed": true,
+      "reply": {
+        "type": "reply_done",
+        "epoch": 18,
+        "text": "16",
+        "first_token_s": 0.1382785839959979,
+        "first_audio_s": 0.22079512476921082,
+        "audio_s": 0.6501666666666667,
+        "wall_s": 0.2306967917829752,
+        "peak_mlx_bytes": 1297434892,
+        "cached_prompt_tokens": 305
+      }
+    },
+    {
+      "case": "long_context_recall",
+      "passed": true,
+      "reply": {
+        "type": "reply_done",
+        "epoch": 19,
+        "text": "Alex, Friday",
+        "first_token_s": 0.14397866697981954,
+        "first_audio_s": 0.2532120835967362,
+        "audio_s": 1.044875,
+        "wall_s": 0.27746887458488345,
+        "peak_mlx_bytes": 1314882660,
+        "cached_prompt_tokens": 325
+      }
+    },
+    {
+      "case": "manual_cancel",
+      "passed": true,
+      "control_roundtrip_s": 0.20394620765000582
+    },
+    {
+      "case": "post_cancel_recovery",
+      "passed": true,
+      "reply": {
+        "type": "reply_done",
+        "epoch": 22,
+        "text": "6",
+        "first_token_s": 0.24818195821717381,
+        "first_audio_s": 0.8229617080651224,
+        "audio_s": 0.5340416666666666,
+        "wall_s": 0.8421807908453047,
+        "peak_mlx_bytes": 1646478328,
+        "cached_prompt_tokens": 223
+      }
+    }
+  ],
+  "errors": [],
+  "capture": {
+    "type": "capture",
+    "frames": 15050,
+    "output_frames": 333,
+    "overlap_frames": 300,
+    "device_status_events": 1
+  },
+  "duration_s": 300.32545845769346,
+  "cpu_percent_max": 150.9,
+  "rss_peak_bytes": 204685312,
+  "devices_ready": true,
+  "microphone_released": true,
+  "invalid_control_closed": true,
+  "restart_ready": true,
+  "restart_microphone_released": true,
+  "capture_during_device_output": true,
+  "status": "passed"
+}

@@ -17,3 +17,11 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 The working voice path uses LiquidAI LFM2.5-Audio through MLX Audio (MIT implementation). The model weights retain the LFM Open License v1.0 and are downloaded separately. Recorded question fixture source: Liquid4All/liquid-audio `assets/question.wav`; fixtures are local-only and not redistributed here. Faster Whisper/Whisper tiny.en are optional evaluation tools, not speech-generation components.
+
+## Streaming application dependencies
+
+The streaming application uses MLX/MLX-LM for local language inference, Moonshine Voice for streaming recognition and neural synthesis, SoundDevice/PortAudio for the optional native adapter, WebRTC VAD, and SpeexDSP for native echo processing. The browser audio path uses built-in WebRTC and AudioWorklet APIs. These components retain their upstream licenses; installation does not relicense them under this project's MIT license.
+
+Qwen, Moonshine, Piper voice assets and optional Kokoro models are downloaded separately. Consult each selected asset's upstream model card/license and the installed package's notices before redistribution or commercial use. No checkpoint or synthesized fixture recording is distributed in this repository.
+
+Sources: [Qwen MLX checkpoint](https://huggingface.co/mlx-community/Qwen3.5-2B-4bit), [Moonshine Voice](https://github.com/moonshine-ai/moonshine), [MLX-LM](https://github.com/ml-explore/mlx-lm), [SoundDevice](https://github.com/spatialaudio/python-sounddevice), [SpeexDSP](https://www.speex.org/).

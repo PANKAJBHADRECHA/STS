@@ -15,3 +15,7 @@ node_modules/
 reports/private/
 
 .venv-live
+
+# Physical-microphone UI tests may capture ambient transcripts.
+/reports/live-desktop.png
+/reports/live-mobile.png

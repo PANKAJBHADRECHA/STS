@@ -1,4 +1,6 @@
-# Local native speech-to-speech on Mac
+# Native turn-based voice — historical implementation notes
+
+For current installation and launch instructions, see [Getting started](GETTING_STARTED.md#native-voice-chat). This document preserves the original model-selection context.
 
 **Actual microphone audio in, model-generated speech out**, running locally on Apple Silicon. The selected model is **LFM2.5-Audio-1.5B, MLX 4-bit**, with a tested brief-response prompt. Its audio encoder takes the waveform directly; interleaved model audio tokens are decoded into a spoken answer. No separate speech-to-text/chat/text-to-speech pipeline is used for replies.
 
@@ -14,7 +16,7 @@ Double-click **Start Voice.command**, or run:
 
 Open **http://127.0.0.1:8769**, click **Load voice model**, then **Record voice**. Allow microphone access in the browser when it requests it. Speak for up to 20 seconds, click **Stop and send**, and the model will reply with playable audio. WAV upload is also supported. Start a new conversation after six turns.
 
-The native runtime and pinned 4-bit model are already installed in this checkout. They are ignored by Git; source and reproducible tests are pushed to the private repository.
+Install the runtime and pinned 4-bit model using the fresh-installation commands below. Environments and weights are ignored by Git.
 
 ## Fresh installation
 
@@ -27,7 +29,7 @@ python3.12 -m venv .venv-sts
 .venv-sts/bin/python -m sts_lab serve --port 8769
 ```
 
-The model download is approximately 1.8 GB. `setup_voice.py` pins the checkpoint revision and never substitutes a larger model. The full tested environment, including optional audio-evaluation tools, is in `requirements-voice-macos.lock.txt`.
+The model download is approximately 1.8 GB; the setup script requires 17 GiB free disk for download/runtime headroom. `setup_voice.py` pins the checkpoint revision and never substitutes a larger model. The full tested environment, including optional audio-evaluation tools, is in `requirements-voice-macos.lock.txt`.
 
 ## Actual audio verification
 
@@ -76,7 +78,7 @@ A smaller **F-Actor/Mimi MLX 4-bit** port now supports simultaneous microphone c
 
 Double-click **Start Duplex Experiment.command** and open **http://127.0.0.1:8767** to inspect it. Use headphones. Startup warms the decoder before capture; bounded queues stop a session if inference falls behind. The user's physical microphone and live human conversation remain untested.
 
-See [native duplex results and reproduction](DUPLEX_RESULTS.md). Hugging Face authentication and PersonaPlex access have been completed locally; [the access probe](../reports/hugging-face-access.json) returned HTTP 200. Credentials and weights are excluded from Git.
+See [native duplex results and reproduction](DUPLEX_RESULTS.md). A development [access probe](../reports/hugging-face-access.json) returned HTTP 200 for the original developer account; this does not grant access to another user. Credentials and weights are excluded from Git.
 
 ## Earlier controller research
 
